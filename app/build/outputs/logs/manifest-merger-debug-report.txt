@@ -1,0 +1,205 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.android.material:material:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/120a2350cd3647d80aeb978c57c0a6d7/material-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/7df144ec1007d382251e1ed4d8816b82/appcompat-1.0.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b5d3a6a7e77ce25e84214d4be9a928f4/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/1e5777733a0bddd0797044e039b90ce7/lifecycle-extensions-2.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/d1157cc8218ae4963aae5b71157b7a72/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/35c59ef3dca87794276545f5b7ac42f2/fragment-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/4771b9d13642bb221a11c0d651abd0f7/vectordrawable-animated-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/38e0f16db6363dda8e32419945643ca6/recyclerview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/4fd9cc19d0c5e5852fbd53dabdb43ced/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/a5f1bd87409d86aa9e0565371c346ab1/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/38a8e1cb501fbb313e2c67d62359ec0a/vectordrawable-1.0.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/94f675fb1e1f1c55314d6d5b031b3df4/transition-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/7c9f4cf14ab3e585d0fc3edb12936036/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/e828e64a743720de1f7055e5e41c5a98/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/6de6be98fac456759b0c9564edff26b2/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/baffa1a21b22e50685325de31f05c12b/coordinatorlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/81f683b1bd89d982f0342c5852c49603/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/7144ff988397c548630c546af6738b17/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/9a10f0c810c94c0c9a91d3293a66d216/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/9079c31a27990e299f9de6ffdf538b55/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/04d2b68ef4795e2512d8f1b04733c96c/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/81d7506206c502db75e79818bcf76613/core-1.0.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/234bda145653ace9c8d76eed9069c55d/versionedparcelable-1.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/d3f17cb4e8378b6aacada8fcffc371f3/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/0ffc8a85880cf78b2db128dd7e20d8fb/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/3397f1323fa38f0411e147c3e0bf82a9/lifecycle-process-2.0.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/eea1872e9f27b2f418f448da1bdffd58/lifecycle-service-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b2b4d1baf666e298e9cca4ec94f3071f/lifecycle-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/0238cd3a1f15555ee2845439a8c4f18d/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/bfbe0f884474239837ca7d8368292139/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/209ce77e0270d41ccb791f284d7c2340/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/dae62abe53593fd70ba7b216abe344a0/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/22218ea2182670b34d6700f7d711138a/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/762246e48556919f2f72bc6b67e5a111/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b8454f2311453f1e09fa980216a0f66f/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/68cd7abffe013d1bfeebf7a808da0e1d/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
+	package
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:3:5-33
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:5:22-64
+application
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:7:5-24:20
+MERGED from [com.google.android.material:material:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/120a2350cd3647d80aeb978c57c0a6d7/material-1.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/120a2350cd3647d80aeb978c57c0a6d7/material-1.0.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b5d3a6a7e77ce25e84214d4be9a928f4/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b5d3a6a7e77ce25e84214d4be9a928f4/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/1e5777733a0bddd0797044e039b90ce7/lifecycle-extensions-2.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/1e5777733a0bddd0797044e039b90ce7/lifecycle-extensions-2.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.core:core:1.0.1] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/81d7506206c502db75e79818bcf76613/core-1.0.1/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/81d7506206c502db75e79818bcf76613/core-1.0.1/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/234bda145653ace9c8d76eed9069c55d/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/234bda145653ace9c8d76eed9069c55d/versionedparcelable-1.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/3397f1323fa38f0411e147c3e0bf82a9/lifecycle-process-2.0.0/AndroidManifest.xml:22:5-28:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/3397f1323fa38f0411e147c3e0bf82a9/lifecycle-process-2.0.0/AndroidManifest.xml:22:5-28:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.1] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/81d7506206c502db75e79818bcf76613/core-1.0.1/AndroidManifest.xml:22:18-86
+	android:supportsRtl
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:12:9-35
+	android:label
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:10:9-41
+	android:roundIcon
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:11:9-54
+	android:icon
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:9:9-43
+	android:allowBackup
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:13:9-40
+activity#edu.byu.cs.tweeter.client.view.main.MainActivity
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:14:9-23:20
+	android:label
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:16:13-56
+	android:theme
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:17:13-56
+	android:name
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:15:13-58
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:18:13-22:29
+action#android.intent.action.MAIN
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:21:27-74
+uses-sdk
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/120a2350cd3647d80aeb978c57c0a6d7/material-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/120a2350cd3647d80aeb978c57c0a6d7/material-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/7df144ec1007d382251e1ed4d8816b82/appcompat-1.0.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/7df144ec1007d382251e1ed4d8816b82/appcompat-1.0.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b5d3a6a7e77ce25e84214d4be9a928f4/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b5d3a6a7e77ce25e84214d4be9a928f4/constraintlayout-1.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/1e5777733a0bddd0797044e039b90ce7/lifecycle-extensions-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/1e5777733a0bddd0797044e039b90ce7/lifecycle-extensions-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/d1157cc8218ae4963aae5b71157b7a72/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/d1157cc8218ae4963aae5b71157b7a72/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/35c59ef3dca87794276545f5b7ac42f2/fragment-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/35c59ef3dca87794276545f5b7ac42f2/fragment-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/4771b9d13642bb221a11c0d651abd0f7/vectordrawable-animated-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/4771b9d13642bb221a11c0d651abd0f7/vectordrawable-animated-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/38e0f16db6363dda8e32419945643ca6/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/38e0f16db6363dda8e32419945643ca6/recyclerview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/4fd9cc19d0c5e5852fbd53dabdb43ced/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/4fd9cc19d0c5e5852fbd53dabdb43ced/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/a5f1bd87409d86aa9e0565371c346ab1/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/a5f1bd87409d86aa9e0565371c346ab1/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/38a8e1cb501fbb313e2c67d62359ec0a/vectordrawable-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/38a8e1cb501fbb313e2c67d62359ec0a/vectordrawable-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/94f675fb1e1f1c55314d6d5b031b3df4/transition-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/94f675fb1e1f1c55314d6d5b031b3df4/transition-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/7c9f4cf14ab3e585d0fc3edb12936036/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/7c9f4cf14ab3e585d0fc3edb12936036/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/e828e64a743720de1f7055e5e41c5a98/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/e828e64a743720de1f7055e5e41c5a98/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/6de6be98fac456759b0c9564edff26b2/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/6de6be98fac456759b0c9564edff26b2/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/baffa1a21b22e50685325de31f05c12b/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/baffa1a21b22e50685325de31f05c12b/coordinatorlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/81f683b1bd89d982f0342c5852c49603/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/81f683b1bd89d982f0342c5852c49603/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/7144ff988397c548630c546af6738b17/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/7144ff988397c548630c546af6738b17/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/9a10f0c810c94c0c9a91d3293a66d216/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/9a10f0c810c94c0c9a91d3293a66d216/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/9079c31a27990e299f9de6ffdf538b55/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/9079c31a27990e299f9de6ffdf538b55/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/04d2b68ef4795e2512d8f1b04733c96c/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/04d2b68ef4795e2512d8f1b04733c96c/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/81d7506206c502db75e79818bcf76613/core-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/81d7506206c502db75e79818bcf76613/core-1.0.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/234bda145653ace9c8d76eed9069c55d/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/234bda145653ace9c8d76eed9069c55d/versionedparcelable-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/d3f17cb4e8378b6aacada8fcffc371f3/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/d3f17cb4e8378b6aacada8fcffc371f3/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/0ffc8a85880cf78b2db128dd7e20d8fb/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/0ffc8a85880cf78b2db128dd7e20d8fb/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/3397f1323fa38f0411e147c3e0bf82a9/lifecycle-process-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/3397f1323fa38f0411e147c3e0bf82a9/lifecycle-process-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/eea1872e9f27b2f418f448da1bdffd58/lifecycle-service-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/eea1872e9f27b2f418f448da1bdffd58/lifecycle-service-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b2b4d1baf666e298e9cca4ec94f3071f/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b2b4d1baf666e298e9cca4ec94f3071f/lifecycle-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/0238cd3a1f15555ee2845439a8c4f18d/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/0238cd3a1f15555ee2845439a8c4f18d/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/bfbe0f884474239837ca7d8368292139/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/bfbe0f884474239837ca7d8368292139/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/209ce77e0270d41ccb791f284d7c2340/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/209ce77e0270d41ccb791f284d7c2340/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/dae62abe53593fd70ba7b216abe344a0/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/dae62abe53593fd70ba7b216abe344a0/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/22218ea2182670b34d6700f7d711138a/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/22218ea2182670b34d6700f7d711138a/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/762246e48556919f2f72bc6b67e5a111/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/762246e48556919f2f72bc6b67e5a111/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b8454f2311453f1e09fa980216a0f66f/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b8454f2311453f1e09fa980216a0f66f/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/68cd7abffe013d1bfeebf7a808da0e1d/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/68cd7abffe013d1bfeebf7a808da0e1d/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/3397f1323fa38f0411e147c3e0bf82a9/lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
+	android:authorities
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/3397f1323fa38f0411e147c3e0bf82a9/lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
+	android:multiprocess
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/3397f1323fa38f0411e147c3e0bf82a9/lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
+	android:exported
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/3397f1323fa38f0411e147c3e0bf82a9/lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/3397f1323fa38f0411e147c3e0bf82a9/lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
