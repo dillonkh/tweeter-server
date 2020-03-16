@@ -1,6 +1,8 @@
 apply plugin: 'java-library'
 apply plugin: 'com.github.johnrengelman.shadow'
 
+
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(path: ':shared')
