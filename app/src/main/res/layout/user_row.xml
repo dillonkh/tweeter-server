@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".client.view.main.following.FollowingFragment">
+    tools:context=".view.main.following.FollowingFragment">
 
     <ImageView
         android:id="@+id/userImage"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_centerVertical="true"
-        android:contentDescription="@string/userImageContentDescription" />
+        android:layout_centerVertical="true"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -32,6 +31,7 @@
             android:id="@+id/userAlias"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="@string/sampleAlias"/>
+            tools:text="@string/sampleAlias"
+            android:clickable="true"/>
     </LinearLayout>
 </RelativeLayout>
