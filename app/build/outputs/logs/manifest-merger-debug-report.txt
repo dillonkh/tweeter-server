@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:2:1-47:12
 MERGED from [com.google.android.material:material:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/120a2350cd3647d80aeb978c57c0a6d7/material-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/7df144ec1007d382251e1ed4d8816b82/appcompat-1.0.2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b5d3a6a7e77ce25e84214d4be9a928f4/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
@@ -40,29 +40,29 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/dillonharris/.grad
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/762246e48556919f2f72bc6b67e5a111/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b8454f2311453f1e09fa980216a0f66f/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/68cd7abffe013d1bfeebf7a808da0e1d/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:2:1-47:12
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:2:1-47:12
 	package
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:3:5-33
-		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:3:5-33
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
-		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:2:1-47:12
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:1-26:12
-		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:2:1-47:12
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:5:5-67
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:5:5-67
 	android:name
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:5:22-64
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:7:5-24:20
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:7:5-45:20
 MERGED from [com.google.android.material:material:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/120a2350cd3647d80aeb978c57c0a6d7/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/120a2350cd3647d80aeb978c57c0a6d7/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b5d3a6a7e77ce25e84214d4be9a928f4/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
@@ -78,39 +78,57 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gr
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.1] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/81d7506206c502db75e79818bcf76613/core-1.0.1/AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:10:9-41
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:9:9-43
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:8:9-35
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:13:9-40
-activity#edu.byu.cs.tweeter.client.view.main.MainActivity
-ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:14:9-23:20
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:13:9-40
+activity#edu.byu.cs.tweeter.view.main.LoginActivity
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:14:9-23:20
 	android:label
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:16:13-56
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:16:13-42
 	android:theme
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:17:13-56
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:17:13-56
 	android:name
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:15:13-58
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:15:13-52
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:18:13-22:29
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
-ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:19:17-69
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:19:25-66
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:21:17-77
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml:21:27-74
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:27-74
+activity#edu.byu.cs.tweeter.view.main.MainActivity
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:24:9-33:20
+	android:label
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:26:13-56
+	android:theme
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:27:13-56
+	android:name
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:25:13-51
+activity#edu.byu.cs.tweeter.view.main.UserViewActivity
+ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:34:9-44:20
+	android:parentActivityName
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:38:13-65
+	android:label
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:36:13-45
+	android:theme
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:37:13-56
+	android:name
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:35:13-55
 uses-sdk
-INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
-INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
 MERGED from [com.google.android.material:material:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/120a2350cd3647d80aeb978c57c0a6d7/material-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/120a2350cd3647d80aeb978c57c0a6d7/material-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/7df144ec1007d382251e1ed4d8816b82/appcompat-1.0.2/AndroidManifest.xml:20:5-44
@@ -183,16 +201,16 @@ MERGED from [androidx.print:print:1.0.0] /Users/dillonharris/.gradle/caches/tran
 MERGED from [androidx.print:print:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/b8454f2311453f1e09fa980216a0f66f/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/68cd7abffe013d1bfeebf7a808da0e1d/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/68cd7abffe013d1bfeebf7a808da0e1d/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
-INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
+INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
-		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-samples/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
+		ADDED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml
 provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
 ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/3397f1323fa38f0411e147c3e0bf82a9/lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
 	android:authorities
