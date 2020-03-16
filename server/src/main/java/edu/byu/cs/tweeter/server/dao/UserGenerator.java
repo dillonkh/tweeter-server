@@ -12,7 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import edu.byu.cs.tweeter.model.domain.User;
+import edu.byu.cs.tweeter.server.model.domain.User;
+
 
 /**
  * A temporary class that generates and returns {@link User} objects. This class may be removed when
@@ -134,6 +135,7 @@ public class UserGenerator {
 
             String lastName = surnames[random.nextInt(surnames.length)];
             User user = new User(firstName, lastName, imageULR);
+            user.makeTweets(TweetGenerator.getInstance().generateTweets(2, user));
 
             if(!users.contains(user)) {
                 users.add(user);

@@ -4,7 +4,7 @@
             "outputFile": "/Users/dillonharris/Documents/GitHub/tweeter-server/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/dillonharris/.gradle/caches/transforms-2/files-2.1/7df144ec1007d382251e1ed4d8816b82/appcompat-1.0.2/res/values-v24/values-v24.xml",
+                    "source": "/Users/dillonharris/.gradle/caches/transforms-2/files-2.1/456928c71aed208c9904dd524e2be555/appcompat-1.0.2/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/dillonharris/.gradle/caches/transforms-2/files-2.1/7c9f4cf14ab3e585d0fc3edb12936036/media-1.0.0/res/values-v24/values-v24.xml",
+                    "source": "/Users/dillonharris/.gradle/caches/transforms-2/files-2.1/2b14afb64686bd2c3dba896ffe9b88a9/media-1.0.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

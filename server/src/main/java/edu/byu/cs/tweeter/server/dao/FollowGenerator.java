@@ -1,5 +1,8 @@
 package edu.byu.cs.tweeter.server.dao;
 
+
+//import com.sun.istack.internal.NotNull;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,8 +11,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-import edu.byu.cs.tweeter.model.domain.Follow;
-import edu.byu.cs.tweeter.model.domain.User;
+import edu.byu.cs.tweeter.server.model.domain.Follow;
+import edu.byu.cs.tweeter.server.model.domain.User;
 
 /**
  * A temporary class that generates and returns Follow objects. This class may be removed when the
@@ -59,7 +62,8 @@ public class FollowGenerator {
      * @return the generated {@link Follow} objects.
      */
     public List<Follow> generateUsersAndFollows(int userCount, int minFollowersPerUser,
-                                                       int maxFollowersPerUser, Sort sortOrder) {
+                                                int maxFollowersPerUser, Sort sortOrder) {
+
         List<User> users = UserGenerator.getInstance().generateUsers(userCount);
         return generateFollowsForUsers(users, minFollowersPerUser, maxFollowersPerUser, sortOrder);
     }
