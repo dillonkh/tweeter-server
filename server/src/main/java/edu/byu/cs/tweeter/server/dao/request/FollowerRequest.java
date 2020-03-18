@@ -5,14 +5,17 @@ import edu.byu.cs.tweeter.server.model.domain.User;
 
 public class FollowerRequest {
 
-    private final User follower;
-    private final int limit;
-    private final User lastFollowee;
+    public User follower;
+    public int limit;
+    public User lastFollowee;
 
     public FollowerRequest(User follower, int limit, User lastFollowee) {
         this.follower = follower;
         this.limit = limit;
         this.lastFollowee = lastFollowee;
+    }
+
+    public FollowerRequest() {
     }
 
     public User getFollowing() {

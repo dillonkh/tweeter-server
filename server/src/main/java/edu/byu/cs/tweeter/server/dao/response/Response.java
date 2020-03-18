@@ -2,8 +2,8 @@ package edu.byu.cs.tweeter.server.dao.response;
 
 class Response {
 
-    private final boolean success;
-    private final String message;
+    public boolean success;
+    public String message;
 
     Response(boolean success) {
         this(success, null);
@@ -12,6 +12,9 @@ class Response {
     Response(boolean success, String message) {
         this.success = success;
         this.message = message;
+    }
+
+    public Response() {
     }
 
     public boolean isSuccess() {

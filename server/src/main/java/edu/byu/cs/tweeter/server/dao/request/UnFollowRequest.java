@@ -5,13 +5,16 @@ import edu.byu.cs.tweeter.server.model.domain.User;
 
 public class UnFollowRequest {
 
-    private final User userToFollow;
-    private final User userLoggedIn;
+    public User userToFollow;
+    public User userLoggedIn;
 
 
     public UnFollowRequest(User userToFollow, User userLoggedIn) {
         this.userToFollow = userToFollow;
         this.userLoggedIn = userLoggedIn;
+    }
+
+    public UnFollowRequest() {
     }
 
     public User getUserToFollow() {

@@ -5,12 +5,15 @@ import edu.byu.cs.tweeter.server.model.domain.User;
 
 public class UserRequest {
 
-    private final User user;
-    private final String handle;
+    public User user;
+    public String handle;
 
     public UserRequest(User user, String handle) {
         this.user = user;
         this.handle = handle;
+    }
+
+    public UserRequest() {
     }
 
     public User getUser() {

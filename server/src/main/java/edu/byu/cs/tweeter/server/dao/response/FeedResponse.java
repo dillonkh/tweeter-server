@@ -6,7 +6,7 @@ import edu.byu.cs.tweeter.server.model.domain.Tweet;
 
 public class FeedResponse extends PagedResponse {
 
-    private List<Tweet> tweets;
+    public List<Tweet> tweets;
 
     public FeedResponse(String message) {
         super(false, message, false);
@@ -16,6 +16,10 @@ public class FeedResponse extends PagedResponse {
         super(true, hasMorePages);
         this.tweets = tweets;
     }
+
+    public FeedResponse() {}
+
+
 
     public List<Tweet> getTweets() {
         return tweets;

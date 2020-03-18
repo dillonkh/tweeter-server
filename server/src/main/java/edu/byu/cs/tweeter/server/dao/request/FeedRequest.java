@@ -6,14 +6,17 @@ import edu.byu.cs.tweeter.server.model.domain.User;
 
 public class FeedRequest {
 
-    private final User user;
-    private final int limit;
-    private final Tweet lastTweet;
+    public User user;
+    public int limit;
+    public Tweet lastTweet;
 
     public FeedRequest(User user, int limit, Tweet lastTweet) {
         this.user = user;
         this.limit = limit;
         this.lastTweet = lastTweet;
+    }
+
+    public FeedRequest() {
     }
 
     public User getUser() {

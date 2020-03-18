@@ -1,5 +1,6 @@
 package edu.byu.cs.tweeter.net;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -49,6 +50,9 @@ public class ServerFacade {
     }
 
     public FollowingResponse getFollowees(FollowingRequest request) { // people i follow
+
+//        ClientCommunicator clientCommunicator = new ClientCommunicator(SERVER_URL);
+//        return clientCommunicator.doPost(urlPath, request, null, FollowingResponse.class);
 
         assert request.getLimit() >= 0;
         assert request.getFollower() != null;

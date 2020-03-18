@@ -2,12 +2,15 @@ package edu.byu.cs.tweeter.server.dao.request;
 
 public class LoginRequest {
 
-    private final String password;
-    private final String handle;
+    public String password;
+    public String handle;
 
     public LoginRequest(String password, String handle) {
         this.password = password;
         this.handle = handle;
+    }
+
+    public LoginRequest() {
     }
 
     public String getPassword() {

@@ -7,7 +7,7 @@ import edu.byu.cs.tweeter.server.model.domain.User;
 
 public class FollowerResponse extends PagedResponse {
 
-    private List<User> followers; // TODO: this may need to change
+    public List<User> followers; // TODO: this may need to change
 
     public FollowerResponse(String message) {
         super(false, message, false);
@@ -17,6 +17,9 @@ public class FollowerResponse extends PagedResponse {
         super(true, hasMorePages);
         this.followers = followees; // TODO: this may need to change
     }
+
+    public FollowerResponse() {}
+
 
     public List<User> getFollowees() {
         return followers;

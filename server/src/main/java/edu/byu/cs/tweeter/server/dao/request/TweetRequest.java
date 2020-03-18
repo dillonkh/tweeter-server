@@ -5,10 +5,13 @@ import edu.byu.cs.tweeter.server.model.domain.Tweet;
 
 public class TweetRequest {
 
-    private Tweet tweet;
+    public Tweet tweet;
 
     public TweetRequest(Tweet tweet) {
         this.tweet = tweet;
+    }
+
+    public TweetRequest() {
     }
 
     public Tweet getTweet() {

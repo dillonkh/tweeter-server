@@ -2,11 +2,11 @@ package edu.byu.cs.tweeter.server.dao.request;
 
 public class SignUpRequest {
 
-    private final String firstName;
-    private final String lastName;
-    private final String handle;
-    private final String password;
-    private final String imageURL;
+    public String firstName;
+    public String lastName;
+    public String handle;
+    public String password;
+    public String imageURL;
 
     public SignUpRequest(String firstName, String lastName, String handle, String password, String imageURL) {
         this.firstName = firstName;
@@ -14,6 +14,9 @@ public class SignUpRequest {
         this.handle = handle;
         this.password = password;
         this.imageURL = imageURL;
+    }
+
+    public SignUpRequest() {
     }
 
     public String getFirstName() {

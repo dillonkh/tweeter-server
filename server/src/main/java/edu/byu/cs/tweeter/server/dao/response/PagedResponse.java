@@ -2,7 +2,7 @@ package edu.byu.cs.tweeter.server.dao.response;
 
 public class PagedResponse extends Response {
 
-    private final boolean hasMorePages;
+    public boolean hasMorePages;
 
     PagedResponse(boolean success, boolean hasMorePages) {
         super(success);
@@ -13,6 +13,10 @@ public class PagedResponse extends Response {
         super(success, message);
         this.hasMorePages = hasMorePages;
     }
+
+    PagedResponse() {}
+
+
 
     public boolean hasMorePages() {
         return hasMorePages;
