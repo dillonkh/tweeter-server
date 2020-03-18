@@ -3,8 +3,10 @@ package edu.byu.cs.tweeter.model.services;
 import edu.byu.cs.tweeter.model.domain.User;
 import edu.byu.cs.tweeter.net.ServerFacade;
 import edu.byu.cs.tweeter.net.request.FollowRequest;
+import edu.byu.cs.tweeter.net.request.IsFollowingRequest;
 import edu.byu.cs.tweeter.net.request.UnFollowRequest;
 import edu.byu.cs.tweeter.net.response.FollowResponse;
+import edu.byu.cs.tweeter.net.response.IsFollowingResponse;
 import edu.byu.cs.tweeter.net.response.UnFollowResponse;
 
 public class FollowService {
@@ -47,8 +49,8 @@ public class FollowService {
 
     }
 
-    public boolean isFollowing(User userLoggedIn, User userShown) {
-        return serverFacade.isFollowing(userLoggedIn,userShown);
+    public IsFollowingResponse isFollowing(IsFollowingRequest request) {
+        return serverFacade.isFollowing(request);
     }
 
 }

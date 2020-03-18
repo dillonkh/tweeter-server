@@ -5,10 +5,12 @@ import edu.byu.cs.tweeter.model.domain.User;
 import edu.byu.cs.tweeter.model.services.FollowService;
 import edu.byu.cs.tweeter.model.services.StoryService;
 import edu.byu.cs.tweeter.net.request.FollowRequest;
+import edu.byu.cs.tweeter.net.request.IsFollowingRequest;
 import edu.byu.cs.tweeter.net.request.TweetRequest;
 import edu.byu.cs.tweeter.net.request.UnFollowRequest;
 import edu.byu.cs.tweeter.net.request.UserRequest;
 import edu.byu.cs.tweeter.net.response.FollowResponse;
+import edu.byu.cs.tweeter.net.response.IsFollowingResponse;
 import edu.byu.cs.tweeter.net.response.TweetResponse;
 import edu.byu.cs.tweeter.net.response.UnFollowResponse;
 import edu.byu.cs.tweeter.net.response.UserResponse;
@@ -49,7 +51,7 @@ public class MainPresenter extends Presenter {
         return FollowService.getInstance().unfollowUser(request);
     }
 
-    public boolean isFollowing(User userLoggedIn, User userShown) {
-        return FollowService.getInstance().isFollowing(userLoggedIn, userShown);
+    public IsFollowingResponse isFollowing(IsFollowingRequest request) {
+        return FollowService.getInstance().isFollowing(request);
     }
 }

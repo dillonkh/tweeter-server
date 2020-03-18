@@ -23,8 +23,10 @@ import edu.byu.cs.tweeter.R;
 import edu.byu.cs.tweeter.model.domain.Tweet;
 import edu.byu.cs.tweeter.model.domain.User;
 import edu.byu.cs.tweeter.net.request.FollowRequest;
+import edu.byu.cs.tweeter.net.request.IsFollowingRequest;
 import edu.byu.cs.tweeter.net.request.TweetRequest;
 import edu.byu.cs.tweeter.net.request.UnFollowRequest;
+import edu.byu.cs.tweeter.net.response.IsFollowingResponse;
 import edu.byu.cs.tweeter.net.response.TweetResponse;
 import edu.byu.cs.tweeter.presenter.MainPresenter;
 import edu.byu.cs.tweeter.view.asyncTasks.GetFollowTask;
@@ -199,9 +201,10 @@ public class UserViewActivity extends AppCompatActivity implements LoadImageTask
     }
 
     private boolean isFollowing () {
-        return presenter.isFollowing(presenter.getCurrentUser(), presenter.getUserShown());
+        IsFollowingRequest request = new IsFollowingRequest(presenter.getCurrentUser(), presenter.getUserShown());
+        IsFollowingResponse response = presenter.isFollowing(request);
+        return response.isSuccess();
     }
-
 
 
     @Override

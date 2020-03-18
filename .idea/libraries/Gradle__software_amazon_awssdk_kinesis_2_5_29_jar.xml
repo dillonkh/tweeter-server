@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: software.amazon.awssdk:kinesis:2.5.29@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/kinesis/2.5.29/5d65b8f49e08ef1877076e3845e325494e9f7a53/kinesis-2.5.29.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/kinesis/2.5.29/adfc6a0b5ba9f32e4023fb7d41a2763404177202/kinesis-2.5.29-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/kinesis/2.5.29/a00ac4785478a7ac4afa9cbb1cb05e599475f898/kinesis-2.5.29-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

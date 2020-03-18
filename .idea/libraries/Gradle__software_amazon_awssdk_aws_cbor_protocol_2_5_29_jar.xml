@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: software.amazon.awssdk:aws-cbor-protocol:2.5.29@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/aws-cbor-protocol/2.5.29/280649be81352097d67411334c7f0b73987021a1/aws-cbor-protocol-2.5.29.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/aws-cbor-protocol/2.5.29/a475cae4b1b2aeca4a472abb72d9a39fe98d2d91/aws-cbor-protocol-2.5.29-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/aws-cbor-protocol/2.5.29/6eea6c96ebd99c76455b74e8896804cecb943437/aws-cbor-protocol-2.5.29-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

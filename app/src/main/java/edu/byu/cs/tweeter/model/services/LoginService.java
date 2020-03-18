@@ -2,9 +2,12 @@ package edu.byu.cs.tweeter.model.services;
 
 import edu.byu.cs.tweeter.model.domain.User;
 import edu.byu.cs.tweeter.net.ServerFacade;
+import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
 import edu.byu.cs.tweeter.net.request.LoginRequest;
 import edu.byu.cs.tweeter.net.request.SignUpRequest;
+import edu.byu.cs.tweeter.net.request.UserRequest;
 import edu.byu.cs.tweeter.net.response.LoginResponse;
+import edu.byu.cs.tweeter.net.response.UserResponse;
 
 public class LoginService {
 
@@ -31,11 +34,15 @@ public class LoginService {
     }
 
     public User getCurrentUser() {
-        return currentUser;
+        CurrentUserRequest request = new CurrentUserRequest();
+        UserResponse response = serverFacade.getCurrentUser(request);
+        return response.getUser();
     }
 
     public void setCurrentUser(User currentUser) {
-        this.currentUser = currentUser;
+
+        UserRequest request = new UserRequest(currentUser);
+        UserResponse response = serverFacade.setCurrentUser(request);
     }
 
     public LoginResponse login(LoginRequest request) {

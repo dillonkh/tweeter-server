@@ -35,12 +35,11 @@ public class LoginService {
     }
 
     public UserResponse getCurrentUser(CurrentUserRequest request) {
-        return new UserResponse(currentUser);
+        return serverFacade.getCurrentUser(request);
     }
 
     public UserResponse setCurrentUser(UserRequest currentUserRequest) {
-        this.currentUser = currentUserRequest.getUser();
-        return new UserResponse(currentUserRequest.getUser());
+        return serverFacade.setCurrentUser(currentUserRequest);
     }
 
     public LoginResponse login(LoginRequest request) {

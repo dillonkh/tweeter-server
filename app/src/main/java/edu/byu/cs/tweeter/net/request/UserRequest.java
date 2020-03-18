@@ -13,6 +13,11 @@ public class UserRequest {
         this.handle = handle;
     }
 
+    public UserRequest(User user) {
+        this.user = user;
+        this.handle = "";
+    }
+
     public User getUser() {
         return user;
     }

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: software.amazon.awssdk:protocol-core:2.5.29@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/protocol-core/2.5.29/e0d936ef62772f9e37b316f036f144072ed227a5/protocol-core-2.5.29.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/protocol-core/2.5.29/a444d3ab566795a7eeda67a8d085637d84b61cfc/protocol-core-2.5.29-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/protocol-core/2.5.29/6b2bee00250e6eb4fdd60724e5fc74c3b72e393e/protocol-core-2.5.29-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

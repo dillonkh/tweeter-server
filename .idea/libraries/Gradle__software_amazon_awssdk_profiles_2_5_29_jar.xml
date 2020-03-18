@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: software.amazon.awssdk:profiles:2.5.29@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/profiles/2.5.29/9139ed4ab42d1e3db97a9c6c56b97f0d6ce58171/profiles-2.5.29.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/profiles/2.5.29/9b6760f669db6d22eb7e506267eea6f1273f7b0e/profiles-2.5.29-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/software.amazon.awssdk/profiles/2.5.29/ff943641e30d1b06aebf59b3eefa1a8a824fc228/profiles-2.5.29-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

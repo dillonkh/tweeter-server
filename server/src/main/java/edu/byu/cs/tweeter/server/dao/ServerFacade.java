@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import edu.byu.cs.tweeter.server.dao.request.CurrentUserRequest;
 import edu.byu.cs.tweeter.server.dao.request.FeedRequest;
 import edu.byu.cs.tweeter.server.dao.request.FollowRequest;
 import edu.byu.cs.tweeter.server.dao.request.FollowerRequest;
@@ -39,6 +40,7 @@ public class ServerFacade {
     private static Map<User, List<User>> followersByUser;
     private static Set<User> usersInDB;
     private static User userSignedIn;
+    private static User currentUser;
 
     public UserResponse getUser(UserRequest request) {
 
@@ -53,32 +55,31 @@ public class ServerFacade {
 
     public FollowingResponse getFollowees(FollowingRequest request) { // people i follow
 
-        return new FollowingResponse(new ArrayList<User>(),false);
-//        assert request.getLimit() >= 0;
-//        assert request.getFollower() != null;
-//
-//        if(followeesByUser == null) {
-//            followeesByUser = initializeFollowees(request.getFollower());
-//        }
-//
-//        List<User> allFollowees = followeesByUser.get(request.getFollower());
-//        List<User> responseFollowees = new ArrayList<>(request.getLimit());
-//
-//        boolean hasMorePages = false;
-//
-//        if(request.getLimit() > 0) {
-//            if (allFollowees != null) {
-//                int followeesIndex = getFolloweesStartingIndex(request.getLastFollowee(), allFollowees);
-//
-//                for(int limitCounter = 0; followeesIndex < allFollowees.size() && limitCounter < request.getLimit(); followeesIndex++, limitCounter++) {
-//                    responseFollowees.add(allFollowees.get(followeesIndex));
-//                }
-//
-//                hasMorePages = followeesIndex < allFollowees.size();
-//            }
-//        }
-//
-//        return new FollowingResponse(responseFollowees, hasMorePages);
+        assert request.getLimit() >= 0;
+        assert request.getFollower() != null;
+
+        if(followeesByUser == null) {
+            followeesByUser = initializeFollowees(request.getFollower());
+        }
+
+        List<User> allFollowees = followeesByUser.get(request.getFollower());
+        List<User> responseFollowees = new ArrayList<>(request.getLimit());
+
+        boolean hasMorePages = false;
+
+        if(request.getLimit() > 0) {
+            if (allFollowees != null) {
+                int followeesIndex = getFolloweesStartingIndex(request.getLastFollowee(), allFollowees);
+
+                for(int limitCounter = 0; followeesIndex < allFollowees.size() && limitCounter < request.getLimit(); followeesIndex++, limitCounter++) {
+                    responseFollowees.add(allFollowees.get(followeesIndex));
+                }
+
+                hasMorePages = followeesIndex < allFollowees.size();
+            }
+        }
+
+        return new FollowingResponse(responseFollowees, hasMorePages);
     }
 
     public FollowerResponse getFollowers(FollowerRequest request) {
@@ -240,6 +241,18 @@ public class ServerFacade {
         }
 
         return tweetIndex;
+    }
+
+    public UserResponse getCurrentUser(CurrentUserRequest request) {
+
+        return new UserResponse(currentUser);
+    }
+
+    public UserResponse setCurrentUser(UserRequest request) {
+
+        currentUser = request.getUser();
+
+        return new UserResponse(currentUser);
     }
 
     /**
