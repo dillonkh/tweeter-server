@@ -1,20 +1,10 @@
 package edu.byu.cs.tweeter.view.asyncTasks;
 
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
-import android.os.Build;
-import android.util.Log;
 
-import java.io.IOException;
-
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import edu.byu.cs.tweeter.model.domain.User;
-import edu.byu.cs.tweeter.net.request.FollowerRequest;
 import edu.byu.cs.tweeter.net.request.UserRequest;
-import edu.byu.cs.tweeter.net.response.FeedResponse;
-import edu.byu.cs.tweeter.net.response.FollowerResponse;
 import edu.byu.cs.tweeter.net.response.UserResponse;
 import edu.byu.cs.tweeter.presenter.FeedPresenter;
 import edu.byu.cs.tweeter.presenter.FollowerPresenter;
@@ -22,18 +12,14 @@ import edu.byu.cs.tweeter.presenter.FollowingPresenter;
 import edu.byu.cs.tweeter.presenter.MainPresenter;
 import edu.byu.cs.tweeter.presenter.Presenter;
 import edu.byu.cs.tweeter.presenter.StoryPresenter;
-import edu.byu.cs.tweeter.view.cache.ImageCache;
-import edu.byu.cs.tweeter.view.main.MainActivity;
-import edu.byu.cs.tweeter.view.main.UserViewActivity;
-import edu.byu.cs.tweeter.view.util.ImageUtils;
 
 
 public class GetUserTask extends AsyncTask<UserRequest, Void, UserResponse> {
 
-//    private final GetUserTask.GetFeedObserver observer;
+    private final GetUserTask.GetUserObserver observer;
 
-    public interface GetFeedObserver {
-        void tweetsRetrieved(FeedResponse feedResponse);
+    public interface GetUserObserver {
+        void userRetrieved(UserResponse userResponse);
     }
 
     private final StoryPresenter storyPresenter;
@@ -44,14 +30,12 @@ public class GetUserTask extends AsyncTask<UserRequest, Void, UserResponse> {
 
 
     private final FragmentActivity activity;
-    private final User user;
-    private final String userHandle;
 
-    public GetUserTask(FeedPresenter presenter, FragmentActivity activity, User user, String userHandle) {
+    public GetUserTask(FeedPresenter presenter, FragmentActivity activity, GetUserTask.GetUserObserver observer) {
         this.feedPresenter = presenter;
         this.activity = activity;
-        this.user = user;
-        this.userHandle = userHandle;
+
+        this.observer = observer;
 
         storyPresenter = null;
         followerPresenter = null;
@@ -59,11 +43,11 @@ public class GetUserTask extends AsyncTask<UserRequest, Void, UserResponse> {
         mainPresenter = null;
     }
 
-    public GetUserTask(StoryPresenter presenter, FragmentActivity activity, User user, String userHandle) {
+    public GetUserTask(StoryPresenter presenter, FragmentActivity activity, GetUserTask.GetUserObserver observer) {
         this.storyPresenter = presenter;
         this.activity = activity;
-        this.user = user;
-        this.userHandle = userHandle;
+
+        this.observer = observer;
 
         feedPresenter = null;
         followerPresenter = null;
@@ -71,11 +55,11 @@ public class GetUserTask extends AsyncTask<UserRequest, Void, UserResponse> {
         mainPresenter = null;
     }
 
-    public GetUserTask(FollowerPresenter presenter, FragmentActivity activity, User user, String userHandle) {
+    public GetUserTask(FollowerPresenter presenter, FragmentActivity activity, GetUserTask.GetUserObserver observer) {
         this.followerPresenter = presenter;
         this.activity = activity;
-        this.user = user;
-        this.userHandle = userHandle;
+
+        this.observer = observer;
 
         feedPresenter = null;
         storyPresenter = null;
@@ -83,11 +67,11 @@ public class GetUserTask extends AsyncTask<UserRequest, Void, UserResponse> {
         mainPresenter = null;
     }
 
-    public GetUserTask(FollowingPresenter presenter, FragmentActivity activity, User user, String userHandle) {
+    public GetUserTask(FollowingPresenter presenter, FragmentActivity activity, GetUserTask.GetUserObserver observer) {
         this.followingPresenter = presenter;
         this.activity = activity;
-        this.user = user;
-        this.userHandle = userHandle;
+
+        this.observer = observer;
 
         feedPresenter = null;
         storyPresenter = null;
@@ -95,11 +79,11 @@ public class GetUserTask extends AsyncTask<UserRequest, Void, UserResponse> {
         mainPresenter = null;
     }
 
-    public GetUserTask(MainPresenter presenter, FragmentActivity activity, User user, String userHandle) {
+    public GetUserTask(MainPresenter presenter, FragmentActivity activity, GetUserTask.GetUserObserver observer) {
         this.mainPresenter = presenter;
         this.activity = activity;
-        this.user = user;
-        this.userHandle = userHandle;
+
+        this.observer = observer;
 
         feedPresenter = null;
         storyPresenter = null;
@@ -140,12 +124,14 @@ public class GetUserTask extends AsyncTask<UserRequest, Void, UserResponse> {
     @Override
     protected void onPostExecute(UserResponse userResponse) {
 
-        if (userResponse != null) {
-            getActivePresenter().setShownUser(userResponse.getUser());
-            User u = getActivePresenter().getUserShown();
-            Intent intent = new Intent(activity, UserViewActivity.class);
-            activity.startActivity(intent);
-        }
+        observer.userRetrieved(userResponse);
+
+//        if (userResponse != null) {
+//            getActivePresenter().setShownUser(new UserRequest(userResponse.getUser()));
+//            User u = getActivePresenter().getUserShown();
+//            Intent intent = new Intent(activity, UserViewActivity.class);
+//            activity.startActivity(intent);
+//        }
 
 //        if(observer != null) {
 //            observer.followersRetrieved(followerResponse);

@@ -34,6 +34,15 @@ public class User implements Comparable<User> {
         this.tweets = tweets;
     }
 
+    public User(String alias) {
+        this.alias = alias;
+
+        firstName = null;
+        lastName = null;
+        imageUrl = null;
+        tweets = null;
+    }
+
     public String getFirstName() {
         return firstName;
     }

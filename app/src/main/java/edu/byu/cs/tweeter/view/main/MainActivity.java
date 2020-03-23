@@ -20,22 +20,36 @@ import android.widget.TextView;
 import edu.byu.cs.tweeter.R;
 import edu.byu.cs.tweeter.model.domain.Tweet;
 import edu.byu.cs.tweeter.model.domain.User;
+import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
 import edu.byu.cs.tweeter.net.request.TweetRequest;
 import edu.byu.cs.tweeter.net.request.UserRequest;
+import edu.byu.cs.tweeter.net.response.FeedResponse;
 import edu.byu.cs.tweeter.net.response.TweetResponse;
+import edu.byu.cs.tweeter.net.response.UserResponse;
 import edu.byu.cs.tweeter.presenter.MainPresenter;
+import edu.byu.cs.tweeter.view.asyncTasks.GetCurrentUserTask;
 import edu.byu.cs.tweeter.view.asyncTasks.GetSendTweetTask;
+import edu.byu.cs.tweeter.view.asyncTasks.GetUserShownTask;
 import edu.byu.cs.tweeter.view.asyncTasks.GetUserTask;
 import edu.byu.cs.tweeter.view.asyncTasks.LoadImageTask;
+import edu.byu.cs.tweeter.view.asyncTasks.SetUserShownTask;
 import edu.byu.cs.tweeter.view.cache.ImageCache;
 import edu.byu.cs.tweeter.view.main.feed.FeedFragment;
 import edu.byu.cs.tweeter.view.main.story.StoryFragment;
 
-public class MainActivity extends AppCompatActivity implements GetSendTweetTask.GetTweetObserver, LoadImageTask.LoadImageObserver, MainPresenter.View {
+public class MainActivity extends AppCompatActivity implements
+        SetUserShownTask.SetUserShownObserver,
+        GetSendTweetTask.GetTweetObserver,
+        LoadImageTask.LoadImageObserver,
+        GetCurrentUserTask.GetCurrentUserObserver,
+        GetUserTask.GetUserObserver,
+        GetUserShownTask.GetUserShownObserver,
+        MainPresenter.View
+{
 
     private MainPresenter presenter;
 //    private StoryPresenter storyPresenter;
-    private User user;
+    private User currentUser;
     private ImageView userImageView;
     private boolean following = true; // TODO: this should come from the user itself
     private StoryFragment storyFragment;
@@ -107,17 +121,15 @@ public class MainActivity extends AppCompatActivity implements GetSendTweetTask.
 
         userImageView = findViewById(R.id.userImage);
 
-        presenter = new MainPresenter(this);
-        user = presenter.getCurrentUser();
-        presenter.setShownUser(user);
+        getCurrentUser(); // sets user when task returns
 
         sendTweetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(view.getContext(),"TODO: implement send tweet", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(view.getContext(),
                 EditText text = (EditText)findViewById(R.id.tweetMessage);
                 String message = text.getText().toString();
-                Tweet tweet = new Tweet(presenter.getCurrentUser(), message, "make URL");
+                Tweet tweet = new Tweet(currentUser.getAlias(), message, "make URL");
 
                 TweetRequest request = new TweetRequest(tweet);
                 GetSendTweetTask getSendTweetTask = new GetSendTweetTask(presenter, MainActivity.this);
@@ -129,22 +141,45 @@ public class MainActivity extends AppCompatActivity implements GetSendTweetTask.
         searchUserIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                GetUserTask getUserTask = new GetUserTask(presenter, MainActivity.this, presenter.getUserShown(), searchBox.getText().toString());
-                UserRequest request = new UserRequest(presenter.getUserShown(), searchBox.getText().toString());
-                getUserTask.execute(request);
+                switchToThisUserView(searchBox.getText().toString());
             }
         });
 
+    }
+
+    private void switchToThisUserView(String searchBoxText) {
+//        getUserShown();
+        // continued in userShownGot()
+        GetUserTask getUserTask = new GetUserTask(presenter,MainActivity.this, this);
+        getUserTask.execute(new UserRequest(new User(searchBoxText)));
+    }
+
+//    private void getUserShown() {
+//        GetUserShownTask getUserShownTask = new GetUserShownTask(presenter, MainActivity.this, this);
+//        getUserShownTask.execute(new CurrentUserRequest());
+//    }
+
+    private void getCurrentUser() {
+        // get the current user
+        presenter = new MainPresenter(this);
+        GetCurrentUserTask currentUserTask = new GetCurrentUserTask(presenter,MainActivity.this,this);
+        currentUserTask.execute(new CurrentUserRequest());
+        // continues at currentUserGot
+    }
+
+    @Override
+    public void currentUserGot(UserResponse userResponse) {
+        currentUser = userResponse.getUser();
 
         // Asynchronously load the user's image
         LoadImageTask loadImageTask = new LoadImageTask(this);
-        loadImageTask.execute(presenter.getCurrentUser().getImageUrl());
+        loadImageTask.execute(currentUser.getImageUrl());
 
         TextView userName = findViewById(R.id.userName);
-        userName.setText(user.getName());
+        userName.setText(currentUser.getName());
 
         TextView userAlias = findViewById(R.id.userAlias);
-        userAlias.setText(user.getAlias());
+        userAlias.setText(currentUser.getAlias());
     }
 
 
@@ -160,6 +195,12 @@ public class MainActivity extends AppCompatActivity implements GetSendTweetTask.
         return following;
     }
 
+    private void setUserShown(User userToShow) {
+        SetUserShownTask setUserShownTask = new SetUserShownTask(presenter,MainActivity.this, this);
+        setUserShownTask.execute(new UserRequest(userToShow));
+        // continued in userShownSet
+    }
+
     @Override
     public void imageLoadProgressUpdated(Integer progress) {
         // We're just loading one image. No need to indicate progress.
@@ -167,7 +208,7 @@ public class MainActivity extends AppCompatActivity implements GetSendTweetTask.
 
     @Override
     public void imagesLoaded(Drawable[] drawables) {
-        ImageCache.getInstance().cacheImage(user, drawables[0]);
+        ImageCache.getInstance().cacheImage(currentUser, drawables[0]);
 
         if(drawables[0] != null) {
             userImageView.setImageDrawable(drawables[0]);
@@ -179,6 +220,26 @@ public class MainActivity extends AppCompatActivity implements GetSendTweetTask.
         if (tweetResponse.isSent()) {
             storyFragment.listChanged();
         }
+    }
+
+    @Override
+    public void userRetrieved(UserResponse userResponse) {
+        if (userResponse != null) {
+            setUserShown(userResponse.getUser());
+        }
+    }
+
+    @Override
+    public void userShownGot(User user) {
+//        GetUserTask getUserTask = new GetUserTask(presenter, MainActivity.this, presenter.getUserShown(), searchBox.getText().toString());
+//        UserRequest request = new UserRequest(presenter.getUserShown(), searchBoxText);
+//        getUserTask.execute(request);
+    }
+
+    @Override
+    public void userShownSet(User user) {
+        Intent intent = new Intent(this, UserViewActivity.class);
+        this.startActivity(intent);
     }
 
 //    class MyCustomSpannable extends ClickableSpan

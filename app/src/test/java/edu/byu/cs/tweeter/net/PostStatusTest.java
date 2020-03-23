@@ -18,57 +18,57 @@ import edu.byu.cs.tweeter.presenter.StoryPresenter;
 
 class PostStatusTest {
 
-    @BeforeEach
-    void setup() {
-        ServerFacade facade = new ServerFacade();
-        facade.clearAll();
-    }
-
-    @Test
-    void testPostStatusValid() {
-
-        User user = new User("Test", "User", null);
-
-        SignUpRequest signUpRequest = new SignUpRequest(user.getFirstName(),user.getLastName(),user.getAlias(),"pass",null);
-        LoginPresenter loginPresenter = new LoginPresenter();
-        LoginResponse loginResponse = loginPresenter.signUp(signUpRequest);
-
-        TweetRequest tweetRequest = new TweetRequest(new Tweet(user,"fake tweet",null));
-        MainPresenter mainPresenter = new MainPresenter();
-        TweetResponse tweetResponse = mainPresenter.addTweet(tweetRequest);
-
-        Assertions.assertEquals(tweetResponse.isSent(), true);
-
-        StoryRequest storyRequest = new StoryRequest(user, 10, null);
-        StoryPresenter storyPresenter = new StoryPresenter();
-        StoryResponse storyResponse = storyPresenter.getTweets(storyRequest);
-
-        Assertions.assertEquals(storyResponse.getTweets().size(), 1);
-
-    }
-
-    @Test
-    void testPostStatusUserNotSignedIn() {
-
-        User user = new User("Test", "User", null);
-        User bad = new User("Bad", "Test", null);
-
-        SignUpRequest signUpRequest = new SignUpRequest(user.getFirstName(),user.getLastName(),user.getAlias(),"pass",null);
-        LoginPresenter loginPresenter = new LoginPresenter();
-        LoginResponse loginResponse = loginPresenter.signUp(signUpRequest);
-
-        TweetRequest tweetRequest = new TweetRequest(new Tweet(bad,"fake tweet",null));
-        MainPresenter mainPresenter = new MainPresenter();
-        TweetResponse tweetResponse = mainPresenter.addTweet(tweetRequest);
-
-        Assertions.assertEquals(tweetResponse.isSent(), false);
-
-        StoryRequest storyRequest = new StoryRequest(bad, 10, null);
-        StoryPresenter storyPresenter = new StoryPresenter();
-        StoryResponse storyResponse = storyPresenter.getTweets(storyRequest);
-
-        Assertions.assertEquals(storyResponse.getMessage(), "Error");
-
-    }
+//    @BeforeEach
+//    void setup() {
+//        ServerFacade facade = new ServerFacade();
+//        facade.clearAll();
+//    }
+//
+//    @Test
+//    void testPostStatusValid() {
+//
+//        User user = new User("Test", "User", null);
+//
+//        SignUpRequest signUpRequest = new SignUpRequest(user.getFirstName(),user.getLastName(),user.getAlias(),"pass",null);
+//        LoginPresenter loginPresenter = new LoginPresenter();
+//        LoginResponse loginResponse = loginPresenter.signUp(signUpRequest);
+//
+//        TweetRequest tweetRequest = new TweetRequest(new Tweet(user,"fake tweet",null));
+//        MainPresenter mainPresenter = new MainPresenter();
+//        TweetResponse tweetResponse = mainPresenter.addTweet(tweetRequest);
+//
+//        Assertions.assertEquals(tweetResponse.isSent(), true);
+//
+//        StoryRequest storyRequest = new StoryRequest(user, 10, null);
+//        StoryPresenter storyPresenter = new StoryPresenter();
+//        StoryResponse storyResponse = storyPresenter.getTweets(storyRequest);
+//
+//        Assertions.assertEquals(storyResponse.getTweets().size(), 1);
+//
+//    }
+//
+//    @Test
+//    void testPostStatusUserNotSignedIn() {
+//
+//        User user = new User("Test", "User", null);
+//        User bad = new User("Bad", "Test", null);
+//
+//        SignUpRequest signUpRequest = new SignUpRequest(user.getFirstName(),user.getLastName(),user.getAlias(),"pass",null);
+//        LoginPresenter loginPresenter = new LoginPresenter();
+//        LoginResponse loginResponse = loginPresenter.signUp(signUpRequest);
+//
+//        TweetRequest tweetRequest = new TweetRequest(new Tweet(bad,"fake tweet",null));
+//        MainPresenter mainPresenter = new MainPresenter();
+//        TweetResponse tweetResponse = mainPresenter.addTweet(tweetRequest);
+//
+//        Assertions.assertEquals(tweetResponse.isSent(), false);
+//
+//        StoryRequest storyRequest = new StoryRequest(bad, 10, null);
+//        StoryPresenter storyPresenter = new StoryPresenter();
+//        StoryResponse storyResponse = storyPresenter.getTweets(storyRequest);
+//
+//        Assertions.assertEquals(storyResponse.getMessage(), "Error");
+//
+//    }
 
 }

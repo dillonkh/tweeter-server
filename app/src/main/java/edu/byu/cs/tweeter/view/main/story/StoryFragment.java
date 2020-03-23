@@ -1,11 +1,13 @@
 package edu.byu.cs.tweeter.view.main.story;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,15 +31,25 @@ import java.util.List;
 import edu.byu.cs.tweeter.R;
 import edu.byu.cs.tweeter.model.domain.Tweet;
 import edu.byu.cs.tweeter.model.domain.User;
+import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
+import edu.byu.cs.tweeter.net.request.FollowingRequest;
 import edu.byu.cs.tweeter.net.request.StoryRequest;
 import edu.byu.cs.tweeter.net.request.UserRequest;
 import edu.byu.cs.tweeter.net.response.StoryResponse;
+import edu.byu.cs.tweeter.net.response.UserResponse;
 import edu.byu.cs.tweeter.presenter.StoryPresenter;
+import edu.byu.cs.tweeter.view.asyncTasks.GetFollowingTask;
 import edu.byu.cs.tweeter.view.asyncTasks.GetStoryTask;
+import edu.byu.cs.tweeter.view.asyncTasks.GetUserShownTask;
 import edu.byu.cs.tweeter.view.asyncTasks.GetUserTask;
+import edu.byu.cs.tweeter.view.asyncTasks.SetUserShownTask;
 import edu.byu.cs.tweeter.view.cache.ImageCache;
+import edu.byu.cs.tweeter.view.main.UserViewActivity;
 
-public class StoryFragment extends Fragment implements StoryPresenter.View {
+public class StoryFragment extends Fragment implements
+        StoryPresenter.View,
+        SetUserShownTask.SetUserShownObserver
+{
 
     private static RecyclerView storyRecyclerView;
 
@@ -48,6 +60,8 @@ public class StoryFragment extends Fragment implements StoryPresenter.View {
 
     private StoryPresenter presenter;
 
+    private SetUserShownTask.SetUserShownObserver setUserShownObserver;
+
     private StoryRecyclerViewAdapter storyRecyclerViewAdapter;
 
     @Override
@@ -56,6 +70,8 @@ public class StoryFragment extends Fragment implements StoryPresenter.View {
         View view = inflater.inflate(R.layout.fragment_story, container, false);
 
         presenter = new StoryPresenter(this);
+
+        setUserShownObserver = this;
 
         storyRecyclerView = view.findViewById(R.id.storyRecyclerView);
 
@@ -81,8 +97,16 @@ public class StoryFragment extends Fragment implements StoryPresenter.View {
         storyRecyclerView.smoothScrollToPosition(0);
     }
 
+    @Override
+    public void userShownSet(User user) {
+        if (user != null) {
+            Intent intent = new Intent(getActivity(), UserViewActivity.class);
+            startActivity(intent);
+        }
+    }
 
-    private class StoryHolder extends RecyclerView.ViewHolder {
+
+    private class StoryHolder extends RecyclerView.ViewHolder implements GetUserTask.GetUserObserver {
 
         private final ImageView userImage;
         private final TextView userAlias;
@@ -101,22 +125,23 @@ public class StoryFragment extends Fragment implements StoryPresenter.View {
             userTweet = itemView.findViewById(R.id.tweetUserTweet);
             timeStamp = itemView.findViewById(R.id.timeStamp);
 
-//            itemView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), userAlias.toString());
-//                    UserRequest request = new UserRequest(presenter.getUserShown(), userAlias.getText().toString());
-//                    getUserTask.execute(request);
-//                }
-//            });
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    switchToThisUserView(getActivity(), userAlias.getText().toString());
+                }
+            });
 
         }
 
+        private void switchToThisUserView(FragmentActivity activity, String userAlias) {
+            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter, activity, setUserShownObserver);
+            setUserShownTask.execute(new UserRequest(new User(userAlias)));
+            // continued in userShownSet
+        }
+
         void bindTweet(Tweet tweet) {
-            userImage.setImageDrawable(ImageCache.getInstance().getImageDrawable(tweet.getUser()));
-            userAlias.setText(tweet.getUser().getAlias());
-            userFirstName.setText(tweet.getUser().getFirstName());
-            userLastName.setText(tweet.getUser().getLastName());
+            getUserToBindTweets(tweet);
 
             SpannableString ss = parseMessage(tweet.getMessage());
             if (ss != null) {
@@ -132,11 +157,24 @@ public class StoryFragment extends Fragment implements StoryPresenter.View {
             userAlias.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), userAlias.toString());
-                    UserRequest request = new UserRequest(presenter.getUserShown(), userAlias.getText().toString());
-                    getUserTask.execute(request);
+                    switchToThisUserView(getActivity(), userAlias.getText().toString());
                 }
             });
+        }
+        private void getUserToBindTweets(Tweet tweet) {
+            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), this);
+            getUserTask.execute(new UserRequest(new User(tweet.getUser())));
+            // continued in userRetrieved
+        }
+
+        @Override
+        public void userRetrieved(UserResponse userResponse) {
+            if (userResponse.getUser() != null) {
+                userImage.setImageDrawable(ImageCache.getInstance().getImageDrawable(userResponse.getUser()));
+                userAlias.setText(userResponse.getUser().getAlias());
+                userFirstName.setText(userResponse.getUser().getFirstName());
+                userLastName.setText(userResponse.getUser().getLastName());
+            }
         }
     }
 
@@ -194,11 +232,12 @@ public class StoryFragment extends Fragment implements StoryPresenter.View {
 
         @Override
         public void onClick(View textView) {
-//                startActivity(new Intent(MyActivity.this, NextActivity.class));
-                Toast.makeText(textView.getContext(),message,Toast.LENGTH_SHORT).show();
-            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), message);
-            UserRequest request = new UserRequest(presenter.getUserShown(), message);
-            getUserTask.execute(request);
+//            startActivity(new Intent(MyActivity.this, NextActivity.class));
+//
+//            Toast.makeText(textView.getContext(),message,Toast.LENGTH_SHORT).show();
+//            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), message);
+//            UserRequest request = new UserRequest(presenter.getUserShown(), message);
+//            getUserTask.execute(request);
         }
         @Override
         public void updateDrawState(TextPaint ds) {
@@ -207,7 +246,10 @@ public class StoryFragment extends Fragment implements StoryPresenter.View {
         }
     }
 
-    private class StoryRecyclerViewAdapter extends RecyclerView.Adapter<StoryHolder> implements GetStoryTask.GetStoryObserver {
+    private class StoryRecyclerViewAdapter extends RecyclerView.Adapter<StoryHolder> implements
+            GetStoryTask.GetStoryObserver,
+            GetUserShownTask.GetUserShownObserver
+    {
 
         private final List<Tweet> tweets = new ArrayList<>();
 
@@ -277,27 +319,30 @@ public class StoryFragment extends Fragment implements StoryPresenter.View {
             isLoading = true;
             addLoadingFooter();
 
-            GetStoryTask getStoryTask = new GetStoryTask(presenter, this);
-            StoryRequest request = new StoryRequest(presenter.getUserShown(), PAGE_SIZE, lastTweet);
-            getStoryTask.execute(request);
+            GetUserShownTask userShownTask = new GetUserShownTask(presenter, getActivity(), this);
+            userShownTask.execute(new CurrentUserRequest());
+            // continues on userShownGot
+
         }
 
         void notifyThereAreMoreItems() {
-            GetStoryTask getStoryTask = new GetStoryTask(presenter, this);
-            StoryRequest request = new StoryRequest(presenter.getUserShown(), PAGE_SIZE, lastTweet);
-            getStoryTask.execute(request);
+//            GetStoryTask getStoryTask = new GetStoryTask(presenter, this);
+//            StoryRequest request = new StoryRequest(presenter.getUserShown(), PAGE_SIZE, lastTweet);
+//            getStoryTask.execute(request);
         }
 
         @Override
         public void tweetsRetrieved(StoryResponse storyResponse) {
             List<Tweet> tweets = storyResponse.getTweets();
 
-            lastTweet = (tweets.size() > 0) ? tweets.get(tweets.size() -1) : null;
-            hasMorePages = storyResponse.hasMorePages();
+            if (tweets != null) {
+                lastTweet = (tweets.size() > 0) ? tweets.get(tweets.size() -1) : null;
+                hasMorePages = storyResponse.hasMorePages();
+                storyRecyclerViewAdapter.addItems(tweets);
+            }
 
             isLoading = false;
             removeLoadingFooter();
-            storyRecyclerViewAdapter.addItems(tweets);
 
 //            notifyThereAreMoreItems();
         }
@@ -305,7 +350,7 @@ public class StoryFragment extends Fragment implements StoryPresenter.View {
         private void addLoadingFooter() {
             addItem(
                     new Tweet(
-                            new User("fakeFirst", "fakeLast", null),
+                            "@fake",
                             "This is placeholder text for tweet",
                             null
                     )
@@ -315,6 +360,16 @@ public class StoryFragment extends Fragment implements StoryPresenter.View {
         private void removeLoadingFooter() {
             if (tweets.size() > 0) {
                 removeItem(tweets.get(tweets.size() - 1));
+            }
+        }
+
+        @Override
+        public void userShownGot(User user) {
+            if (user != null) {
+                GetStoryTask getStoryTask = new GetStoryTask(presenter, this);
+                StoryRequest request = new StoryRequest(user, PAGE_SIZE, lastTweet);
+                getStoryTask.execute(request);
+                // continued at tweetsRetrieved
             }
         }
     }

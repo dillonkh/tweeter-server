@@ -7,6 +7,7 @@ import edu.byu.cs.tweeter.server.dao.request.FollowRequest;
 import edu.byu.cs.tweeter.server.dao.request.TweetRequest;
 import edu.byu.cs.tweeter.server.dao.response.FollowResponse;
 import edu.byu.cs.tweeter.server.dao.response.TweetResponse;
+import edu.byu.cs.tweeter.server.model.domain.Tweet;
 import edu.byu.cs.tweeter.server.model.service.FollowService;
 import edu.byu.cs.tweeter.server.model.service.StoryService;
 
@@ -28,7 +29,9 @@ public class AddTweetHandler implements RequestHandler<TweetRequest, TweetRespon
     @Override
     public TweetResponse handleRequest(TweetRequest request, Context context) {
         StoryService service = StoryService.getInstance();
-        return service.addTweet(request);
+        TweetResponse response = service.addTweet(request);
+
+        return response;
     }
 
 

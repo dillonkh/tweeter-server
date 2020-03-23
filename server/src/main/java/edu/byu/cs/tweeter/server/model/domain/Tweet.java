@@ -16,14 +16,14 @@ public class Tweet implements Comparable<Tweet> {
     public String message;
     public String url;
     public String timeStamp;
-    public LocalDateTime now;
+//    public LocalDateTime now;
 
     public Tweet(String user, String message, String url) {
         this.user = user;
         this.message = message;
         this.url = url;
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-        this.now = LocalDateTime.now();
+        LocalDateTime now = LocalDateTime.now();
         this.timeStamp = dtf.format(now);
 
     }
@@ -57,9 +57,9 @@ public class Tweet implements Comparable<Tweet> {
         return timeStamp;
     }
 
-    public LocalDateTime getNow() {
-        return now;
-    }
+//    public LocalDateTime getNow() {
+//        return now;
+//    }
 
     @Override
     public boolean equals(Object o) {
@@ -85,6 +85,6 @@ public class Tweet implements Comparable<Tweet> {
 
     @Override
     public int compareTo(Tweet tweet) {
-        return this.now.compareTo(tweet.getNow());
+        return this.timeStamp.compareTo(tweet.getTimeStamp());
     }
 }

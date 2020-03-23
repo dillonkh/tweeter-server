@@ -31,7 +31,7 @@ public class StoryService {
         return r;
     }
 
-    public TweetResponse addTweet(TweetRequest request) {
+    public TweetResponse addTweet(TweetRequest request) throws RuntimeException {
         return serverFacade.addTweet(request);
     }
 

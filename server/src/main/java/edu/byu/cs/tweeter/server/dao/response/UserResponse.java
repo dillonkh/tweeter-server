@@ -12,8 +12,7 @@ public class UserResponse {
         this.user = user;
     }
 
-    public UserResponse() {
-    }
+    public UserResponse() {}
 
     public User getUser() {
         return user;

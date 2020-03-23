@@ -1,9 +1,12 @@
 package edu.byu.cs.tweeter.view.main.follower;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,15 +24,28 @@ import java.util.List;
 
 import edu.byu.cs.tweeter.R;
 import edu.byu.cs.tweeter.model.domain.User;
+import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
 import edu.byu.cs.tweeter.net.request.FollowerRequest;
 import edu.byu.cs.tweeter.net.request.UserRequest;
 import edu.byu.cs.tweeter.net.response.FollowerResponse;
+import edu.byu.cs.tweeter.net.response.UserResponse;
 import edu.byu.cs.tweeter.presenter.FollowerPresenter;
+import edu.byu.cs.tweeter.view.asyncTasks.GetCurrentUserTask;
+import edu.byu.cs.tweeter.view.asyncTasks.GetFollowTask;
 import edu.byu.cs.tweeter.view.asyncTasks.GetFollowerTask;
+import edu.byu.cs.tweeter.view.asyncTasks.GetUserShownTask;
 import edu.byu.cs.tweeter.view.asyncTasks.GetUserTask;
+import edu.byu.cs.tweeter.view.asyncTasks.SetUserShownTask;
 import edu.byu.cs.tweeter.view.cache.ImageCache;
+import edu.byu.cs.tweeter.view.main.UserViewActivity;
 
-public class FollowerFragment extends Fragment implements FollowerPresenter.View {
+public class FollowerFragment extends Fragment implements
+        FollowerPresenter.View,
+        GetUserTask.GetUserObserver,
+        GetCurrentUserTask.GetCurrentUserObserver,
+        SetUserShownTask.SetUserShownObserver,
+        GetUserShownTask.GetUserShownObserver
+{
 
     private static final int LOADING_DATA_VIEW = 0;
     private static final int ITEM_VIEW = 1;
@@ -40,12 +56,21 @@ public class FollowerFragment extends Fragment implements FollowerPresenter.View
 
     private FollowerRecyclerViewAdapter followerRecyclerViewAdapter;
 
+    private GetUserTask.GetUserObserver getUserObserver;
+    private SetUserShownTask.SetUserShownObserver setUserShownObserver;
+    private GetUserShownTask.GetUserShownObserver getUserShownObserver;
+    private GetFollowerTask.GetFollowersObserver getFollowersObserver;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_follower, container, false);
 
         presenter = new FollowerPresenter(this);
+
+        getUserObserver = this;
+        setUserShownObserver = this;
+        getUserObserver = this;
 
         RecyclerView followerRecyclerView = view.findViewById(R.id.followerRecyclerView);
 
@@ -59,6 +84,37 @@ public class FollowerFragment extends Fragment implements FollowerPresenter.View
 
         return view;
     }
+
+    @Override
+    public void userRetrieved(UserResponse userResponse) {
+//        GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), userAlias.toString());
+//        UserRequest request = new UserRequest(presenter.getUserShown(), userAlias.getText().toString());
+//        getUserTask.execute(request);
+    }
+
+    @Override
+    public void currentUserGot(UserResponse userResponse) {
+//        GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), userAlias.toString());
+//        UserRequest request = new UserRequest(presenter.getUserShown(), userAlias.getText().toString());
+//        getUserTask.execute(request);
+    }
+
+    @Override
+    public void userShownSet(User user) {
+        if (user != null) {
+            Intent intent = new Intent(getActivity(), UserViewActivity.class);
+            startActivity(intent);
+        }
+
+    }
+
+    @Override
+    public void userShownGot(User user) {
+//        GetFollowerTask getFollowerTask = new GetFollowerTask(presenter, getFollowersObserver);
+//        FollowerRequest request = new FollowerRequest(user, PAGE_SIZE,);
+//        getFollowerTask.execute(request);
+    }
+
 
 
     private class FollowerHolder extends RecyclerView.ViewHolder {
@@ -74,15 +130,15 @@ public class FollowerFragment extends Fragment implements FollowerPresenter.View
             userAlias = itemView.findViewById(R.id.userAlias);
             userName = itemView.findViewById(R.id.userName);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(getContext(), "You selected '" + userName.getText() + "'.", Toast.LENGTH_SHORT).show();
-                }
-            });
+//            itemView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Toast.makeText(getContext(), "You selected '" + userName.getText() + "'.", Toast.LENGTH_SHORT).show();
+//                }
+//            });
         }
 
-        void bindUser(User user) {
+        void bindUser(final User user) {
             userImage.setImageDrawable(ImageCache.getInstance().getImageDrawable(user));
             userAlias.setText(user.getAlias());
             userName.setText(user.getName());
@@ -90,19 +146,29 @@ public class FollowerFragment extends Fragment implements FollowerPresenter.View
             userAlias.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), userAlias.toString());
-                    UserRequest request = new UserRequest(presenter.getUserShown(), userAlias.getText().toString());
-                    getUserTask.execute(request);
+                    switchToThisUserView(getActivity(), user);
                 }
             });
         }
+
+        private void switchToThisUserView(FragmentActivity activity, User user) {
+            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter,activity,setUserShownObserver);
+            setUserShownTask.execute(new UserRequest(user));
+            // continued in userShownSet
+
+        }
+
+
     }
 
-    private class FollowerRecyclerViewAdapter extends RecyclerView.Adapter<FollowerHolder> implements GetFollowerTask.GetFollowersObserver {
+    public class FollowerRecyclerViewAdapter extends RecyclerView.Adapter<FollowerHolder>
+            implements GetFollowerTask.GetFollowersObserver,
+            GetUserShownTask.GetUserShownObserver
+    {
 
         private final List<User> users = new ArrayList<>();
 
-        private edu.byu.cs.tweeter.model.domain.User lastFollowee;
+        public edu.byu.cs.tweeter.model.domain.User lastFollowee;
 
         private boolean hasMorePages;
         private boolean isLoading = false;
@@ -166,9 +232,10 @@ public class FollowerFragment extends Fragment implements FollowerPresenter.View
             isLoading = true;
             addLoadingFooter();
 
-            GetFollowerTask getFollowerTask = new GetFollowerTask(presenter, this);
-            FollowerRequest request = new FollowerRequest(presenter.getUserShown(), PAGE_SIZE, lastFollowee);
-            getFollowerTask.execute(request);
+            GetUserShownTask userShownTask = new GetUserShownTask(presenter, getActivity(), this);
+            userShownTask.execute(new CurrentUserRequest());
+            // continues on userShownGot
+
         }
 
         @Override
@@ -189,6 +256,16 @@ public class FollowerFragment extends Fragment implements FollowerPresenter.View
 
         private void removeLoadingFooter() {
             removeItem(users.get(users.size() - 1));
+        }
+
+        @Override
+        public void userShownGot(User user) {
+            if (user != null) {
+                GetFollowerTask getFollowerTask = new GetFollowerTask(presenter, this);
+                FollowerRequest request = new FollowerRequest(user, PAGE_SIZE, lastFollowee);
+                getFollowerTask.execute(request);
+            }
+
         }
     }
 

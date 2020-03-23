@@ -22,50 +22,50 @@ import edu.byu.cs.tweeter.server.model.domain.User;
  */
 public class TweetGenerator {
 
-    private static final String MALE_NAMES_URL = "https://faculty.cs.byu.edu/~jwilkerson/cs340/tweeter/json/mnames.json";
-    private static final String FEMALE_NAMES_URL = "https://faculty.cs.byu.edu/~jwilkerson/cs340/tweeter/json/fnames.json";
-    private static final String SURNAMES_URL = "https://faculty.cs.byu.edu/~jwilkerson/cs340/tweeter/json/snames.json";
-
-    private static final String [] maleNames;
-    private static final String [] femaleNames;
-    private static final String [] surnames;
+//    private static final String MALE_NAMES_URL = "https://faculty.cs.byu.edu/~jwilkerson/cs340/tweeter/json/mnames.json";
+//    private static final String FEMALE_NAMES_URL = "https://faculty.cs.byu.edu/~jwilkerson/cs340/tweeter/json/fnames.json";
+//    private static final String SURNAMES_URL = "https://faculty.cs.byu.edu/~jwilkerson/cs340/tweeter/json/snames.json";
+//
+//    private static final String [] maleNames;
+//    private static final String [] femaleNames;
+//    private static final String [] surnames;
 
     static final String MALE_IMAGE_URL = "https://faculty.cs.byu.edu/~jwilkerson/cs340/tweeter/images/donald_duck.png";
     private static final String FEMALE_IMAGE_URL = "https://faculty.cs.byu.edu/~jwilkerson/cs340/tweeter/images/daisy_duck.png";
 
-    private static TweetGenerator instance;
+//    private static TweetGenerator instance;
 
     /**
      * A private constructor that ensures no instances of this class can be created.
      */
-    private TweetGenerator() {}
+    public TweetGenerator() {}
 
     /**
      * Returns the singleton instance of the class
      *
      * @return the instance.
      */
-    public static TweetGenerator getInstance() {
-        if(instance == null) {
-            instance = new TweetGenerator();
-        }
-
-        return instance;
-    }
+//    public static TweetGenerator getInstance() {
+//        if(instance == null) {
+//            instance = new TweetGenerator();
+//        }
+//
+//        return instance;
+//    }
 
     /*
      * Loads a lists of female first names, male first names, and surnames from the json files when
      * this class is loaded into memory.
-     */
-    static {
-        try {
-            maleNames = loadNamesFromJSon(MALE_NAMES_URL);
-            femaleNames = loadNamesFromJSon(FEMALE_NAMES_URL);
-            surnames = loadNamesFromJSon(SURNAMES_URL);
-        } catch (IOException e) {
-            throw new ExceptionInInitializerError(e);
-        }
-    }
+//     */
+//    static {
+//        try {
+//            maleNames = loadNamesFromJSon(MALE_NAMES_URL);
+//            femaleNames = loadNamesFromJSon(FEMALE_NAMES_URL);
+//            surnames = loadNamesFromJSon(SURNAMES_URL);
+//        } catch (IOException e) {
+//            throw new ExceptionInInitializerError(e);
+//        }
+//    }
 
     /**
      * Loads and returns the names from the specified json file.
@@ -74,40 +74,40 @@ public class TweetGenerator {
      * @return the names.
      * @throws IOException if an IO error occurs.
      */
-    private static String [] loadNamesFromJSon(String urlString) throws IOException {
-
-        Names names;
-
-        HttpURLConnection connection = null;
-
-        try {
-            URL url = new URL(urlString);
-
-            connection = (HttpURLConnection) url.openConnection();
-            connection.setRequestMethod("GET");
-            connection.connect();
-
-            if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                // Get response body input stream
-                InputStream is = connection.getInputStream();
-                InputStreamReader isr = new InputStreamReader(is);
-                BufferedReader br = new BufferedReader(isr);
-
-                names = (new Gson()).fromJson(br, Names.class);
-
-            } else {
-                throw new IOException("Unable to read from url. Response code: " + connection.getResponseCode());
-            }
-
-            connection.disconnect();
-        } finally {
-            if(connection != null) {
-                connection.disconnect();
-            }
-        }
-
-        return names == null ? null : names.getNames();
-    }
+//    private static String [] loadNamesFromJSon(String urlString) throws IOException {
+//
+//        Names names;
+//
+//        HttpURLConnection connection = null;
+//
+//        try {
+//            URL url = new URL(urlString);
+//
+//            connection = (HttpURLConnection) url.openConnection();
+//            connection.setRequestMethod("GET");
+//            connection.connect();
+//
+//            if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+//                // Get response body input stream
+//                InputStream is = connection.getInputStream();
+//                InputStreamReader isr = new InputStreamReader(is);
+//                BufferedReader br = new BufferedReader(isr);
+//
+//                names = (new Gson()).fromJson(br, Names.class);
+//
+//            } else {
+//                throw new IOException("Unable to read from url. Response code: " + connection.getResponseCode());
+//            }
+//
+//            connection.disconnect();
+//        } finally {
+//            if(connection != null) {
+//                connection.disconnect();
+//            }
+//        }
+//
+//        return names == null ? null : names.getNames();
+//    }
 
     /**
      * Generates the specified number of users with names randomly selected from the json files.
@@ -117,31 +117,11 @@ public class TweetGenerator {
      */
     public List<Tweet> generateTweets(int count, User user) {
 
-        List<Tweet> tweets = new ArrayList<>(count);
+        List<Tweet> tweets = new ArrayList<>();
 
-        Random random = new Random();
-
-        while(tweets.size() < count) {
-            // Randomly determine if the user will be male or female and generate a gender
-            // specific first name
+        for (int i = 0; i < count; i++) {
             Tweet tweet = new Tweet(user.getAlias(),"This is a tweet!", "this is a url");
             tweets.add(tweet);
-//            String firstName;
-//            String imageULR;
-//            if(random.nextInt(2) == 0) {
-//                firstName = maleNames[random.nextInt(maleNames.length)];
-//                imageULR = MALE_IMAGE_URL;
-//            } else {
-//                firstName = femaleNames[random.nextInt(femaleNames.length)];
-//                imageULR = FEMALE_IMAGE_URL;
-//            }
-//
-//            String lastName = surnames[random.nextInt(surnames.length)];
-//            User user = new User(firstName, lastName, imageULR);
-//
-//            if(!users.contains(user)) {
-//                users.add(user);
-//            }
         }
 
         return tweets;

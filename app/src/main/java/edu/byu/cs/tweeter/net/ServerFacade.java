@@ -1,5 +1,6 @@
 package edu.byu.cs.tweeter.net;
 
+import com.amazonaws.Response;
 import com.amazonaws.mobileconnectors.apigateway.ApiClientFactory;
 
 import java.io.IOException;
@@ -43,7 +44,7 @@ public class ServerFacade {
 //    private static Set<User> usersInDB;
 //    private static User userSignedIn;
 
-    private final String BASE_URL = " https://99n8wodqn9.execute-api.us-west-2.amazonaws.com/dev";
+    private final String BASE_URL = "https://99n8wodqn9.execute-api.us-west-2.amazonaws.com/dev";
 
     public UserResponse getUser(UserRequest request) {
 
@@ -88,7 +89,7 @@ public class ServerFacade {
 
         ClientCommunicator clientCommunicator = new ClientCommunicator(BASE_URL);
         try {
-            return clientCommunicator.doPost(urlPath, request, null, UserResponse.class);
+            return clientCommunicator.doGet(urlPath,null, UserResponse.class);
         } catch (IOException e) {
             e.printStackTrace();
         }

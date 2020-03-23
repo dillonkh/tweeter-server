@@ -15,56 +15,56 @@ import edu.byu.cs.tweeter.presenter.LoginPresenter;
 
 class SignUpPresenterTest {
 
-    @BeforeEach
-    void setup() {
-        ServerFacade facade = new ServerFacade();
-        facade.clearAll();
-    }
-
-    @Test
-    void testSignUpValid() {
-
-        User user = new User("Test", "User", null);
-
-        SignUpRequest signUpRequest = new SignUpRequest(user.getFirstName(),user.getLastName(),user.getAlias(),"pass",null);
-        LoginPresenter loginPresenter = new LoginPresenter();
-        LoginResponse loginResponse = loginPresenter.signUp(signUpRequest);
-
-        LoginRequest loginRequest = new LoginRequest("pass",user.getAlias());
-        loginPresenter = new LoginPresenter();
-        loginResponse = loginPresenter.login(loginRequest);
-
-        Assertions.assertEquals(loginResponse.isAuthentcated(), true);
-        Assertions.assertEquals(loginResponse.getUserSignedIn(), user);
-
-        UserRequest userRequest = new UserRequest(user,user.getAlias());
-        FeedPresenter presenter = new FeedPresenter();
-        UserResponse response = presenter.getUser(userRequest);
-
-        Assertions.assertEquals(response.getUser(), user);
-    }
-
-
-    @Test
-    void testSignUpAlreadySignedUp() {
-
-        User user = new User("Test", "User", null);
-
-        SignUpRequest signUpRequest = new SignUpRequest(user.getFirstName(),user.getLastName(),user.getAlias(),"pass",null);
-        LoginPresenter loginPresenter = new LoginPresenter();
-        LoginResponse loginResponse = loginPresenter.signUp(signUpRequest);
-
-        LoginRequest loginRequest = new LoginRequest("pass",user.getAlias());
-        loginPresenter = new LoginPresenter();
-        loginResponse = loginPresenter.login(loginRequest);
-
-        Assertions.assertEquals(loginResponse.isAuthentcated(), true);
-        Assertions.assertEquals(loginResponse.getUserSignedIn(), user);
-
-        UserRequest userRequest = new UserRequest(user,user.getAlias());
-        FeedPresenter presenter = new FeedPresenter();
-        UserResponse response = presenter.getUser(userRequest);
-
-        Assertions.assertEquals(response.getUser(), user);
-    }
+//    @BeforeEach
+//    void setup() {
+//        ServerFacade facade = new ServerFacade();
+//        facade.clearAll();
+//    }
+//
+//    @Test
+//    void testSignUpValid() {
+//
+//        User user = new User("Test", "User", null);
+//
+//        SignUpRequest signUpRequest = new SignUpRequest(user.getFirstName(),user.getLastName(),user.getAlias(),"pass",null);
+//        LoginPresenter loginPresenter = new LoginPresenter();
+//        LoginResponse loginResponse = loginPresenter.signUp(signUpRequest);
+//
+//        LoginRequest loginRequest = new LoginRequest("pass",user.getAlias());
+//        loginPresenter = new LoginPresenter();
+//        loginResponse = loginPresenter.login(loginRequest);
+//
+//        Assertions.assertEquals(loginResponse.isAuthentcated(), true);
+//        Assertions.assertEquals(loginResponse.getUserSignedIn(), user);
+//
+//        UserRequest userRequest = new UserRequest(user,user.getAlias());
+//        FeedPresenter presenter = new FeedPresenter();
+//        UserResponse response = presenter.getUser(userRequest);
+//
+//        Assertions.assertEquals(response.getUser(), user);
+//    }
+//
+//
+//    @Test
+//    void testSignUpAlreadySignedUp() {
+//
+//        User user = new User("Test", "User", null);
+//
+//        SignUpRequest signUpRequest = new SignUpRequest(user.getFirstName(),user.getLastName(),user.getAlias(),"pass",null);
+//        LoginPresenter loginPresenter = new LoginPresenter();
+//        LoginResponse loginResponse = loginPresenter.signUp(signUpRequest);
+//
+//        LoginRequest loginRequest = new LoginRequest("pass",user.getAlias());
+//        loginPresenter = new LoginPresenter();
+//        loginResponse = loginPresenter.login(loginRequest);
+//
+//        Assertions.assertEquals(loginResponse.isAuthentcated(), true);
+//        Assertions.assertEquals(loginResponse.getUserSignedIn(), user);
+//
+//        UserRequest userRequest = new UserRequest(user,user.getAlias());
+//        FeedPresenter presenter = new FeedPresenter();
+//        UserResponse response = presenter.getUser(userRequest);
+//
+//        Assertions.assertEquals(response.getUser(), user);
+//    }
 }

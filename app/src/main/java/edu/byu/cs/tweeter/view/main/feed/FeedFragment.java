@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,18 +31,27 @@ import java.util.List;
 import edu.byu.cs.tweeter.R;
 import edu.byu.cs.tweeter.model.domain.Tweet;
 import edu.byu.cs.tweeter.model.domain.User;
+import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
 import edu.byu.cs.tweeter.net.request.FeedRequest;
+import edu.byu.cs.tweeter.net.request.StoryRequest;
 import edu.byu.cs.tweeter.net.request.UserRequest;
 import edu.byu.cs.tweeter.net.response.FeedResponse;
+import edu.byu.cs.tweeter.net.response.UserResponse;
 import edu.byu.cs.tweeter.presenter.FeedPresenter;
 import edu.byu.cs.tweeter.presenter.MainPresenter;
 import edu.byu.cs.tweeter.view.asyncTasks.GetFeedTask;
+import edu.byu.cs.tweeter.view.asyncTasks.GetStoryTask;
+import edu.byu.cs.tweeter.view.asyncTasks.GetUserShownTask;
 import edu.byu.cs.tweeter.view.asyncTasks.GetUserTask;
+import edu.byu.cs.tweeter.view.asyncTasks.SetUserShownTask;
 import edu.byu.cs.tweeter.view.cache.ImageCache;
 import edu.byu.cs.tweeter.view.main.UserViewActivity;
 import edu.byu.cs.tweeter.view.main.story.StoryFragment;
 
-public class FeedFragment extends Fragment implements FeedPresenter.View {
+public class FeedFragment extends Fragment implements
+        FeedPresenter.View,
+        SetUserShownTask.SetUserShownObserver
+{
 
     private static final int LOADING_DATA_VIEW = 0;
     private static final int ITEM_VIEW = 1;
@@ -50,7 +60,11 @@ public class FeedFragment extends Fragment implements FeedPresenter.View {
 
     private FeedPresenter presenter;
 
+    private SetUserShownTask.SetUserShownObserver setUserShownObserver;
+
     private FeedRecyclerViewAdapter feedRecyclerViewAdapter;
+
+    private User userShown;
 
     private View view;
 
@@ -60,6 +74,8 @@ public class FeedFragment extends Fragment implements FeedPresenter.View {
         view = inflater.inflate(R.layout.fragment_feed, container, false);
 
         presenter = new FeedPresenter(this);
+
+        setUserShownObserver = this;
 
         RecyclerView feedRecyclerView = view.findViewById(R.id.feedRecyclerView);
 
@@ -82,8 +98,16 @@ public class FeedFragment extends Fragment implements FeedPresenter.View {
         feedRecyclerViewAdapter.loadMoreItems();
     }
 
+    @Override
+    public void userShownSet(User user) {
+        if (user != null) {
+            Intent intent = new Intent(getActivity(), UserViewActivity.class);
+            startActivity(intent);
+        }
+    }
 
-    private class FeedHolder extends RecyclerView.ViewHolder {
+
+    private class FeedHolder extends RecyclerView.ViewHolder implements GetUserTask.GetUserObserver {
 
         private final ImageView userImage;
         private final TextView userAlias;
@@ -102,23 +126,23 @@ public class FeedFragment extends Fragment implements FeedPresenter.View {
             userTweet = itemView.findViewById(R.id.tweetUserTweet);
             timeStamp = itemView.findViewById(R.id.timeStamp);
 
-//            itemView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//
-//                    GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), userAlias.toString());
-//                    UserRequest request = new UserRequest(presenter.getUserShown(), userAlias.getText().toString());
-//                    getUserTask.execute(request);
-//                }
-//            });
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    switchToThisUserView(getActivity(), userAlias.getText().toString());
+                }
+            });
 
         }
 
+        private void switchToThisUserView(FragmentActivity activity, String userAlias) {
+            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter, activity, setUserShownObserver);
+            setUserShownTask.execute(new UserRequest(new User(userAlias)));
+            // continued in userShownSet
+        }
+
         void bindTweet(Tweet tweet) {
-            userImage.setImageDrawable(ImageCache.getInstance().getImageDrawable(tweet.getUser()));
-            userAlias.setText(tweet.getUser().getAlias());
-            userFirstName.setText(tweet.getUser().getFirstName());
-            userLastName.setText(tweet.getUser().getLastName());
+            getUserToBindTweets(tweet);
 
             SpannableString ss = parseMessage(tweet.getMessage());
             if (ss != null) {
@@ -134,11 +158,27 @@ public class FeedFragment extends Fragment implements FeedPresenter.View {
             userAlias.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), userAlias.toString());
-                    UserRequest request = new UserRequest(presenter.getUserShown(), userAlias.getText().toString());
-                    getUserTask.execute(request);
+                    switchToThisUserView(getActivity(), userAlias.getText().toString());
                 }
             });
+        }
+
+        private void getUserToBindTweets(Tweet tweet) {
+
+            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), this);
+            getUserTask.execute(new UserRequest(new User(tweet.getUser())));
+            // continued in userRetrieved
+
+        }
+
+        @Override
+        public void userRetrieved(UserResponse userResponse) {
+            if (userResponse.getUser() != null) {
+                userImage.setImageDrawable(ImageCache.getInstance().getImageDrawable(userResponse.getUser()));
+                userAlias.setText(userResponse.getUser().getAlias());
+                userFirstName.setText(userResponse.getUser().getFirstName());
+                userLastName.setText(userResponse.getUser().getLastName());
+            }
         }
     }
 
@@ -197,10 +237,11 @@ public class FeedFragment extends Fragment implements FeedPresenter.View {
         @Override
         public void onClick(View textView) {
 //                startActivity(new Intent(MyActivity.this, NextActivity.class));
-            Toast.makeText(textView.getContext(),message,Toast.LENGTH_SHORT).show();
-            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), message);
-            UserRequest request = new UserRequest(presenter.getUserShown(), message);
-            getUserTask.execute(request);
+
+//            Toast.makeText(textView.getContext(),message,Toast.LENGTH_SHORT).show();
+//            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), message);
+//            UserRequest request = new UserRequest(presenter.getUserShown(), message);
+//            getUserTask.execute(request);
         }
         @Override
         public void updateDrawState(TextPaint ds) {
@@ -209,28 +250,32 @@ public class FeedFragment extends Fragment implements FeedPresenter.View {
         }
     }
 
-    private class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedHolder> implements GetFeedTask.GetFeedObserver {
+    private class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedHolder> implements
+            GetFeedTask.GetFeedObserver,
+            GetUserShownTask.GetUserShownObserver
+    {
 
         private final List<Tweet> tweets = new ArrayList<>();
 
         private edu.byu.cs.tweeter.model.domain.Tweet lastTweet;
 
         private boolean hasMorePages;
-        private boolean isLoading = false;
+        private boolean isLoading = true;
 
         FeedRecyclerViewAdapter() {
             loadMoreItems();
         }
 
         void addItems(List<Tweet> newTweets) {
-//            int startInsertPosition = tweets.size();
-            tweets.addAll(0,newTweets);
-            this.notifyItemRangeInserted(0, newTweets.size());
+            int startInsertPosition = tweets.size();
+            tweets.addAll(tweets.size(), newTweets);
+            this.notifyItemRangeInserted(startInsertPosition, tweets.size());
         }
 
         void addItem(Tweet tweet) {
-            tweets.add(0, tweet);
-            this.notifyItemInserted(0);
+            int startInsertPosition = tweets.size();
+            tweets.add(tweets.size(), tweet);
+            this.notifyItemInserted(startInsertPosition);
         }
 
         void removeItem(Tweet tweet) {
@@ -277,41 +322,62 @@ public class FeedFragment extends Fragment implements FeedPresenter.View {
             isLoading = true;
             addLoadingFooter();
 
-            GetFeedTask getFeedTask = new GetFeedTask(presenter, this);
-            FeedRequest request = new FeedRequest(presenter.getUserShown(), PAGE_SIZE, lastTweet);
-            getFeedTask.execute(request);
+            if (userShown == null) {
+                GetUserShownTask userShownTask = new GetUserShownTask(presenter, getActivity(), this);
+                userShownTask.execute(new CurrentUserRequest());
+                // continues on userShownGot
+            }
+            else {
+                userShownGot(userShown);
+            }
         }
 
         @Override
         public void tweetsRetrieved(FeedResponse feedResponse) {
             List<Tweet> tweets = feedResponse.getTweets();
 
-            lastTweet = (tweets.size() > 0) ? tweets.get(tweets.size() -1) : null;
-            hasMorePages = feedResponse.hasMorePages();
+            if (tweets != null) {
+                lastTweet = tweets.get(tweets.size() - 1);
+//                lastTweet = (tweets.size() > 0) ? tweets.get(tweets.size() -1) : null;
+                hasMorePages = feedResponse.hasMorePages();
+                feedRecyclerViewAdapter.addItems(tweets);
+
+//                notifyThereAreMoreItems();
+            }
 
             isLoading = false;
-            removeLoadingFooter();
-            feedRecyclerViewAdapter.addItems(tweets);
+//            removeLoadingFooter();
         }
 
         void notifyThereAreMoreItems() {
-            GetFeedTask getFeedTask = new GetFeedTask(presenter, this);
-            FeedRequest request = new FeedRequest(presenter.getUserShown(), PAGE_SIZE, lastTweet);
-            getFeedTask.execute(request);
+//            GetFeedTask getFeedTask = new GetFeedTask(presenter, this);
+//            FeedRequest request = new FeedRequest(presenter.getUserShown(), PAGE_SIZE, lastTweet);
+//            getFeedTask.execute(request);
         }
 
         private void addLoadingFooter() {
-            addItem(
-                    new Tweet(
-                            new User("fakeFirst", "fakeLast", null),
-                            "This is placeholder text for tweet",
-                            null
-                    )
-            );
+            isLoading = true;
+//            addItem(
+//                    new Tweet(
+//                            "@fake",
+//                            "This is placeholder text for tweet",
+//                            null
+//                    )
+//            );
         }
 
         private void removeLoadingFooter() {
             removeItem(tweets.get(tweets.size() - 1));
+        }
+
+        @Override
+        public void userShownGot(User user) {
+
+            if (user != null) {
+                GetFeedTask getFeedTask = new GetFeedTask(presenter, this);
+                FeedRequest request = new FeedRequest(user, PAGE_SIZE, lastTweet);
+                getFeedTask.execute(request);
+            }
         }
     }
 

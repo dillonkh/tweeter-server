@@ -12,13 +12,14 @@ import java.util.Objects;
 public class Tweet implements Comparable<Tweet> {
 
 //    private final String userHandle;
-    private final User user;
+//    private final User user;
+    private final String user;
     private final String message;
     private final String url;
     private final String timeStamp;
     private final LocalDateTime now;
 
-    public Tweet(@NotNull User user, @NotNull String message, String url) {
+    public Tweet(@NotNull String user, @NotNull String message, String url) {
         this.user = user;
         this.message = message;
         this.url = url;
@@ -28,7 +29,7 @@ public class Tweet implements Comparable<Tweet> {
 
     }
 
-    public Tweet(@NotNull User user, @NotNull SpannableString message, String url) {
+    public Tweet(@NotNull String user, @NotNull SpannableString message, String url) {
         this.user = user;
         this.message = message.toString();
         this.url = url;
@@ -38,7 +39,7 @@ public class Tweet implements Comparable<Tweet> {
 
     }
 
-    public User getUser() {
+    public String getUser() {
         return user;
     }
 

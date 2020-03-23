@@ -32,25 +32,25 @@ public class UserGenerator {
     static final String MALE_IMAGE_URL = "https://faculty.cs.byu.edu/~jwilkerson/cs340/tweeter/images/donald_duck.png";
     private static final String FEMALE_IMAGE_URL = "https://faculty.cs.byu.edu/~jwilkerson/cs340/tweeter/images/daisy_duck.png";
 
-    private static UserGenerator instance;
+//    private static UserGenerator instance;
 
     /**
      * A private constructor that ensures no instances of this class can be created.
      */
-    private UserGenerator() {}
+    public UserGenerator() {}
 
     /**
      * Returns the singleton instance of the class
      *
      * @return the instance.
      */
-    public static UserGenerator getInstance() {
-        if(instance == null) {
-            instance = new UserGenerator();
-        }
-
-        return instance;
-    }
+//    public static UserGenerator getInstance() {
+//        if(instance == null) {
+//            instance = new UserGenerator();
+//        }
+//
+//        return instance;
+//    }
 
     /*
      * Loads a lists of female first names, male first names, and surnames from the json files when
@@ -135,11 +135,10 @@ public class UserGenerator {
 
             String lastName = surnames[random.nextInt(surnames.length)];
             User user = new User(firstName, lastName, imageULR);
-            user.makeTweets(TweetGenerator.getInstance().generateTweets(2, user));
 
-            if(!users.contains(user)) {
-                users.add(user);
-            }
+            user.makeTweets(new TweetGenerator().generateTweets(2, user));
+
+            users.add(user);
         }
 
         return users;

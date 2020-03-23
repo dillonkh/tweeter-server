@@ -15,7 +15,6 @@ public class LoginService {
 
     private final ServerFacade serverFacade;
 
-    private User currentUser;
 
     public static LoginService getInstance() {
         if(instance == null) {
@@ -33,23 +32,24 @@ public class LoginService {
         serverFacade = new ServerFacade();
     }
 
-    public User getCurrentUser() {
-        CurrentUserRequest request = new CurrentUserRequest();
-        UserResponse response = serverFacade.getCurrentUser(request);
-        return response.getUser();
-    }
+//    public UserResponse getCurrentUser() {
+//        CurrentUserRequest request = new CurrentUserRequest();
+//        UserResponse response = serverFacade.getCurrentUser(request);
+//        return response;
+//    }
 
-    public void setCurrentUser(User currentUser) {
-
-        UserRequest request = new UserRequest(currentUser);
-        UserResponse response = serverFacade.setCurrentUser(request);
-    }
+//    public void setCurrentUser(User currentUser) {
+//
+//        UserRequest request = new UserRequest(currentUser);
+//        UserResponse response = serverFacade.setCurrentUser(request);
+//    }
 
     public LoginResponse login(LoginRequest request) {
         LoginResponse r = serverFacade.login(request);
         // some other stuff
         if (r.isAuthentcated() && r.getUserSignedIn() != null) {
-            setCurrentUser(r.getUserSignedIn());
+            UserService.getInstance().setCurrentUser(new UserRequest(r.getUserSignedIn()));
+            UserService.getInstance().setUserShown(new UserRequest(r.getUserSignedIn()));
         }
 
         return r;
@@ -59,7 +59,8 @@ public class LoginService {
         LoginResponse r = serverFacade.signUp(request);
         // some other stuff
         if (r.isAuthentcated() && r.getUserSignedIn() != null) {
-            setCurrentUser(r.getUserSignedIn());
+            UserService.getInstance().setCurrentUser(new UserRequest(r.getUserSignedIn()));
+            UserService.getInstance().setUserShown(new UserRequest(r.getUserSignedIn()));
         }
 
         return r;

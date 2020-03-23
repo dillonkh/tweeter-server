@@ -1,7 +1,9 @@
 package edu.byu.cs.tweeter.model.services;
 
 import edu.byu.cs.tweeter.model.domain.Tweet;
+import edu.byu.cs.tweeter.model.domain.User;
 import edu.byu.cs.tweeter.net.ServerFacade;
+import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
 import edu.byu.cs.tweeter.net.request.StoryRequest;
 import edu.byu.cs.tweeter.net.request.TweetRequest;
 import edu.byu.cs.tweeter.net.request.UserRequest;
@@ -28,10 +30,17 @@ public class StoryService {
 
     public StoryResponse getTweets(StoryRequest request) {
         StoryResponse r = serverFacade.getStory(request);
-        return r;
+
+        User user = UserService.getInstance().getUserShown(new CurrentUserRequest()).getUser();
+
+        return new StoryResponse(user.getTweets(), false);
     }
 
     public TweetResponse addTweet(TweetRequest request) {
+        User userShown = UserService.getInstance().getUserShown(new CurrentUserRequest()).getUser();
+        userShown.addTweet(request.getTweet());
+        UserService.getInstance().setUserShown(new UserRequest(userShown));
+
         return serverFacade.addTweet(request);
     }
 

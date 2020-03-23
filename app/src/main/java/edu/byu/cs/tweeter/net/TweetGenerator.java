@@ -123,7 +123,7 @@ public class TweetGenerator {
         while(tweets.size() < count) {
             // Randomly determine if the user will be male or female and generate a gender
             // specific first name
-            Tweet tweet = new Tweet(user,"This is a tweet!", "this is a url");
+            Tweet tweet = new Tweet(user.getAlias(),"This is a tweet!", "this is a url");
             tweets.add(tweet);
 //            String firstName;
 //            String imageULR;
