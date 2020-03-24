@@ -263,9 +263,9 @@ public class StoryFragment extends Fragment implements
         }
 
         void addItems(List<Tweet> newTweets) {
-//            int startInsertPosition = tweets.size();
-            tweets.addAll(0,newTweets);
-            this.notifyItemRangeInserted(0, newTweets.size());
+            int startInsertPosition = tweets.size();
+            tweets.add(0, newTweets.get(newTweets.size()-1));
+            this.notifyItemInserted(0);
         }
 
         void addItem(Tweet tweet) {

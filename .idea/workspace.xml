@@ -10,31 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cffe23bc-817e-4fe0-85a2-516182738000" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/GetCurrentUserTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/GetUserShownTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/IsFollowingTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/SetUserShownTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/GetFeedDAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/GetFollowersDAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/GetFollowingDAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/PostStatusDAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/SignInDAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/SignOutDAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/SignUpDAOTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/StoryDAOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/bundle_manifest/debug/processDebugManifest/bundle-manifest/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/out/classes.dex" afterDir="false" />
@@ -43,234 +27,84 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/D+esd4i3sBeRTuJWOg20X34ibXY=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/D+esd4i3sBeRTuJWOg20X34ibXY=" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/yiNmbjMvSgGGE5kyMhpYGDE0xOc=" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/yiNmbjMvSgGGE5kyMhpYGDE0xOc=" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/instant_app_manifest/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/model/domain/Tweet.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/model/domain/Tweet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/model/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/model/domain/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/model/services/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/model/services/LoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/model/services/StoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/model/services/StoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/model/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/model/services/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/net/ServerFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/net/ServerFacade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/net/TweetGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/net/TweetGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/presenter/Presenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/presenter/Presenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/asyncTasks/GetFollowerTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/asyncTasks/GetFollowerTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/asyncTasks/GetFollowingTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/asyncTasks/GetFollowingTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/asyncTasks/GetUserTask$GetFeedObserver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/asyncTasks/GetUserTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/asyncTasks/GetUserTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/MainActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/UserViewActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FeedHolder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FeedHolder$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FeedHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FeedHolder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FeedRecyclerViewAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FeedRecyclerViewAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FollowRecyclerViewPaginationScrollListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FollowRecyclerViewPaginationScrollListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/feed/FeedFragment$MyClickableSpan.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/feed/FeedFragment$MyClickableSpan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/feed/FeedFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/feed/FeedFragment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowRecyclerViewPaginationScrollListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowRecyclerViewPaginationScrollListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerHolder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerHolder$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerHolder$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerRecyclerViewAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerRecyclerViewAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/follower/FollowerFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/follower/FollowerFragment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowRecyclerViewPaginationScrollListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowRecyclerViewPaginationScrollListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder$2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingRecyclerViewAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingRecyclerViewAdapter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/following/FollowingFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/following/FollowingFragment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/story/StoryFragment$FollowRecyclerViewPaginationScrollListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/story/StoryFragment$FollowRecyclerViewPaginationScrollListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/story/StoryFragment$MyClickableSpan.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/story/StoryFragment$MyClickableSpan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/story/StoryFragment$StoryHolder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/story/StoryFragment$StoryHolder$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/story/StoryFragment$StoryHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/story/StoryFragment$StoryHolder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/story/StoryFragment$StoryRecyclerViewAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/story/StoryFragment$StoryRecyclerViewAdapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/story/StoryFragment.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/javac/debug/classes/edu/byu/cs/tweeter/view/main/story/StoryFragment.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_java_res/debug/out.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/processDebugResources/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/model/domain/Tweet.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/model/domain/Tweet.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/model/domain/User.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/model/domain/User.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/model/services/LoginService.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/model/services/LoginService.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/model/services/StoryService.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/model/services/StoryService.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/model/services/UserService.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/model/services/UserService.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/net/ServerFacade.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/net/ServerFacade.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/net/TweetGenerator.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/net/TweetGenerator.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/presenter/Presenter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/presenter/Presenter.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/asyncTasks/GetFollowerTask.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/asyncTasks/GetFollowerTask.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/asyncTasks/GetFollowingTask.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/asyncTasks/GetFollowingTask.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/asyncTasks/GetUserTask$GetFeedObserver.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/asyncTasks/GetUserTask.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/asyncTasks/GetUserTask.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$3.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$4.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$5.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$5.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$6.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$6.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$7.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity$7.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/MainActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$2.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$3.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$4.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$4.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$5.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$5.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$6.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$6.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$7.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity$7.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/UserViewActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FeedHolder$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FeedHolder$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FeedHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FeedHolder.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_login.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_login.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FeedRecyclerViewAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FeedRecyclerViewAdapter.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FollowRecyclerViewPaginationScrollListener.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/feed/FeedFragment$FollowRecyclerViewPaginationScrollListener.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/feed/FeedFragment$MyClickableSpan.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/feed/FeedFragment$MyClickableSpan.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/feed/FeedFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/feed/FeedFragment.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowRecyclerViewPaginationScrollListener.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowRecyclerViewPaginationScrollListener.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerHolder$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerHolder$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerHolder$2.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerHolder.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerRecyclerViewAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/follower/FollowerFragment$FollowerRecyclerViewAdapter.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/follower/FollowerFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/follower/FollowerFragment.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowRecyclerViewPaginationScrollListener.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowRecyclerViewPaginationScrollListener.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder$2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder$2.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder$2.dex" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingHolder.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingRecyclerViewAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/following/FollowingFragment$FollowingRecyclerViewAdapter.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/following/FollowingFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/following/FollowingFragment.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/story/StoryFragment$FollowRecyclerViewPaginationScrollListener.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/story/StoryFragment$FollowRecyclerViewPaginationScrollListener.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/story/StoryFragment$MyClickableSpan.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/story/StoryFragment$MyClickableSpan.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/story/StoryFragment$StoryHolder$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/story/StoryFragment$StoryHolder$1.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/story/StoryFragment$StoryHolder.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/story/StoryFragment$StoryHolder.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/story/StoryFragment$StoryRecyclerViewAdapter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/story/StoryFragment$StoryRecyclerViewAdapter.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/story/StoryFragment.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dexBuilder/debug/0/edu/byu/cs/tweeter/view/main/story/StoryFragment.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/domain/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/domain/Tweet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/services/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/services/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/services/StoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/services/StoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/net/ServerFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/net/ServerFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/net/TweetGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/net/TweetGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/GetFollowerTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/GetFollowerTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/GetFollowingTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/GetFollowingTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/GetUserTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/GetUserTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/UserViewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/UserViewActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/feed/FeedFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/feed/FeedFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/follower/FollowerFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/follower/FollowerFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/following/FollowingFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/following/FollowingFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/story/StoryFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/story/StoryFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/FeedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/FeedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/FollowersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/FollowersTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/FollowingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/FollowingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/PostStatusTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/PostStatusTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/SignInPresenterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/SignInPresenterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/SignOutPresenterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/SignOutPresenterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/SignUpPresenterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/SignUpPresenterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/StoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/edu/byu/cs/tweeter/net/StoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/FollowGenerator 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/FollowGenerator$1 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/FollowGenerator$2 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/FollowGenerator$3 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/FollowGenerator$Sort 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/FollowGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/FollowGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/ServerFacade 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/ServerFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/ServerFacade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/TweetGenerator 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/TweetGenerator$Names 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/TweetGenerator$Names.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/TweetGenerator$Names.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/TweetGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/TweetGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/UserGenerator 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/UserGenerator$Names 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/UserGenerator$Names.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/UserGenerator$Names.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/UserGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/UserGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/CurrentUserRequest 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/FeedRequest 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/FollowRequest 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/FollowerRequest 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/FollowingRequest 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/IsFollowingRequest 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/LoginRequest 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/SignUpRequest 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/StoryRequest 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/TweetRequest 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/UnFollowRequest 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/UserRequest 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/FollowResponse 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/IsFollowingResponse 3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/Response 3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/TweetResponse 3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/UnFollowResponse 3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/UserResponse 2.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/UserResponse 2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/UserResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/UserResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/AddTweetHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/AddTweetHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/AddTweetHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/FollowUserHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/GetCurrentUserHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/GetCurrentUserHandler 3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/GetFeedHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/GetFollowerHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/GetFollowingHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/GetStoryHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/GetUserHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/GetUserShownHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/IsFollowingHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/LoginHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/SetCurrentUserHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/SignUpHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/UnFollowUserHandler 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/domain/Follow 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/domain/Tweet 2.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/domain/Tweet 2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/domain/Tweet.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/domain/Tweet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/domain/Tweeted 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/domain/User 3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/service/FeedService 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/service/FollowService 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/service/FollowerService 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/service/FollowingService 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/service/LoginService 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/service/StoryService 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/service/StoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/service/StoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/service/UserService 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/libs/server 2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/libs/server 3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/FollowGenerator 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/FollowGenerator$1 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/FollowGenerator$2 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/FollowGenerator$3 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/FollowGenerator$Sort 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/TweetGenerator 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/TweetGenerator$Names 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/UserGenerator 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/UserGenerator$Names 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/CurrentUserRequest 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/FeedRequest 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/FollowRequest 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/FollowerRequest 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/FollowingRequest 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/IsFollowingRequest 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/LoginRequest 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/SignUpRequest 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/StoryRequest 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/TweetRequest 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/UnFollowRequest 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/request/UserRequest 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/FeedResponse 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/FollowResponse 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/FollowerResponse 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/FollowingResponse 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/IsFollowingResponse 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/LoginResponse 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/PagedResponse 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/Response 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/StoryResponse 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/TweetResponse 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/UnFollowResponse 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/dao/response/UserResponse 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/lambda/GetUserShownHandler 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/domain/Follow 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/domain/Tweet 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/domain/Tweeted 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/domain/User 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/edu/byu/cs/tweeter/server/model/service/UserService 3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/test/edu/byu/cs/tweeter/server/dao/GetFeedDAOTest 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/test/edu/byu/cs/tweeter/server/dao/GetFollowersDAOTest 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/test/edu/byu/cs/tweeter/server/dao/GetFollowingDAOTest 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/test/edu/byu/cs/tweeter/server/dao/PostStatusDAOTest 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/test/edu/byu/cs/tweeter/server/dao/SignInDAOTest 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/test/edu/byu/cs/tweeter/server/dao/SignOutDAOTest 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/test/edu/byu/cs/tweeter/server/dao/SignUpDAOTest 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/test/edu/byu/cs/tweeter/server/dao/StoryDAOTest 2.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/build/libs/server.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/FollowGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/FollowGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/ServerFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/ServerFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/TweetGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/TweetGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/UserGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/UserGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/response/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/lambda/AddTweetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/lambda/AddTweetHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/model/domain/Tweet.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/model/domain/Tweet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/model/service/StoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/model/service/StoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/domain/Follow 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/domain/Follow 3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/domain/User 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/domain/User 3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/domain/User 4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/service/FollowingService 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/service/FollowingService 3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/service/FollowingService 4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/service/request/FollowingRequest 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/service/request/FollowingRequest 3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/service/request/FollowingRequest 4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/service/response/FollowingResponse 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/service/response/FollowingResponse 3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/service/response/PagedResponse 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/service/response/PagedResponse 3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/service/response/Response 2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/service/response/Response 3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared/build/classes/java/main/edu/byu/cs/tweeter/model/service/response/Response 4.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -281,7 +115,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_28" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_25" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -323,70 +157,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/GetFollowersDAOTest.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/GetSendTweetTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/PostStatusDAOTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="68" column="64" selection-start-line="68" selection-start-column="64" selection-end-line="68" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/GetFollowingDAOTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="59" column="66" selection-start-line="59" selection-start-column="66" selection-end-line="59" selection-end-column="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/SignInDAOTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="57" column="108" selection-start-line="57" selection-start-column="108" selection-end-line="57" selection-end-column="108" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/StoryDAOTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="72" column="62" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="74">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/GetFeedDAOTest.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="104" column="9" lean-forward="true" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+            <state relative-caret-position="153">
+              <caret line="219" selection-start-line="219" selection-end-line="219" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/presenter/MainPresenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/services/StoryService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/net/ServerFacade.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="150" column="25" selection-start-line="150" selection-start-column="25" selection-end-line="150" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -395,10 +205,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/SignUpDAOTest.java">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/lambda/AddTweetHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="60" column="108" selection-start-line="60" selection-start-column="108" selection-end-line="60" selection-end-column="108" />
+            <state relative-caret-position="273">
+              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -407,22 +217,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/SignOutDAOTest.java">
+        <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/model/service/StoryService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/ServerFacade.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="213" selection-start-line="213" selection-end-line="213" />
+            <state relative-caret-position="243">
+              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -438,14 +236,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>generateTw</find>
-      <find>message</find>
-      <find>names</find>
-      <find>Name</find>
-      <find>loadNamesFromJSon</find>
-      <find>addLoadingFooter</find>
-      <find>isLoading</find>
-      <find>name</find>
       <find>Home</find>
       <find>sendTweetBu</find>
       <find>currentUser</find>
@@ -453,9 +243,6 @@
       <find>tweetbut</find>
       <find>tweet</find>
       <find>tweetRespo</find>
-      <find>loadMoreItems</find>
-      <find>userShownGot</find>
-      <find>tweetsRetrieved</find>
       <find>currentuser</find>
       <find>getUserShown</find>
       <find>getCurrentUser</find>
@@ -468,6 +255,17 @@
       <find>getFollowees</find>
       <find>getFolloweesStartingIndex</find>
       <find>initializeFollowees</find>
+      <find>pass</find>
+      <find>loading</find>
+      <find>LOADING_DATA_VIEW</find>
+      <find>addLoadingFooter</find>
+      <find>private boolean isLoading =</find>
+      <find>fake</find>
+      <find>add</find>
+      <find>loadMoreItems</find>
+      <find>userShownGot</find>
+      <find>tweetsRetrieved</find>
+      <find>addItems</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -476,7 +274,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/LoginActivity.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/lambda/GetUserShownHandler.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/GetCurrentUserTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/domain/User.java" />
@@ -499,9 +296,6 @@
         <option value="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/TweetGenerator.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/UserGenerator.java" />
         <option value="$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/model/domain/Tweet.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/following/FollowingFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/feed/FeedFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/story/StoryFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/services/StoryService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/IsFollowingTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/UserViewActivity.java" />
@@ -527,6 +321,10 @@
         <option value="$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/PostStatusDAOTest.java" />
         <option value="$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/SignInDAOTest.java" />
         <option value="$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/GetFeedDAOTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/following/FollowingFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/feed/FeedFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/story/StoryFragment.java" />
       </list>
     </option>
   </component>
@@ -540,12 +338,122 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
               <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tweeter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tweeter" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tweeter" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tweeter" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tweeter" type="462c0819:PsiDirectoryNode" />
+              <item name="presenter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tweeter" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tweeter" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="asyncTasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tweeter" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
@@ -600,18 +508,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tweeter-server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="server" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="lambda" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Tweeter" type="b2602c69:ProjectViewProjectNode" />
@@ -641,9 +538,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -826,15 +721,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GetFeedTest - 2020.03.22 at 11h 12m 15s.xml">
-      <configuration name="GetFeedTest" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="GetFeedTest_testGetFollowees_noFolloweesForUser - 2020.03.22 at 11h 12m 57s.xml">
-      <configuration name="GetFeedTest.testGetFollowees_noFolloweesForUser" configurationId="AndroidJUnit" />
-    </history-entry>
-    <history-entry file="GetFeedTest_testGetFollowees_noFolloweesForUser - 2020.03.22 at 11h 15m 21s.xml">
-      <configuration name="GetFeedTest.testGetFollowees_noFolloweesForUser" configurationId="AndroidJUnit" />
-    </history-entry>
     <history-entry file="GetFeedTest_testGetFollowees_noFolloweesForUser - 2020.03.22 at 11h 18m 31s.xml">
       <configuration name="GetFeedTest.testGetFollowees_noFolloweesForUser" configurationId="AndroidJUnit" />
     </history-entry>
@@ -856,6 +742,15 @@
     <history-entry file="All_in_server - 2020.03.23 at 13h 35m 56s.xml">
       <configuration name="All in server" configurationId="AndroidJUnit" />
     </history-entry>
+    <history-entry file="All_in_server - 2020.03.23 at 13h 37m 24s.xml">
+      <configuration name="All in server" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="All_in_server - 2020.03.23 at 15h 22m 13s.xml">
+      <configuration name="All in server" configurationId="AndroidJUnit" />
+    </history-entry>
+    <history-entry file="All_in_server - 2020.03.23 at 16h 43m 14s.xml">
+      <configuration name="All in server" configurationId="AndroidJUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -867,11 +762,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="826" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="826" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2539342" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2539342" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -879,22 +774,22 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Find" />
-      <window_info active="true" anchor="bottom" id="Run" order="0" sideWeight="0.527897" visible="true" weight="0.32833788" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.52503574" weight="0.32833788" />
       <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49213162" weight="0.42370573" />
       <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.49928468" weight="0.32970026" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4792561" weight="0.32833788" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.47782546" weight="0.32833788" />
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49928468" weight="0.32833788" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.472103" side_tool="true" visible="true" weight="0.32833788" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.52646637" side_tool="true" visible="true" weight="0.32833788" />
       <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.49928468" weight="0.32833788" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.47639486" weight="0.32833788" />
-      <window_info anchor="bottom" id="Android Profiler" order="8" sideWeight="0.49928468" weight="0.32833788" />
-      <window_info anchor="right" id="Preview" weight="0.3297568" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.47353363" visible="true" weight="0.32833788" />
+      <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" sideWeight="0.49928468" weight="0.32833788" />
+      <window_info anchor="bottom" id="Find" order="9" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" visible="true" weight="0.11230329" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.11230329" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
+      <window_info anchor="right" id="Preview" order="5" weight="0.3297568" />
     </layout>
   </component>
   <component name="XDebuggerManager">
@@ -954,88 +849,10 @@
           <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/story/StoryFragment.java</url>
-          <line>92</line>
-          <properties />
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/UserViewActivity.java</url>
-          <line>281</line>
-          <properties />
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/MainActivity.java</url>
-          <line>219</line>
-          <properties />
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/request/FeedRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/follower/FollowerFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="262" selection-start-line="262" selection-end-line="262" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/loading_row.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.5.2/32912ebbdeda6dcc83fe50d0ca112a930a777b5f/junit-platform-commons-1.5.2-sources.jar!/org/junit/platform/commons/util/ReflectionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="677" selection-start-line="677" selection-end-line="677" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/GetFeedTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/presenter/FeedPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/services/FeedService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/response/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/response/PagedResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -1061,23 +878,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/following/FollowingFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="213" column="13" lean-forward="true" selection-start-line="213" selection-start-column="13" selection-end-line="213" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/feed/FeedFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="263" lean-forward="true" selection-start-line="263" selection-end-line="263" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1117,13 +917,6 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/presenter/MainPresenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="54" column="64" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/services/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -1131,13 +924,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/story/StoryFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="337" selection-start-line="337" selection-end-line="337" />
         </state>
       </provider>
     </entry>
@@ -1155,48 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/UserViewActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="123" column="17" selection-start-line="123" selection-start-column="17" selection-end-line="123" selection-end-column="17" />
-          <folding>
-            <element signature="e#5748#5909#0" expanded="true" />
-            <element signature="e#5908#5909#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/GetSendTweetTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/services/StoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/model/service/StoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="33" column="70" selection-start-line="33" selection-start-column="70" selection-end-line="33" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/lambda/AddTweetHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/response/TweetResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1208,23 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="219" selection-start-line="219" selection-end-line="219" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/net/ServerFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="151" selection-start-line="151" selection-end-line="151" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1294,17 +1021,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/ServerFacade.java">
+    <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/StoryDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="213" selection-start-line="213" selection-end-line="213" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/GetFollowersDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
+        <state relative-caret-position="148">
+          <caret line="72" column="62" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1321,36 +1041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/StoryDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="72" column="62" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/SignUpDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="60" column="108" selection-start-line="60" selection-start-column="108" selection-end-line="60" selection-end-column="108" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/SignOutDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/PostStatusDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
@@ -1361,10 +1051,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/SignInDAOTest.java">
+    <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/GetFollowersDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="137" column="16" lean-forward="true" selection-start-line="137" selection-start-column="16" selection-end-line="137" selection-end-column="16" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/following/FollowingFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="216" column="37" selection-start-line="216" selection-start-column="21" selection-end-line="216" selection-end-column="37" />
+          <folding>
+            <element signature="e#7521#7522#0" expanded="true" />
+            <element signature="e#7584#7585#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/feed/FeedFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="374" column="31" lean-forward="true" selection-start-line="374" selection-start-column="31" selection-end-line="374" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-29/android.jar!/android/os/Looper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding>
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/story/StoryFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="265" selection-start-line="265" selection-end-line="265" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/UserViewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="281" selection-start-line="281" selection-end-line="281" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/presenter/Presenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/presenter/FollowingPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/presenter/FollowerPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/presenter/FeedPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/lambda/GetStoryHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/presenter/StoryPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="30" column="45" lean-forward="true" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/presenter/LoginPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/SignOutDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/SignInDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
           <caret line="57" column="108" selection-start-line="57" selection-start-column="108" selection-end-line="57" selection-end-column="108" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/SignUpDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="60" column="108" selection-start-line="60" selection-start-column="108" selection-end-line="60" selection-end-column="108" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1373,11 +1196,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/src/test/java/edu/byu/cs/tweeter/server/dao/GetFeedDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="104" column="9" lean-forward="true" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
+        <state relative-caret-position="416">
+          <caret line="105" column="36" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/dao/ServerFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="153" column="25" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/presenter/MainPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/model/services/StoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/net/ServerFacade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="150" column="25" selection-start-line="150" selection-start-column="25" selection-end-line="150" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/lambda/AddTweetHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/src/main/java/edu/byu/cs/tweeter/server/model/service/StoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/asyncTasks/GetSendTweetTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/byu/cs/tweeter/view/main/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="219" selection-start-line="219" selection-end-line="219" />
         </state>
       </provider>
     </entry>

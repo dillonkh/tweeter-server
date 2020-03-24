@@ -39,5 +39,6 @@
     <orderEntry type="library" exported="" scope="TEST" name="Gradle: opentest4j-1.2.0" level="project" />
     <orderEntry type="module" module-name="shared" exported="" />
     <orderEntry type="module" module-name="shared" exported="" />
+    <orderEntry type="module" module-name="shared" exported="" />
   </component>
 </module>

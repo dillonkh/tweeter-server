@@ -95,12 +95,12 @@ public class FollowingFragment extends Fragment implements
             userAlias = itemView.findViewById(R.id.userAlias);
             userName = itemView.findViewById(R.id.userName);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(getContext(), "You selected '" + userName.getText() + "'.", Toast.LENGTH_SHORT).show();
-                }
-            });
+//            itemView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Toast.makeText(getContext(), "You selected '" + userName.getText() + "'.", Toast.LENGTH_SHORT).show();
+//                }
+//            });
         }
 
         void bindUser(final User user) {
@@ -215,6 +215,7 @@ public class FollowingFragment extends Fragment implements
         }
 
         private void addLoadingFooter() {
+
             addItem(new User("Dummy", "User", ""));
         }
 

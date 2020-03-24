@@ -260,7 +260,7 @@ public class FeedFragment extends Fragment implements
         private edu.byu.cs.tweeter.model.domain.Tweet lastTweet;
 
         private boolean hasMorePages;
-        private boolean isLoading = true;
+        private boolean isLoading = false;
 
         FeedRecyclerViewAdapter() {
             loadMoreItems();
@@ -356,7 +356,6 @@ public class FeedFragment extends Fragment implements
         }
 
         private void addLoadingFooter() {
-            isLoading = true;
 //            addItem(
 //                    new Tweet(
 //                            "@fake",

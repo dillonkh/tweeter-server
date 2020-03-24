@@ -50,6 +50,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:id="@+id/passwordInput"
+                        android:inputType="textPassword"
                         android:hint="Password">
 
                     </EditText>
@@ -136,6 +137,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/signUpPasswordInput"
+                    android:inputType="textPassword"
                     android:hint="Password">
 
                 </EditText>
