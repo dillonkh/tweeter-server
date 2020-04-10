@@ -23,7 +23,7 @@ class FollowingDAOTest {
     void testFollowUser() {
         User userToFollow = new User("Test1", "User", "@testUser1", "url");
         User userLoggedIn = new User("Dillon","Harris", "@dillonkh", "url");
-        FollowRequest request = new FollowRequest(userToFollow, userLoggedIn);
+        FollowRequest request = new FollowRequest(userLoggedIn,userToFollow);
 
         FollowResponse response = new FollowingDAO().followUser(request);
 

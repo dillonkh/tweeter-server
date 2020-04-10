@@ -55,8 +55,8 @@ public class ServerFacade {
             return clientCommunicator.doPost(urlPath, request, null, UserResponse.class);
         } catch (IOException e) {
             e.printStackTrace();
+            return new UserResponse(null);
         }
-        return null;
     }
 
     public FollowingResponse getFollowees(FollowingRequest request) { // people i follow
@@ -68,8 +68,8 @@ public class ServerFacade {
             return clientCommunicator.doPost(urlPath, request, null, FollowingResponse.class);
         } catch (IOException e) {
             e.printStackTrace();
+            return new FollowingResponse(null, false);
         }
-        return null;
     }
 
     public UserResponse setCurrentUser(UserRequest request) {

@@ -133,30 +133,42 @@ public class LoginActivity extends AppCompatActivity implements
 
     @Override
     public void userLoginResponded(LoginResponse r) {
-        if (r.isAuthentcated() && r.getUserSignedIn() != null) {
-            SessionManager.getInstance().setUserLoggedIn(r.getUserSignedIn());
-            SessionManager.getInstance().setUserShown(r.getUserSignedIn());
-            SessionManager.getInstance().setUserLoggedInAuthToken(r.getAuthToken());
-            switchToMainActivity();
+        if (r != null) {
+            if (r.isAuthentcated() && r.getUserSignedIn() != null) {
+                SessionManager.getInstance().setUserLoggedIn(r.getUserSignedIn());
+                SessionManager.getInstance().setUserShown(r.getUserSignedIn());
+                SessionManager.getInstance().setUserLoggedInAuthToken(r.getAuthToken());
+                switchToMainActivity();
+            }
+            else {
+                Toast.makeText(this, "Sorry, something went wrong.", Toast.LENGTH_LONG).show();
+            }
         }
         else {
             Toast.makeText(this, "Sorry, something went wrong.", Toast.LENGTH_LONG).show();
         }
+
     }
 
     @Override
     public void userRetrieved(UserResponse userResponse) {
-        if (userResponse.getUser() != null) {
-            GetLoginTask getLoginTask = new GetLoginTask(presenter,LoginActivity.this);
-            LoginRequest request = new LoginRequest(
-                    passwordInput.getText().toString(),
-                    handleInput.getText().toString()
-            );
-            getLoginTask.execute(request);
+        if (userResponse != null) {
+            if (userResponse.getUser() != null) {
+                GetLoginTask getLoginTask = new GetLoginTask(presenter,LoginActivity.this);
+                LoginRequest request = new LoginRequest(
+                        passwordInput.getText().toString(),
+                        handleInput.getText().toString()
+                );
+                getLoginTask.execute(request);
+            }
+            else {
+                Toast.makeText(this, "Sorry, something went wrong.", Toast.LENGTH_LONG).show();
+            }
         }
         else {
             Toast.makeText(this, "Sorry, something went wrong.", Toast.LENGTH_LONG).show();
         }
+
 
     }
 }

@@ -41,13 +41,13 @@ public class TweetsDAO {
         try {
 
             // get all users you are following
-            ArrayList<User> usersImFollowing = (ArrayList) new FollowingDAO().getFollowees(
+            ArrayList<User> usersImFollowing = (ArrayList<User>) new FollowingDAO().getFollowees(
                     new FollowingRequest(
                             request.getUser(),
                             10,
                             null
                     )
-            ).followees;
+            ).getFollowees();
 
             // get 10 tweets (sorted by timestamp) by each user
             for (int i = 0; i < usersImFollowing.size(); i++) {
@@ -62,14 +62,18 @@ public class TweetsDAO {
 
                 while (iterator.hasNext()) {
                     item = iterator.next();
-                    String user = item.get("user").toString();
-                    String message = item.get("message").toString();
-                    String url = item.get("url").toString();
-                    String timeStamp = item.get("time_stamp").toString();
+                    if (item != null) {
+                        String user = item.get("user_alias").toString();
+                        String firstName = item.get("first_name").toString();
+                        String lastName = item.get("last_name").toString();
+                        String message = item.get("message").toString();
+                        String url = item.get("url").toString();
+                        String timeStamp = item.get("timestamp").toString();
 
-                    Tweet t = new Tweet(user,message,url,timeStamp);
+                        Tweet t = new Tweet(user,firstName,lastName,message,url,timeStamp);
 
-                    tweets.add(t);
+                        tweets.add(t);
+                    }
                 }
             }
 
@@ -85,7 +89,6 @@ public class TweetsDAO {
     }
 
     public StoryResponse getStory(StoryRequest request) {
-        ArrayList<Tweet> tweets = new ArrayList<>();
 
         AmazonDynamoDB client = AmazonDynamoDBClientBuilder
                 .standard()
@@ -104,17 +107,22 @@ public class TweetsDAO {
             ItemCollection<QueryOutcome> items = table.query(spec);
 
             Iterator<Item> iterator = items.iterator();
+            ArrayList<Tweet> tweets = new ArrayList<>();
             Item item = null;
             while (iterator.hasNext()) {
                 item = iterator.next();
-                String user = item.get("user_alias").toString();
-                String message = item.get("message").toString();
-                String url = item.get("url").toString();
-                String timeStamp = item.get("time_stamp").toString();
+                if (item != null) {
+                    String user = item.get("user_alias").toString();
+                    String firstName = item.get("first_name").toString();
+                    String lastName = item.get("last_name").toString();
+                    String message = item.get("message").toString();
+                    String url = item.get("url").toString();
+                    String timeStamp = item.get("timestamp").toString();
 
-                Tweet t = new Tweet(user,message,url,timeStamp);
+                    Tweet t = new Tweet(user,firstName,lastName,message,url,timeStamp);
 
-                tweets.add(t);
+                    tweets.add(t);
+                }
             }
 
 
@@ -139,6 +147,8 @@ public class TweetsDAO {
         try {
             Item item = new Item();
             item.withPrimaryKey("user_alias", request.getTweet().user);
+            item.withString("first_name", request.getTweet().firstName);
+            item.withString("last_name", request.getTweet().lastName);
             item.withString("message", request.getTweet().message);
             item.withString("url", request.getTweet().url);
             item.withString("timestamp", request.getTweet().timeStamp);

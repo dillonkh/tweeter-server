@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.byu.cs.tweeter.R;
+import edu.byu.cs.tweeter.model.SessionManager;
 import edu.byu.cs.tweeter.model.domain.User;
 import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
 import edu.byu.cs.tweeter.net.request.FollowerRequest;
@@ -235,20 +236,31 @@ public class FollowerFragment extends Fragment implements
 //            GetUserShownTask userShownTask = new GetUserShownTask(presenter, getActivity(), this);
 //            userShownTask.execute(new CurrentUserRequest());
             // continues on userShownGot
+            User user = SessionManager.getInstance().getUserShown();
+            if (user != null) {
+                GetFollowerTask getFollowerTask = new GetFollowerTask(presenter, this);
+                FollowerRequest request = new FollowerRequest(user, PAGE_SIZE, lastFollowee);
+                getFollowerTask.execute(request);
+            }
 
         }
 
         @Override
         public void followersRetrieved(FollowerResponse followerResponse) {
-            removeLoadingFooter();
             if (followerResponse != null) {
-                List<User> followees = followerResponse.getFollowees();
+                removeLoadingFooter();
+                if (followerResponse.getFollowees() != null) {
+                    List<User> followees = followerResponse.getFollowees();
 
-                lastFollowee = (followees.size() > 0) ? followees.get(followees.size() -1) : null;
-                hasMorePages = followerResponse.hasMorePages();
+                    lastFollowee = (followees.size() > 0) ? followees.get(followees.size() -1) : null;
+                    hasMorePages = followerResponse.hasMorePages();
 
-                isLoading = false;
-                followerRecyclerViewAdapter.addItems(followees);
+                    isLoading = false;
+                    followerRecyclerViewAdapter.addItems(followees);
+                }
+            }
+            else {
+                loadMoreItems();
             }
         }
 

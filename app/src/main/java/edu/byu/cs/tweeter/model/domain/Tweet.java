@@ -18,8 +18,10 @@ public class Tweet implements Comparable<Tweet> {
     private final String url;
     private final String timeStamp;
     private final LocalDateTime now;
+    private final String firstName;
+    private final String lastName;
 
-    public Tweet(@NotNull String user, @NotNull String message, String url) {
+    public Tweet(@NotNull String user, String firstName, String lastName, @NotNull String message, String url) {
         this.user = user;
         this.message = message;
         this.url = url;
@@ -27,9 +29,12 @@ public class Tweet implements Comparable<Tweet> {
         this.now = LocalDateTime.now();
         this.timeStamp = dtf.format(now);
 
+        this.firstName = firstName;
+        this.lastName = lastName;
+
     }
 
-    public Tweet(@NotNull String user, @NotNull SpannableString message, String url) {
+    public Tweet(@NotNull String user, String firstName, String lastName, @NotNull SpannableString message, String url) {
         this.user = user;
         this.message = message.toString();
         this.url = url;
@@ -37,6 +42,17 @@ public class Tweet implements Comparable<Tweet> {
         this.now = LocalDateTime.now();
         this.timeStamp = dtf.format(now);
 
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public String getUser() {

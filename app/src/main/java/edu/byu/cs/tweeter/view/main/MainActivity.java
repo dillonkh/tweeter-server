@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
+        presenter = new MainPresenter();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -123,15 +124,16 @@ public class MainActivity extends AppCompatActivity implements
         sendTweetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),"implement send tweet", Toast.LENGTH_SHORT).show();
-//                EditText text = (EditText)findViewById(R.id.tweetMessage);
-//                String message = text.getText().toString();
-//                Tweet tweet = new Tweet(currentUser.getAlias(), message, "make URL");
-//
-//                TweetRequest request = new TweetRequest(tweet);
-//                GetSendTweetTask getSendTweetTask = new GetSendTweetTask(presenter, MainActivity.this);
-//                getSendTweetTask.execute(request);
-//                tweetCard.setVisibility(View.INVISIBLE);
+//                Toast.makeText(view.getContext(),"implement send tweet", Toast.LENGTH_SHORT).show();
+                EditText text = (EditText)findViewById(R.id.tweetMessage);
+                String message = text.getText().toString();
+                User user = SessionManager.getInstance().getUserLoggedIn();
+                Tweet tweet = new Tweet(user.getAlias(), user.getFirstName(), user.getLastName(), message, "make URL");
+
+                TweetRequest request = new TweetRequest(tweet);
+                GetSendTweetTask getSendTweetTask = new GetSendTweetTask(presenter, MainActivity.this);
+                getSendTweetTask.execute(request);
+                tweetCard.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -236,7 +238,17 @@ public class MainActivity extends AppCompatActivity implements
             if (tweetResponse.isSent()) {
                 storyFragment.listChanged();
             }
+            else {
+                reportErrorSendingTweet();
+            }
         }
+        else {
+            reportErrorSendingTweet();
+        }
+    }
+
+    public void reportErrorSendingTweet() {
+        Toast.makeText(this, "There was an error sending the tweet", Toast.LENGTH_SHORT);
     }
 
 //    @Override

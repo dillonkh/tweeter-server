@@ -120,8 +120,8 @@ public class TweetGenerator {
         List<Tweet> tweets = new ArrayList<>();
 
         for (int i = 0; i < count; i++) {
-            Tweet tweet = new Tweet(user.getAlias(),"This is a tweet!", "this is a url");
-            tweets.add(tweet);
+//            Tweet tweet = new Tweet(user.getAlias(),"This is a tweet!", "this is a url");
+//            tweets.add(tweet);
         }
 
         return tweets;

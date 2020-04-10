@@ -142,7 +142,7 @@ public class StoryFragment extends Fragment implements
         }
 
         void bindTweet(Tweet tweet) {
-            getUserToBindTweets(tweet);
+//            getUserToBindTweets(tweet);
 
             SpannableString ss = parseMessage(tweet.getMessage());
             if (ss != null) {
@@ -154,6 +154,10 @@ public class StoryFragment extends Fragment implements
             userTweet.setMovementMethod(LinkMovementMethod.getInstance());
             userTweet.setHighlightColor(Color.TRANSPARENT);
             timeStamp.setText(tweet.getTimeStamp());
+//            userImage.setImageDrawable(ImageCache.getInstance().getImageDrawable(tweet.getUser()));
+            userAlias.setText(tweet.getUser());
+            userFirstName.setText(tweet.getFirstName());
+            userLastName.setText(tweet.getLastName());
 
             userAlias.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -162,11 +166,11 @@ public class StoryFragment extends Fragment implements
                 }
             });
         }
-        private void getUserToBindTweets(Tweet tweet) {
-            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), this);
-            getUserTask.execute(new UserRequest(null, tweet.getUser()));
-            // continued in userRetrieved
-        }
+//        private void getUserToBindTweets(Tweet tweet) {
+//            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), this);
+//            getUserTask.execute(new UserRequest(null, tweet.getUser()));
+//            // continued in userRetrieved
+//        }
 
         @Override
         public void userRetrieved(UserResponse userResponse) {
@@ -338,24 +342,31 @@ public class StoryFragment extends Fragment implements
 
         @Override
         public void tweetsRetrieved(StoryResponse storyResponse) {
-            List<Tweet> tweets = storyResponse.getTweets();
 
-            if (tweets != null) {
-                lastTweet = (tweets.size() > 0) ? tweets.get(tweets.size() -1) : null;
-                hasMorePages = storyResponse.hasMorePages();
-                storyRecyclerViewAdapter.addItems(tweets);
+            if (storyResponse != null) {
+                List<Tweet> tweets = storyResponse.getTweets();
+
+                if (tweets != null) {
+                    lastTweet = (tweets.size() > 0) ? tweets.get(tweets.size() -1) : null;
+                    hasMorePages = storyResponse.hasMorePages();
+                    storyRecyclerViewAdapter.addItems(tweets);
+                }
+
+                isLoading = false;
+                removeLoadingFooter();
+            }
+            else {
+                loadMoreItems();
             }
 
-            isLoading = false;
-            removeLoadingFooter();
-
-//            notifyThereAreMoreItems();
         }
 
         private void addLoadingFooter() {
             addItem(
                     new Tweet(
                             "@fake",
+                            "fake",
+                            "user",
                             "This is placeholder text for tweet",
                             null
                     )

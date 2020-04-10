@@ -27,7 +27,7 @@ class StoryDAOTest {
     @Test
     void testAddTweet() {
 
-        Tweet tweet = new Tweet("@dillonkh", "this is the first tweet","url");
+        Tweet tweet = new Tweet("@testUser1", "Test1", "User", "this is a tweet by @testUser1","url");
         TweetResponse response = new TweetsDAO().addTweet(new TweetRequest(tweet));
 
         Assertions.assertTrue(response.sent);
@@ -35,7 +35,8 @@ class StoryDAOTest {
 
     @Test
     void testGetStory() {
-        User user = new UserDAO().getUser(new UserRequest(null, "@dillonkh")).getUser();
+//        User user = new UserDAO().getUser(new UserRequest(null, "@dillonkh")).getUser();
+        User user = new User("Dillon", "Harris", "@dillonkh", "url");
         StoryResponse response = new TweetsDAO().getStory(new StoryRequest(user, 10, null));
 
         Assertions.assertTrue(response.isSuccess());

@@ -207,8 +207,8 @@ public class FollowingFragment extends Fragment implements
 
         @Override
         public void followeesRetrieved(FollowingResponse followingResponse) {
-            removeLoadingFooter();
             if (followingResponse != null) {
+                removeLoadingFooter();
                 if (followingResponse.getFollowees() != null) {
                     List<User> followees = followingResponse.getFollowees();
 
@@ -218,6 +218,9 @@ public class FollowingFragment extends Fragment implements
                     isLoading = false;
                     followingRecyclerViewAdapter.addItems(followees);
                 }
+            }
+            else {
+                loadMoreItems();
             }
 
         }
