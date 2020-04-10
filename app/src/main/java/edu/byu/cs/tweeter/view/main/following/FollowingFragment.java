@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.byu.cs.tweeter.R;
+import edu.byu.cs.tweeter.model.SessionManager;
 import edu.byu.cs.tweeter.model.domain.User;
 import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
 import edu.byu.cs.tweeter.net.request.FollowingRequest;
@@ -36,8 +37,8 @@ import edu.byu.cs.tweeter.view.cache.ImageCache;
 import edu.byu.cs.tweeter.view.main.UserViewActivity;
 
 public class FollowingFragment extends Fragment implements
-        FollowingPresenter.View,
-        SetUserShownTask.SetUserShownObserver
+        FollowingPresenter.View
+//        SetUserShownTask.SetUserShownObserver
 {
 
     private static final int LOADING_DATA_VIEW = 0;
@@ -47,7 +48,7 @@ public class FollowingFragment extends Fragment implements
 
     private FollowingPresenter presenter;
 
-    private SetUserShownTask.SetUserShownObserver setUserShownObserver;
+//    private SetUserShownTask.SetUserShownObserver setUserShownObserver;
 
     private FollowingRecyclerViewAdapter followingRecyclerViewAdapter;
 
@@ -58,7 +59,7 @@ public class FollowingFragment extends Fragment implements
 
         presenter = new FollowingPresenter(this);
 
-        setUserShownObserver = this;
+//        setUserShownObserver = this;
 
         RecyclerView followingRecyclerView = view.findViewById(R.id.followingRecyclerView);
 
@@ -73,13 +74,13 @@ public class FollowingFragment extends Fragment implements
         return view;
     }
 
-    @Override
-    public void userShownSet(User user) {
-        if (user != null) {
-            Intent intent = new Intent(getActivity(), UserViewActivity.class);
-            startActivity(intent);
-        }
-    }
+//    @Override
+//    public void userShownSet(User user) {
+//        if (user != null) {
+//            Intent intent = new Intent(getActivity(), UserViewActivity.class);
+//            startActivity(intent);
+//        }
+//    }
 
 
     private class FollowingHolder extends RecyclerView.ViewHolder {
@@ -117,15 +118,15 @@ public class FollowingFragment extends Fragment implements
         }
 
         private void switchToThisUserView(FragmentActivity activity, User user) {
-            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter, activity, setUserShownObserver);
-            setUserShownTask.execute(new UserRequest(user));
+//            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter, activity, setUserShownObserver);
+//            setUserShownTask.execute(new UserRequest(user));
             // continued in userShownSet
         }
     }
 
     private class FollowingRecyclerViewAdapter extends RecyclerView.Adapter<FollowingHolder> implements
-            GetFollowingTask.GetFolloweesObserver,
-            GetUserShownTask.GetUserShownObserver
+            GetFollowingTask.GetFolloweesObserver
+//            GetUserShownTask.GetUserShownObserver
     {
 
         private final List<User> users = new ArrayList<>();
@@ -194,24 +195,31 @@ public class FollowingFragment extends Fragment implements
             isLoading = true;
             addLoadingFooter();
 
-            GetUserShownTask userShownTask = new GetUserShownTask(presenter, getActivity(), this);
-            userShownTask.execute(new CurrentUserRequest());
+//            GetUserShownTask userShownTask = new GetUserShownTask(presenter, getActivity(), this);
+//            userShownTask.execute(new CurrentUserRequest());
             // continues on userShownGot
+            GetFollowingTask getFollowingTask = new GetFollowingTask(presenter, this);
+            FollowingRequest request = new FollowingRequest(SessionManager.getInstance().getUserShown(), PAGE_SIZE, lastFollowee);
+            getFollowingTask.execute(request);
+
 
         }
 
         @Override
         public void followeesRetrieved(FollowingResponse followingResponse) {
-            if (followingResponse.getFollowees() != null) {
-                List<User> followees = followingResponse.getFollowees();
+            removeLoadingFooter();
+            if (followingResponse != null) {
+                if (followingResponse.getFollowees() != null) {
+                    List<User> followees = followingResponse.getFollowees();
 
-                lastFollowee = (followees.size() > 0) ? followees.get(followees.size() -1) : null;
-                hasMorePages = followingResponse.hasMorePages();
+                    lastFollowee = (followees.size() > 0) ? followees.get(followees.size() -1) : null;
+                    hasMorePages = followingResponse.hasMorePages();
 
-                isLoading = false;
-                removeLoadingFooter();
-                followingRecyclerViewAdapter.addItems(followees);
+                    isLoading = false;
+                    followingRecyclerViewAdapter.addItems(followees);
+                }
             }
+
         }
 
         private void addLoadingFooter() {
@@ -223,15 +231,15 @@ public class FollowingFragment extends Fragment implements
             removeItem(users.get(users.size() - 1));
         }
 
-        @Override
-        public void userShownGot(User user) {
-            if (user != null) {
-                GetFollowingTask getFollowingTask = new GetFollowingTask(presenter, this);
-                FollowingRequest request = new FollowingRequest(user, PAGE_SIZE, lastFollowee);
-                getFollowingTask.execute(request);
-            }
-
-        }
+//        @Override
+//        public void userShownGot(User user) {
+//            if (user != null) {
+//                GetFollowingTask getFollowingTask = new GetFollowingTask(presenter, this);
+//                FollowingRequest request = new FollowingRequest(user, PAGE_SIZE, lastFollowee);
+//                getFollowingTask.execute(request);
+//            }
+//
+//        }
     }
 
     private class FollowRecyclerViewPaginationScrollListener extends RecyclerView.OnScrollListener {

@@ -8,6 +8,7 @@ import edu.byu.cs.tweeter.server.dao.request.UserRequest;
 import edu.byu.cs.tweeter.server.dao.response.FeedResponse;
 import edu.byu.cs.tweeter.server.dao.response.UserResponse;
 import edu.byu.cs.tweeter.server.model.service.FeedService;
+import edu.byu.cs.tweeter.server.model.service.UserService;
 
 
 /**
@@ -26,7 +27,7 @@ public class GetUserHandler implements RequestHandler<UserRequest, UserResponse>
      */
     @Override
     public UserResponse handleRequest(UserRequest request, Context context) {
-        FeedService service = FeedService.getInstance();
+        UserService service = UserService.getInstance();
         return service.getUser(request);
     }
 

@@ -11,7 +11,7 @@ public class UserService {
     private static UserService instance;
 
     private User currentUser;
-    private User userShown;
+//    private User userShown;
 
     private final ServerFacade serverFacade;
 
@@ -31,13 +31,12 @@ public class UserService {
         serverFacade = new ServerFacade();
     }
 
-    public UserResponse getCurrentUser() {
-//        CurrentUserRequest request = new CurrentUserRequest();
-//        UserResponse response = serverFacade.getCurrentUser(request);
-        if (currentUser == null) {
-            return null;
-        }
-        return new UserResponse(currentUser);
+    public UserResponse getCurrentUser(CurrentUserRequest request) {
+
+        UserResponse response = serverFacade.getCurrentUser(request);
+
+        return response;
+
     }
 
     public UserResponse setCurrentUser(UserRequest userRequest) {
@@ -47,15 +46,15 @@ public class UserService {
         return new UserResponse(currentUser);
     }
 
-    public UserResponse getUserShown(CurrentUserRequest userRequest) {
+//    public UserResponse getUserShown(CurrentUserRequest userRequest) {
 //        UserResponse response = serverFacade.getUserShown(userRequest);
 //        return response;
-        return new UserResponse(userShown);
-    }
-
-    public UserResponse setUserShown(UserRequest userRequest) {
-        userShown = userRequest.getUser();
-
-        return new UserResponse(userShown);
-    }
+////        return new UserResponse(userShown);
+//    }
+//
+//    public UserResponse setUserShown(UserRequest userRequest) {
+//        userShown = userRequest.getUser();
+//
+//        return new UserResponse(userShown);
+//    }
 }

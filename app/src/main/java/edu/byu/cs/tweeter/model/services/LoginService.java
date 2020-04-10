@@ -47,10 +47,10 @@ public class LoginService {
     public LoginResponse login(LoginRequest request) {
         LoginResponse r = serverFacade.login(request);
         // some other stuff
-        if (r.isAuthentcated() && r.getUserSignedIn() != null) {
-            UserService.getInstance().setCurrentUser(new UserRequest(r.getUserSignedIn()));
-            UserService.getInstance().setUserShown(new UserRequest(r.getUserSignedIn()));
-        }
+//        if (r.isAuthentcated() && r.getUserSignedIn() != null) {
+//            UserService.getInstance().setCurrentUser(new UserRequest(r.getUserSignedIn()));
+//            UserService.getInstance().setUserShown(new UserRequest(r.getUserSignedIn()));
+//        }
 
         return r;
     }
@@ -58,10 +58,10 @@ public class LoginService {
     public LoginResponse signUp(SignUpRequest request) {
         LoginResponse r = serverFacade.signUp(request);
         // some other stuff
-        if (r.isAuthentcated() && r.getUserSignedIn() != null) {
-            UserService.getInstance().setCurrentUser(new UserRequest(r.getUserSignedIn()));
-            UserService.getInstance().setUserShown(new UserRequest(r.getUserSignedIn()));
-        }
+//        if (r.isAuthentcated() && r.getUserSignedIn() != null) {
+//            UserService.getInstance().setCurrentUser(new UserRequest(r.getUserSignedIn()));
+//            UserService.getInstance().setUserShown(new UserRequest(r.getUserSignedIn()));
+//        }
 
         return r;
     }

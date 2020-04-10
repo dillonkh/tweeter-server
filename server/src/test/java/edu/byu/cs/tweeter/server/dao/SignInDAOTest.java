@@ -24,38 +24,24 @@ class SignInDAOTest {
     @Test
     void testSignInValid() {
 
-        User user = new User("Test", "User", null);
+        LoginRequest request = new LoginRequest("Password1", "@dillonkh");
+        LoginResponse response = new UserDAO().login(request);
 
-        SignUpRequest signUpRequest = new SignUpRequest(user.getFirstName(),user.getLastName(),user.getAlias(),"pass",null);
-//        LoginPresenter loginPresenter = new LoginPresenter();
-        LoginResponse loginResponse = facade.signUp(signUpRequest);
-
-        LoginRequest loginRequest = new LoginRequest("pass",user.getAlias());
-//        loginPresenter = new LoginPresenter();
-        loginResponse = facade.login(loginRequest);
-
-        Assertions.assertEquals(loginResponse.isAuthentcated(), true);
-        Assertions.assertEquals(loginResponse.getUserSignedIn(), new User("Dummy", "Data", "@DummyData", ""));
-
-        UserRequest userRequest = new UserRequest(user,user.getAlias());
-//        FeedPresenter presenter = new FeedPresenter();
-        UserResponse response = facade.getUser(userRequest);
-
-        Assertions.assertEquals(response.getUser(), user);
+        Assertions.assertTrue(response.isAuthentcated);
 
     }
 
     @Test
     void testSignInNoUser() {
 
-        User user = new User("Test", "User", null);
-
-        LoginRequest loginRequest = new LoginRequest("pass",user.getAlias());
-//        LoginPresenter loginPresenter = new LoginPresenter();
-        LoginResponse loginResponse = facade.login(loginRequest);
-
-        Assertions.assertEquals(loginResponse.isAuthentcated(), true);
-        Assertions.assertEquals(loginResponse.getUserSignedIn(), new User("Dummy", "Data", "@DummyData", ""));
+//        User user = new User("Test", "User", null);
+//
+//        LoginRequest loginRequest = new LoginRequest("pass",user.getAlias());
+////        LoginPresenter loginPresenter = new LoginPresenter();
+//        LoginResponse loginResponse = facade.login(loginRequest);
+//
+//        Assertions.assertEquals(loginResponse.isAuthentcated(), true);
+//        Assertions.assertEquals(loginResponse.getUserSignedIn(), new User("Dummy", "Data", "@DummyData", ""));
 
     }
 

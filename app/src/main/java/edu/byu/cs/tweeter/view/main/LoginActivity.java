@@ -11,15 +11,25 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import edu.byu.cs.tweeter.R;
+import edu.byu.cs.tweeter.model.SessionManager;
 import edu.byu.cs.tweeter.net.request.LoginRequest;
 import edu.byu.cs.tweeter.net.request.SignUpRequest;
+import edu.byu.cs.tweeter.net.request.UserRequest;
 import edu.byu.cs.tweeter.net.response.LoginResponse;
+import edu.byu.cs.tweeter.net.response.UserResponse;
 import edu.byu.cs.tweeter.presenter.LoginPresenter;
 import edu.byu.cs.tweeter.presenter.MainPresenter;
 import edu.byu.cs.tweeter.view.asyncTasks.GetLoginTask;
 import edu.byu.cs.tweeter.view.asyncTasks.GetSignUpTask;
+import edu.byu.cs.tweeter.view.asyncTasks.GetUserTask;
 
-public class LoginActivity extends AppCompatActivity implements LoginPresenter.View, GetSignUpTask.GetLoginObserver, GetLoginTask.GetLoginObserver {
+public class LoginActivity extends AppCompatActivity implements
+        LoginPresenter.View,
+        MainPresenter.View,
+        GetSignUpTask.GetLoginObserver,
+        GetLoginTask.GetLoginObserver ,
+        GetUserTask.GetUserObserver
+{
 
     private LoginPresenter presenter;
 
@@ -78,14 +88,8 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenter.V
     }
 
     private void signIn(View v) {
-        if (userInfoIsValid() && authenticated()) {
-            GetLoginTask getLoginTask = new GetLoginTask(presenter,LoginActivity.this);
-            LoginRequest request = new LoginRequest(
-                    passwordInput.getText().toString(),
-                    handleInput.getText().toString()
-            );
-
-            getLoginTask.execute(request);
+        if (userInfoIsValid()) {
+            authenticated();
         }
 
     }
@@ -105,8 +109,12 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenter.V
         }
     }
 
-    private  boolean authenticated() {
-        return true;
+    private  void authenticated() {
+        GetUserTask task = new GetUserTask(new MainPresenter(this),LoginActivity.this,this);
+        UserRequest request = new UserRequest(null, handleInput.getText().toString());
+        task.execute(request);
+        // continues at userretrieved
+
     }
 
     private boolean userInfoIsValid() {
@@ -126,7 +134,29 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenter.V
     @Override
     public void userLoginResponded(LoginResponse r) {
         if (r.isAuthentcated() && r.getUserSignedIn() != null) {
+            SessionManager.getInstance().setUserLoggedIn(r.getUserSignedIn());
+            SessionManager.getInstance().setUserShown(r.getUserSignedIn());
+            SessionManager.getInstance().setUserLoggedInAuthToken(r.getAuthToken());
             switchToMainActivity();
         }
+        else {
+            Toast.makeText(this, "Sorry, something went wrong.", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    @Override
+    public void userRetrieved(UserResponse userResponse) {
+        if (userResponse.getUser() != null) {
+            GetLoginTask getLoginTask = new GetLoginTask(presenter,LoginActivity.this);
+            LoginRequest request = new LoginRequest(
+                    passwordInput.getText().toString(),
+                    handleInput.getText().toString()
+            );
+            getLoginTask.execute(request);
+        }
+        else {
+            Toast.makeText(this, "Sorry, something went wrong.", Toast.LENGTH_LONG).show();
+        }
+
     }
 }

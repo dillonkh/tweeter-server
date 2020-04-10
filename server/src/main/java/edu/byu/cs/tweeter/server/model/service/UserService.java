@@ -1,6 +1,8 @@
 package edu.byu.cs.tweeter.server.model.service;
 
 
+import edu.byu.cs.tweeter.server.dao.UserDAO;
+import edu.byu.cs.tweeter.server.dao.request.UserRequest;
 import edu.byu.cs.tweeter.server.dao.response.UserResponse;
 import edu.byu.cs.tweeter.server.model.domain.User;
 
@@ -29,7 +31,12 @@ public class UserService {
         return new UserResponse(userShown);
     }
 
-    public void setCurrentUser(User user) {
+    public UserResponse getUser(UserRequest request) {
+        UserResponse r = new UserDAO().getUser(request);
+        return r;
+    }
+
+    public void setCurrentUser(User user) { // this will probably use the auth token in an authorized user table
         this.userShown = user;
     }
 }

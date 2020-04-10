@@ -25,7 +25,8 @@ public class FollowingService {
     }
 
     public FollowingResponse getFollowees(FollowingRequest request) {
-        return serverFacade.getFollowees(request);
+        FollowingResponse r = serverFacade.getFollowees(request);
+        return r;
     }
 
     public UserResponse getUser(UserRequest request) {

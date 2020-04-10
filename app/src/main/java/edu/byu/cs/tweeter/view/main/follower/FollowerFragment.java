@@ -42,9 +42,9 @@ import edu.byu.cs.tweeter.view.main.UserViewActivity;
 public class FollowerFragment extends Fragment implements
         FollowerPresenter.View,
         GetUserTask.GetUserObserver,
-        GetCurrentUserTask.GetCurrentUserObserver,
-        SetUserShownTask.SetUserShownObserver,
-        GetUserShownTask.GetUserShownObserver
+        GetCurrentUserTask.GetCurrentUserObserver
+//        SetUserShownTask.SetUserShownObserver
+//        GetUserShownTask.GetUserShownObserver
 {
 
     private static final int LOADING_DATA_VIEW = 0;
@@ -57,8 +57,8 @@ public class FollowerFragment extends Fragment implements
     private FollowerRecyclerViewAdapter followerRecyclerViewAdapter;
 
     private GetUserTask.GetUserObserver getUserObserver;
-    private SetUserShownTask.SetUserShownObserver setUserShownObserver;
-    private GetUserShownTask.GetUserShownObserver getUserShownObserver;
+//    private SetUserShownTask.SetUserShownObserver setUserShownObserver;
+//    private GetUserShownTask.GetUserShownObserver getUserShownObserver;
     private GetFollowerTask.GetFollowersObserver getFollowersObserver;
 
     @Override
@@ -69,7 +69,7 @@ public class FollowerFragment extends Fragment implements
         presenter = new FollowerPresenter(this);
 
         getUserObserver = this;
-        setUserShownObserver = this;
+//        setUserShownObserver = this;
         getUserObserver = this;
 
         RecyclerView followerRecyclerView = view.findViewById(R.id.followerRecyclerView);
@@ -99,21 +99,21 @@ public class FollowerFragment extends Fragment implements
 //        getUserTask.execute(request);
     }
 
-    @Override
-    public void userShownSet(User user) {
-        if (user != null) {
-            Intent intent = new Intent(getActivity(), UserViewActivity.class);
-            startActivity(intent);
-        }
+//    @Override
+//    public void userShownSet(User user) {
+//        if (user != null) {
+//            Intent intent = new Intent(getActivity(), UserViewActivity.class);
+//            startActivity(intent);
+//        }
+//
+//    }
 
-    }
-
-    @Override
-    public void userShownGot(User user) {
-//        GetFollowerTask getFollowerTask = new GetFollowerTask(presenter, getFollowersObserver);
-//        FollowerRequest request = new FollowerRequest(user, PAGE_SIZE,);
-//        getFollowerTask.execute(request);
-    }
+//    @Override
+//    public void userShownGot(User user) {
+////        GetFollowerTask getFollowerTask = new GetFollowerTask(presenter, getFollowersObserver);
+////        FollowerRequest request = new FollowerRequest(user, PAGE_SIZE,);
+////        getFollowerTask.execute(request);
+//    }
 
 
 
@@ -152,8 +152,8 @@ public class FollowerFragment extends Fragment implements
         }
 
         private void switchToThisUserView(FragmentActivity activity, User user) {
-            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter,activity,setUserShownObserver);
-            setUserShownTask.execute(new UserRequest(user));
+//            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter,activity,setUserShownObserver);
+//            setUserShownTask.execute(new UserRequest(user));
             // continued in userShownSet
 
         }
@@ -162,8 +162,8 @@ public class FollowerFragment extends Fragment implements
     }
 
     public class FollowerRecyclerViewAdapter extends RecyclerView.Adapter<FollowerHolder>
-            implements GetFollowerTask.GetFollowersObserver,
-            GetUserShownTask.GetUserShownObserver
+            implements GetFollowerTask.GetFollowersObserver
+//            GetUserShownTask.GetUserShownObserver
     {
 
         private final List<User> users = new ArrayList<>();
@@ -232,22 +232,24 @@ public class FollowerFragment extends Fragment implements
             isLoading = true;
             addLoadingFooter();
 
-            GetUserShownTask userShownTask = new GetUserShownTask(presenter, getActivity(), this);
-            userShownTask.execute(new CurrentUserRequest());
+//            GetUserShownTask userShownTask = new GetUserShownTask(presenter, getActivity(), this);
+//            userShownTask.execute(new CurrentUserRequest());
             // continues on userShownGot
 
         }
 
         @Override
         public void followersRetrieved(FollowerResponse followerResponse) {
-            List<User> followees = followerResponse.getFollowees();
-
-            lastFollowee = (followees.size() > 0) ? followees.get(followees.size() -1) : null;
-            hasMorePages = followerResponse.hasMorePages();
-
-            isLoading = false;
             removeLoadingFooter();
-            followerRecyclerViewAdapter.addItems(followees);
+            if (followerResponse != null) {
+                List<User> followees = followerResponse.getFollowees();
+
+                lastFollowee = (followees.size() > 0) ? followees.get(followees.size() -1) : null;
+                hasMorePages = followerResponse.hasMorePages();
+
+                isLoading = false;
+                followerRecyclerViewAdapter.addItems(followees);
+            }
         }
 
         private void addLoadingFooter() {
@@ -258,15 +260,15 @@ public class FollowerFragment extends Fragment implements
             removeItem(users.get(users.size() - 1));
         }
 
-        @Override
-        public void userShownGot(User user) {
-            if (user != null) {
-                GetFollowerTask getFollowerTask = new GetFollowerTask(presenter, this);
-                FollowerRequest request = new FollowerRequest(user, PAGE_SIZE, lastFollowee);
-                getFollowerTask.execute(request);
-            }
-
-        }
+//        @Override
+//        public void userShownGot(User user) {
+//            if (user != null) {
+//                GetFollowerTask getFollowerTask = new GetFollowerTask(presenter, this);
+//                FollowerRequest request = new FollowerRequest(user, PAGE_SIZE, lastFollowee);
+//                getFollowerTask.execute(request);
+//            }
+//
+//        }
     }
 
     private class FollowRecyclerViewPaginationScrollListener extends RecyclerView.OnScrollListener {

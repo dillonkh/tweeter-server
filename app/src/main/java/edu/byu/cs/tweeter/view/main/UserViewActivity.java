@@ -20,6 +20,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.ViewPager;
 import edu.byu.cs.tweeter.R;
+import edu.byu.cs.tweeter.model.SessionManager;
 import edu.byu.cs.tweeter.model.domain.Tweet;
 import edu.byu.cs.tweeter.model.domain.User;
 import edu.byu.cs.tweeter.model.services.UserService;
@@ -28,6 +29,7 @@ import edu.byu.cs.tweeter.net.request.FollowRequest;
 import edu.byu.cs.tweeter.net.request.IsFollowingRequest;
 import edu.byu.cs.tweeter.net.request.TweetRequest;
 import edu.byu.cs.tweeter.net.request.UnFollowRequest;
+import edu.byu.cs.tweeter.net.request.UserRequest;
 import edu.byu.cs.tweeter.net.response.IsFollowingResponse;
 import edu.byu.cs.tweeter.net.response.TweetResponse;
 import edu.byu.cs.tweeter.net.response.UserResponse;
@@ -53,7 +55,7 @@ public class UserViewActivity extends AppCompatActivity implements
         GetUnFollowTask.GetUnFollowObserver,
         GetSendTweetTask.GetTweetObserver,
         GetUserTask.GetUserObserver,
-        GetUserShownTask.GetUserShownObserver,
+//        GetUserShownTask.GetUserShownObserver,
         IsFollowingTask.IsFollowingObserver,
         GetCurrentUserTask.GetCurrentUserObserver
 {
@@ -90,7 +92,7 @@ public class UserViewActivity extends AppCompatActivity implements
 
         presenter = new MainPresenter(this);
 
-        getUserShown();
+//        getUserShown();
 
         ImageView optionDots = findViewById(R.id.optionDots);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -181,15 +183,15 @@ public class UserViewActivity extends AppCompatActivity implements
         sendTweetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(view.getContext(),"TODO: implement send tweet", Toast.LENGTH_SHORT).show();
-                EditText text = (EditText)findViewById(R.id.tweetMessage);
-                String message = text.getText().toString();
-                UserResponse currentUserResponse = UserService.getInstance().getCurrentUser();
-                Tweet tweet = new Tweet(currentUserResponse.getUser().getAlias(),message, "fakeURL");
-
-                TweetRequest request = new TweetRequest(tweet);
-                GetSendTweetTask getSendTweetTask = new GetSendTweetTask(presenter, UserViewActivity.this);
-                getSendTweetTask.execute(request);
+                Toast.makeText(view.getContext(),"TODO: implement send tweet", Toast.LENGTH_SHORT).show();
+//                EditText text = (EditText)findViewById(R.id.tweetMessage);
+//                String message = text.getText().toString();
+////                UserResponse currentUserResponse = UserService.getInstance().getCurrentUser();
+////                Tweet tweet = new Tweet(currentUserResponse.getUser().getAlias(),message, "fakeURL");
+//
+//                TweetRequest request = new TweetRequest(tweet);
+//                GetSendTweetTask getSendTweetTask = new GetSendTweetTask(presenter, UserViewActivity.this);
+//                getSendTweetTask.execute(request);
                 tweetCard.setVisibility(View.INVISIBLE);
             }
         });
@@ -198,25 +200,25 @@ public class UserViewActivity extends AppCompatActivity implements
         // Asynchronously load the user's image
     }
 
-    private void getUserShown() {
-        if (userShown == null) {
-            GetUserShownTask getUserShownTask = new GetUserShownTask(presenter, UserViewActivity.this, this);
-            getUserShownTask.execute(new CurrentUserRequest());
-            // continued at userShownGot
-        }
-        else {
-            userShownGot(userShown);
-        }
-    }
+//    private void getUserShown() {
+//        if (userShown == null) {
+//            GetUserShownTask getUserShownTask = new GetUserShownTask(presenter, UserViewActivity.this, this);
+//            getUserShownTask.execute(new CurrentUserRequest());
+//            // continued at userShownGot
+//        }
+//        else {
+//            userShownGot(userShown);
+//        }
+//    }
 
     private void getCurrentUser() {
         if (currentUserLoggedIn == null) {
-            GetCurrentUserTask currentUserTask =  new GetCurrentUserTask(presenter, UserViewActivity.this, this);
-            currentUserTask.execute(new CurrentUserRequest());
-            // continued at currentUserGot
+//            GetCurrentUserTask currentUserTask =  new GetCurrentUserTask(presenter, UserViewActivity.this, this);
+//            currentUserTask.execute(new CurrentUserRequest());
+//            // continued at currentUserGot
         }
         else {
-            currentUserGot(new UserResponse(currentUserLoggedIn));
+//            currentUserGot(new UserResponse(currentUserLoggedIn));
         }
     }
 
@@ -261,19 +263,19 @@ public class UserViewActivity extends AppCompatActivity implements
 
     }
 
-    @Override
-    public void userShownGot(User user) {
-
-        // Asynchronously load the user's image
-        LoadImageTask loadImageTask = new LoadImageTask(this);
-        loadImageTask.execute(user.getImageUrl());
-
-        TextView userName = findViewById(R.id.userName);
-        userName.setText(user.getName());
-
-        TextView userAlias = findViewById(R.id.userAlias);
-        userAlias.setText(user.getAlias());
-    }
+//    @Override
+//    public void userShownGot(User user) {
+//
+//        // Asynchronously load the user's image
+//        LoadImageTask loadImageTask = new LoadImageTask(this);
+//        loadImageTask.execute(user.getImageUrl());
+//
+//        TextView userName = findViewById(R.id.userName);
+//        userName.setText(user.getName());
+//
+//        TextView userAlias = findViewById(R.id.userAlias);
+//        userAlias.setText(user.getAlias());
+//    }
 
     @Override
     public void isFollowingResponded(IsFollowingResponse response) {

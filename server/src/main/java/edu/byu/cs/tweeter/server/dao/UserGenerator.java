@@ -136,7 +136,7 @@ public class UserGenerator {
             String lastName = surnames[random.nextInt(surnames.length)];
             User user = new User(firstName, lastName, imageULR);
 
-            user.makeTweets(new TweetGenerator().generateTweets(2, user));
+//            user.makeTweets(new TweetGenerator().generateTweets(2, user));
 
             users.add(user);
         }

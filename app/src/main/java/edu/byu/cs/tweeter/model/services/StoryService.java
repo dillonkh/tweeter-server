@@ -31,15 +31,13 @@ public class StoryService {
     public StoryResponse getTweets(StoryRequest request) {
         StoryResponse r = serverFacade.getStory(request);
 
-        User user = UserService.getInstance().getUserShown(new CurrentUserRequest()).getUser();
-
-        return new StoryResponse(user.getTweets(), false);
+        return r;
     }
 
     public TweetResponse addTweet(TweetRequest request) {
-        User userShown = UserService.getInstance().getUserShown(new CurrentUserRequest()).getUser();
-        userShown.addTweet(request.getTweet());
-        UserService.getInstance().setUserShown(new UserRequest(userShown));
+//        User userShown = UserService.getInstance().getUserShown(new CurrentUserRequest()).getUser();
+//        userShown.addTweet(request.getTweet());
+//        UserService.getInstance().setUserShown(new UserRequest(userShown));
 
         return serverFacade.addTweet(request);
     }

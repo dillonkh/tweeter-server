@@ -49,8 +49,8 @@ import edu.byu.cs.tweeter.view.main.UserViewActivity;
 import edu.byu.cs.tweeter.view.main.story.StoryFragment;
 
 public class FeedFragment extends Fragment implements
-        FeedPresenter.View,
-        SetUserShownTask.SetUserShownObserver
+        FeedPresenter.View
+//        SetUserShownTask.SetUserShownObserver
 {
 
     private static final int LOADING_DATA_VIEW = 0;
@@ -60,7 +60,7 @@ public class FeedFragment extends Fragment implements
 
     private FeedPresenter presenter;
 
-    private SetUserShownTask.SetUserShownObserver setUserShownObserver;
+//    private SetUserShownTask.SetUserShownObserver setUserShownObserver;
 
     private FeedRecyclerViewAdapter feedRecyclerViewAdapter;
 
@@ -75,7 +75,7 @@ public class FeedFragment extends Fragment implements
 
         presenter = new FeedPresenter(this);
 
-        setUserShownObserver = this;
+//        setUserShownObserver = this;
 
         RecyclerView feedRecyclerView = view.findViewById(R.id.feedRecyclerView);
 
@@ -98,13 +98,13 @@ public class FeedFragment extends Fragment implements
         feedRecyclerViewAdapter.loadMoreItems();
     }
 
-    @Override
-    public void userShownSet(User user) {
-        if (user != null) {
-            Intent intent = new Intent(getActivity(), UserViewActivity.class);
-            startActivity(intent);
-        }
-    }
+//    @Override
+//    public void userShownSet(User user) {
+//        if (user != null) {
+//            Intent intent = new Intent(getActivity(), UserViewActivity.class);
+//            startActivity(intent);
+//        }
+//    }
 
 
     private class FeedHolder extends RecyclerView.ViewHolder implements GetUserTask.GetUserObserver {
@@ -136,8 +136,8 @@ public class FeedFragment extends Fragment implements
         }
 
         private void switchToThisUserView(FragmentActivity activity, String userAlias) {
-            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter, activity, setUserShownObserver);
-            setUserShownTask.execute(new UserRequest(new User(userAlias)));
+//            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter, activity, setUserShownObserver);
+//            setUserShownTask.execute(new UserRequest(new User(userAlias)));
             // continued in userShownSet
         }
 
@@ -251,8 +251,8 @@ public class FeedFragment extends Fragment implements
     }
 
     private class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedHolder> implements
-            GetFeedTask.GetFeedObserver,
-            GetUserShownTask.GetUserShownObserver
+            GetFeedTask.GetFeedObserver
+//            GetUserShownTask.GetUserShownObserver
     {
 
         private final List<Tweet> tweets = new ArrayList<>();
@@ -323,12 +323,12 @@ public class FeedFragment extends Fragment implements
             addLoadingFooter();
 
             if (userShown == null) {
-                GetUserShownTask userShownTask = new GetUserShownTask(presenter, getActivity(), this);
-                userShownTask.execute(new CurrentUserRequest());
+//                GetUserShownTask userShownTask = new GetUserShownTask(presenter, getActivity(), this);
+//                userShownTask.execute(new CurrentUserRequest());
                 // continues on userShownGot
             }
             else {
-                userShownGot(userShown);
+//                userShownGot(userShown);
             }
         }
 
@@ -337,12 +337,12 @@ public class FeedFragment extends Fragment implements
             List<Tweet> tweets = feedResponse.getTweets();
 
             if (tweets != null) {
-                lastTweet = tweets.get(tweets.size() - 1);
-//                lastTweet = (tweets.size() > 0) ? tweets.get(tweets.size() -1) : null;
-                hasMorePages = feedResponse.hasMorePages();
-                feedRecyclerViewAdapter.addItems(tweets);
+                if (tweets.size() > 0) {
+                    lastTweet = tweets.get(tweets.size() - 1);
+                    hasMorePages = feedResponse.hasMorePages();
+                    feedRecyclerViewAdapter.addItems(tweets);
 
-//                notifyThereAreMoreItems();
+                }
             }
 
             isLoading = false;
@@ -369,15 +369,15 @@ public class FeedFragment extends Fragment implements
             removeItem(tweets.get(tweets.size() - 1));
         }
 
-        @Override
-        public void userShownGot(User user) {
-
-            if (user != null) {
-                GetFeedTask getFeedTask = new GetFeedTask(presenter, this);
-                FeedRequest request = new FeedRequest(user, PAGE_SIZE, lastTweet);
-                getFeedTask.execute(request);
-            }
-        }
+//        @Override
+//        public void userShownGot(User user) {
+//
+//            if (user != null) {
+//                GetFeedTask getFeedTask = new GetFeedTask(presenter, this);
+//                FeedRequest request = new FeedRequest(user, PAGE_SIZE, lastTweet);
+//                getFeedTask.execute(request);
+//            }
+//        }
     }
 
     private class FollowRecyclerViewPaginationScrollListener extends RecyclerView.OnScrollListener {

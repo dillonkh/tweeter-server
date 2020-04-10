@@ -37,64 +37,64 @@ public class GetCurrentUserTask extends AsyncTask<CurrentUserRequest, Void, User
     private final User user;
     private final String userHandle;
 
-    public GetCurrentUserTask(FeedPresenter presenter, FragmentActivity activity, User user, String userHandle, GetCurrentUserTask.GetCurrentUserObserver observer) {
-        this.feedPresenter = presenter;
-        this.activity = activity;
-        this.user = user;
-        this.userHandle = userHandle;
-
-        this.observer = observer;
-
-        storyPresenter = null;
-        followerPresenter = null;
-        followingPresenter = null;
-        mainPresenter = null;
-    }
-
-    public GetCurrentUserTask(StoryPresenter presenter, FragmentActivity activity, User user, String userHandle, GetCurrentUserTask.GetCurrentUserObserver observer) {
-        this.storyPresenter = presenter;
-        this.activity = activity;
-        this.user = user;
-        this.userHandle = userHandle;
-
-        this.observer = observer;
-
-
-        feedPresenter = null;
-        followerPresenter = null;
-        followingPresenter = null;
-        mainPresenter = null;
-    }
-
-    public GetCurrentUserTask(FollowerPresenter presenter, FragmentActivity activity, User user, String userHandle, GetCurrentUserTask.GetCurrentUserObserver observer) {
-        this.followerPresenter = presenter;
-        this.activity = activity;
-        this.user = user;
-        this.userHandle = userHandle;
-
-        this.observer = observer;
-
-
-        feedPresenter = null;
-        storyPresenter = null;
-        followingPresenter = null;
-        mainPresenter = null;
-    }
-
-    public GetCurrentUserTask(FollowingPresenter presenter, FragmentActivity activity, User user, String userHandle, GetCurrentUserTask.GetCurrentUserObserver observer) {
-        this.followingPresenter = presenter;
-        this.activity = activity;
-        this.user = user;
-        this.userHandle = userHandle;
-
-        this.observer = observer;
-
-
-        feedPresenter = null;
-        storyPresenter = null;
-        followerPresenter = null;
-        mainPresenter = null;
-    }
+//    public GetCurrentUserTask(FeedPresenter presenter, FragmentActivity activity, User user, String userHandle, GetCurrentUserTask.GetCurrentUserObserver observer) {
+//        this.feedPresenter = presenter;
+//        this.activity = activity;
+//        this.user = user;
+//        this.userHandle = userHandle;
+//
+//        this.observer = observer;
+//
+//        storyPresenter = null;
+//        followerPresenter = null;
+//        followingPresenter = null;
+//        mainPresenter = null;
+//    }
+//
+//    public GetCurrentUserTask(StoryPresenter presenter, FragmentActivity activity, User user, String userHandle, GetCurrentUserTask.GetCurrentUserObserver observer) {
+//        this.storyPresenter = presenter;
+//        this.activity = activity;
+//        this.user = user;
+//        this.userHandle = userHandle;
+//
+//        this.observer = observer;
+//
+//
+//        feedPresenter = null;
+//        followerPresenter = null;
+//        followingPresenter = null;
+//        mainPresenter = null;
+//    }
+//
+//    public GetCurrentUserTask(FollowerPresenter presenter, FragmentActivity activity, User user, String userHandle, GetCurrentUserTask.GetCurrentUserObserver observer) {
+//        this.followerPresenter = presenter;
+//        this.activity = activity;
+//        this.user = user;
+//        this.userHandle = userHandle;
+//
+//        this.observer = observer;
+//
+//
+//        feedPresenter = null;
+//        storyPresenter = null;
+//        followingPresenter = null;
+//        mainPresenter = null;
+//    }
+//
+//    public GetCurrentUserTask(FollowingPresenter presenter, FragmentActivity activity, User user, String userHandle, GetCurrentUserTask.GetCurrentUserObserver observer) {
+//        this.followingPresenter = presenter;
+//        this.activity = activity;
+//        this.user = user;
+//        this.userHandle = userHandle;
+//
+//        this.observer = observer;
+//
+//
+//        feedPresenter = null;
+//        storyPresenter = null;
+//        followerPresenter = null;
+//        mainPresenter = null;
+//    }
 
     public GetCurrentUserTask(MainPresenter presenter, FragmentActivity activity, GetCurrentUserTask.GetCurrentUserObserver observer) {
         this.mainPresenter = presenter;

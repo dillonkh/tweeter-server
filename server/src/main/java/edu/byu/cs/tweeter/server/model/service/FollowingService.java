@@ -1,5 +1,6 @@
 package edu.byu.cs.tweeter.server.model.service;
 
+import edu.byu.cs.tweeter.server.dao.FollowingDAO;
 import edu.byu.cs.tweeter.server.dao.ServerFacade;
 import edu.byu.cs.tweeter.server.dao.request.FollowingRequest;
 import edu.byu.cs.tweeter.server.dao.request.UserRequest;
@@ -25,11 +26,12 @@ public class FollowingService {
     }
 
     public FollowingResponse getFollowees(FollowingRequest request) {
-        return serverFacade.getFollowees(request);
+//        return serverFacade.getFollowees(request);
+        return  new FollowingDAO().getFollowees(request);
     }
 
-    public UserResponse getUser(UserRequest request) {
-        UserResponse r = serverFacade.getUser(request);
-        return r;
-    }
+//    public UserResponse getUser(UserRequest request) {
+//        UserResponse r = serverFacade.getUser(request);
+//        return r;
+//    }
 }

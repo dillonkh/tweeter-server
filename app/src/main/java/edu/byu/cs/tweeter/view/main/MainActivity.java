@@ -16,14 +16,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import edu.byu.cs.tweeter.R;
+import edu.byu.cs.tweeter.model.SessionManager;
 import edu.byu.cs.tweeter.model.domain.Tweet;
 import edu.byu.cs.tweeter.model.domain.User;
 import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
 import edu.byu.cs.tweeter.net.request.TweetRequest;
 import edu.byu.cs.tweeter.net.request.UserRequest;
-import edu.byu.cs.tweeter.net.response.FeedResponse;
 import edu.byu.cs.tweeter.net.response.TweetResponse;
 import edu.byu.cs.tweeter.net.response.UserResponse;
 import edu.byu.cs.tweeter.presenter.MainPresenter;
@@ -38,22 +39,19 @@ import edu.byu.cs.tweeter.view.main.feed.FeedFragment;
 import edu.byu.cs.tweeter.view.main.story.StoryFragment;
 
 public class MainActivity extends AppCompatActivity implements
-        SetUserShownTask.SetUserShownObserver,
+//        SetUserShownTask.SetUserShownObserver,
         GetSendTweetTask.GetTweetObserver,
         LoadImageTask.LoadImageObserver,
-        GetCurrentUserTask.GetCurrentUserObserver,
-        GetUserTask.GetUserObserver,
-        GetUserShownTask.GetUserShownObserver,
+//        GetCurrentUserTask.GetCurrentUserObserver,
+//        GetUserTask.GetUserObserver,
         MainPresenter.View
 {
 
     private MainPresenter presenter;
-//    private StoryPresenter storyPresenter;
-    private User currentUser;
+//    private User currentUser;
     private ImageView userImageView;
     private boolean following = true; // TODO: this should come from the user itself
     private StoryFragment storyFragment;
-//    private View theView;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -76,10 +74,9 @@ public class MainActivity extends AppCompatActivity implements
         Button sendTweetButton = findViewById(R.id.sendTweetButton);
         final EditText searchBox = findViewById(R.id.searchText);
         ImageView searchUserIcon = findViewById(R.id.searchUserIcon);
-//        final Button followButton = findViewById(R.id.followButton);
 
         storyFragment = sectionsPagerAdapter.getStoryFragment();
-        final FeedFragment feedFragment = sectionsPagerAdapter.getFeedFragment();
+//        final FeedFragment feedFragment = sectionsPagerAdapter.getFeedFragment();
 
 
         signOutButton.setOnClickListener(new View.OnClickListener() {
@@ -126,15 +123,15 @@ public class MainActivity extends AppCompatActivity implements
         sendTweetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(view.getContext(),
-                EditText text = (EditText)findViewById(R.id.tweetMessage);
-                String message = text.getText().toString();
-                Tweet tweet = new Tweet(currentUser.getAlias(), message, "make URL");
-
-                TweetRequest request = new TweetRequest(tweet);
-                GetSendTweetTask getSendTweetTask = new GetSendTweetTask(presenter, MainActivity.this);
-                getSendTweetTask.execute(request);
-                tweetCard.setVisibility(View.INVISIBLE);
+                Toast.makeText(view.getContext(),"implement send tweet", Toast.LENGTH_SHORT).show();
+//                EditText text = (EditText)findViewById(R.id.tweetMessage);
+//                String message = text.getText().toString();
+//                Tweet tweet = new Tweet(currentUser.getAlias(), message, "make URL");
+//
+//                TweetRequest request = new TweetRequest(tweet);
+//                GetSendTweetTask getSendTweetTask = new GetSendTweetTask(presenter, MainActivity.this);
+//                getSendTweetTask.execute(request);
+//                tweetCard.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -150,8 +147,10 @@ public class MainActivity extends AppCompatActivity implements
     private void switchToThisUserView(String searchBoxText) {
 //        getUserShown();
         // continued in userShownGot()
-        GetUserTask getUserTask = new GetUserTask(presenter,MainActivity.this, this);
-        getUserTask.execute(new UserRequest(new User(searchBoxText)));
+//        GetUserTask getUserTask = new GetUserTask(presenter,MainActivity.this, this);
+//        getUserTask.execute(new UserRequest(new User(searchBoxText)));
+
+        Toast.makeText(this, "implement switch user view", Toast.LENGTH_SHORT).show();
     }
 
 //    private void getUserShown() {
@@ -161,16 +160,12 @@ public class MainActivity extends AppCompatActivity implements
 
     private void getCurrentUser() {
         // get the current user
-        presenter = new MainPresenter(this);
-        GetCurrentUserTask currentUserTask = new GetCurrentUserTask(presenter,MainActivity.this,this);
-        currentUserTask.execute(new CurrentUserRequest());
+//        presenter = new MainPresenter(this);
+//        GetCurrentUserTask currentUserTask = new GetCurrentUserTask(presenter,MainActivity.this,this);
+//        currentUserTask.execute(new CurrentUserRequest(SessionManager.getInstance().getUserLoggedInAuthToken()));
         // continues at currentUserGot
-    }
 
-    @Override
-    public void currentUserGot(UserResponse userResponse) {
-        currentUser = userResponse.getUser();
-
+        User currentUser = SessionManager.getInstance().getUserLoggedIn();
         // Asynchronously load the user's image
         LoadImageTask loadImageTask = new LoadImageTask(this);
         loadImageTask.execute(currentUser.getImageUrl());
@@ -180,11 +175,31 @@ public class MainActivity extends AppCompatActivity implements
 
         TextView userAlias = findViewById(R.id.userAlias);
         userAlias.setText(currentUser.getAlias());
+
     }
+
+//    @Override
+//    public void currentUserGot(UserResponse userResponse) {
+//        currentUser = userResponse.getUser();
+//
+//        // Asynchronously load the user's image
+//        LoadImageTask loadImageTask = new LoadImageTask(this);
+//        loadImageTask.execute(currentUser.getImageUrl());
+//
+//        TextView userName = findViewById(R.id.userName);
+//        userName.setText(currentUser.getName());
+//
+//        TextView userAlias = findViewById(R.id.userAlias);
+//        userAlias.setText(currentUser.getAlias());
+//    }
 
 
     private void switchToSignInView (View view) {
-//        Toast.makeText(view.getContext(),"TODO: switch to sign in page", Toast.LENGTH_SHORT).show();
+
+        SessionManager.getInstance().setUserLoggedIn(null);
+        SessionManager.getInstance().setUserShown(null);
+        SessionManager.getInstance().setUserLoggedInAuthToken(null);
+
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
@@ -195,11 +210,11 @@ public class MainActivity extends AppCompatActivity implements
         return following;
     }
 
-    private void setUserShown(User userToShow) {
-        SetUserShownTask setUserShownTask = new SetUserShownTask(presenter,MainActivity.this, this);
-        setUserShownTask.execute(new UserRequest(userToShow));
-        // continued in userShownSet
-    }
+//    private void setUserShown(User userToShow) {
+//        SetUserShownTask setUserShownTask = new SetUserShownTask(presenter,MainActivity.this, this);
+//        setUserShownTask.execute(new UserRequest(userToShow));
+//        // continued in userShownSet
+//    }
 
     @Override
     public void imageLoadProgressUpdated(Integer progress) {
@@ -208,7 +223,7 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void imagesLoaded(Drawable[] drawables) {
-        ImageCache.getInstance().cacheImage(currentUser, drawables[0]);
+        ImageCache.getInstance().cacheImage(SessionManager.getInstance().getUserLoggedIn(), drawables[0]);
 
         if(drawables[0] != null) {
             userImageView.setImageDrawable(drawables[0]);
@@ -217,30 +232,32 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     public void tweetResponded(TweetResponse tweetResponse) {
-        if (tweetResponse.isSent()) {
-            storyFragment.listChanged();
+        if (tweetResponse != null) {
+            if (tweetResponse.isSent()) {
+                storyFragment.listChanged();
+            }
         }
     }
 
-    @Override
-    public void userRetrieved(UserResponse userResponse) {
-        if (userResponse != null) {
-            setUserShown(userResponse.getUser());
-        }
-    }
+//    @Override
+//    public void userRetrieved(UserResponse userResponse) {
+//        if (userResponse != null) {
+//            setUserShown(userResponse.getUser());
+//        }
+//    }
 
-    @Override
-    public void userShownGot(User user) {
+//    @Override
+//    public void userShownGot(User user) {
 //        GetUserTask getUserTask = new GetUserTask(presenter, MainActivity.this, presenter.getUserShown(), searchBox.getText().toString());
 //        UserRequest request = new UserRequest(presenter.getUserShown(), searchBoxText);
 //        getUserTask.execute(request);
-    }
+//    }
 
-    @Override
-    public void userShownSet(User user) {
-        Intent intent = new Intent(this, UserViewActivity.class);
-        this.startActivity(intent);
-    }
+//    @Override
+//    public void userShownSet(User user) {
+//        Intent intent = new Intent(this, UserViewActivity.class);
+//        this.startActivity(intent);
+//    }
 
 //    class MyCustomSpannable extends ClickableSpan
 //    {

@@ -88,7 +88,7 @@ public class ServerFacade {
             List<Tweet> allTweets = new ArrayList<>();
 
             for (User u : randomUsers) {
-                allTweets.addAll(u.getTweets());
+//                allTweets.addAll(u.getTweets());
             }
 
 
@@ -128,7 +128,7 @@ public class ServerFacade {
         if (u == null) {
             return new StoryResponse("Error");
         }
-        allTweets = u.getTweets();
+//        allTweets = u.getTweets();
 
         boolean hasMorePages = false;
 
@@ -196,7 +196,7 @@ public class ServerFacade {
 
     public UserResponse getCurrentUser(CurrentUserRequest request) {
 
-        return new UserResponse(new User("Dillon", "Harris", ""));
+        return new UserResponse(new User("Dillon", "Harris", "@dillonkh",""));
     }
 
     public UserResponse setCurrentUser(UserRequest request) {
@@ -255,11 +255,11 @@ public class ServerFacade {
             }
 
             String lastName = surnames[random.nextInt(surnames.length)];
-            User user = new User(firstName, lastName, imageULR);
+//            User user = new User(firstName, lastName, imageULR);
 
-            user.makeTweets(new TweetGenerator().generateTweets(2, user));
+//            user.makeTweets(new TweetGenerator().generateTweets(2, user));
 
-            users.add(user);
+//            users.add(user);
         }
 
         return users;
@@ -394,7 +394,7 @@ public class ServerFacade {
     }
 
     public LoginResponse login(LoginRequest request) {
-        return new LoginResponse(true, new User("Dummy", "Data", ""), "fakeToken");
+        return new LoginResponse(true, new User("Dummy", "Data", "@dummy", ""), "fakeToken");
     }
 
     public LoginResponse signUp(SignUpRequest request) {
@@ -402,6 +402,8 @@ public class ServerFacade {
 
         return new LoginResponse(true, newUser, "FakeAuth");
     }
+
+    // signout
 
 
 }

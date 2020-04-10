@@ -12,16 +12,16 @@ public abstract class Presenter {
 //    private User shownUser;
 
     public UserResponse getCurrentUser(CurrentUserRequest request) {
-        return UserService.getInstance().getCurrentUser();
+        return UserService.getInstance().getCurrentUser(request);
     }
 
-    public User getUserShown(CurrentUserRequest request) {
-        return UserService.getInstance().getUserShown(request).getUser();
-    }
-
-    public User setShownUser(UserRequest userRequest) {
-        return UserService.getInstance().setUserShown(userRequest).getUser();
-    }
+//    public User getUserShown(CurrentUserRequest request) {
+//        return UserService.getInstance().getUserShown(request).getUser();
+//    }
+//
+//    public User setShownUser(UserRequest userRequest) {
+//        return UserService.getInstance().setUserShown(userRequest).getUser();
+//    }
 
     public abstract UserResponse getUser(UserRequest request);
 }

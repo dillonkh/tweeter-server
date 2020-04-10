@@ -29,79 +29,78 @@
 19-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:11:9-54
 20        android:supportsRtl="true"
 20-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:12:9-35
-21        android:testOnly="true"
-22        android:theme="@style/AppTheme" >
-22-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:13:9-40
-23        <activity
-23-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:14:9-23:20
-24            android:name="edu.byu.cs.tweeter.view.main.LoginActivity"
-24-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:15:13-52
-25            android:label="LoginActivity"
-25-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:16:13-42
-26            android:theme="@style/AppTheme.NoActionBar" >
-26-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:17:13-56
-27            <intent-filter>
-27-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:18:13-22:29
-28                <action android:name="android.intent.action.MAIN" />
-28-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:17-69
-28-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:25-66
-29
-30                <category android:name="android.intent.category.LAUNCHER" />
-30-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:17-77
-30-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:27-74
-31            </intent-filter>
-32        </activity>
-33        <activity
-33-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:24:9-33:20
-34            android:name="edu.byu.cs.tweeter.view.main.MainActivity"
-34-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:25:13-51
-35            android:label="@string/title_activity_main"
-35-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:26:13-56
-36            android:theme="@style/AppTheme.NoActionBar" >
-36-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:27:13-56
-37            <intent-filter>
-37-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:18:13-22:29
-38                <action android:name="android.intent.action.MAIN" />
-38-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:17-69
-38-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:25-66
-39
-40                <category android:name="android.intent.category.LAUNCHER" />
-40-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:17-77
-40-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:27-74
-41            </intent-filter>
-42        </activity>
-43        <activity
-43-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:34:9-44:20
-44            android:name="edu.byu.cs.tweeter.view.main.UserViewActivity"
-44-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:35:13-55
-45            android:label="UserViewActivity"
-45-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:36:13-45
-46            android:parentActivityName="edu.byu.cs.tweeter.view.main.MainActivity"
-46-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:38:13-65
-47            android:theme="@style/AppTheme.NoActionBar" >
-47-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:37:13-56
-48            <intent-filter>
-48-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:18:13-22:29
-49                <action android:name="android.intent.action.MAIN" />
-49-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:17-69
-49-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:25-66
-50
-51                <category android:name="android.intent.category.LAUNCHER" />
-51-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:17-77
-51-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:27-74
-52            </intent-filter>
-53        </activity>
-54
-55        <provider
-55-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/373c6a82ca13621ed8eb3aa683d0abf7/lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
-56            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-56-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/373c6a82ca13621ed8eb3aa683d0abf7/lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
-57            android:authorities="edu.byu.cs.tweeter.lifecycle-process"
-57-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/373c6a82ca13621ed8eb3aa683d0abf7/lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
-58            android:exported="false"
-58-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/373c6a82ca13621ed8eb3aa683d0abf7/lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
-59            android:multiprocess="true" />
-59-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/373c6a82ca13621ed8eb3aa683d0abf7/lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
-60    </application>
-61
-62</manifest>
+21        android:theme="@style/AppTheme" >
+21-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:13:9-40
+22        <activity
+22-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:14:9-23:20
+23            android:name="edu.byu.cs.tweeter.view.main.LoginActivity"
+23-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:15:13-52
+24            android:label="LoginActivity"
+24-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:16:13-42
+25            android:theme="@style/AppTheme.NoActionBar" >
+25-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:17:13-56
+26            <intent-filter>
+26-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:18:13-22:29
+27                <action android:name="android.intent.action.MAIN" />
+27-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:17-69
+27-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:25-66
+28
+29                <category android:name="android.intent.category.LAUNCHER" />
+29-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:17-77
+29-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:27-74
+30            </intent-filter>
+31        </activity>
+32        <activity
+32-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:24:9-33:20
+33            android:name="edu.byu.cs.tweeter.view.main.MainActivity"
+33-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:25:13-51
+34            android:label="@string/title_activity_main"
+34-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:26:13-56
+35            android:theme="@style/AppTheme.NoActionBar" >
+35-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:27:13-56
+36            <intent-filter>
+36-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:18:13-22:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:17-69
+37-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:17-77
+39-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:27-74
+40            </intent-filter>
+41        </activity>
+42        <activity
+42-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:34:9-44:20
+43            android:name="edu.byu.cs.tweeter.view.main.UserViewActivity"
+43-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:35:13-55
+44            android:label="UserViewActivity"
+44-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:36:13-45
+45            android:parentActivityName="edu.byu.cs.tweeter.view.main.MainActivity"
+45-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:38:13-65
+46            android:theme="@style/AppTheme.NoActionBar" >
+46-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:37:13-56
+47            <intent-filter>
+47-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:18:13-22:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:17-69
+48-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:19:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:17-77
+50-->/Users/dillonharris/Documents/GitHub/tweeter-server/app/src/main/AndroidManifest.xml:21:27-74
+51            </intent-filter>
+52        </activity>
+53
+54        <provider
+54-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/373c6a82ca13621ed8eb3aa683d0abf7/lifecycle-process-2.0.0/AndroidManifest.xml:23:9-27:43
+55            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+55-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/373c6a82ca13621ed8eb3aa683d0abf7/lifecycle-process-2.0.0/AndroidManifest.xml:24:13-79
+56            android:authorities="edu.byu.cs.tweeter.lifecycle-process"
+56-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/373c6a82ca13621ed8eb3aa683d0abf7/lifecycle-process-2.0.0/AndroidManifest.xml:25:13-69
+57            android:exported="false"
+57-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/373c6a82ca13621ed8eb3aa683d0abf7/lifecycle-process-2.0.0/AndroidManifest.xml:26:13-37
+58            android:multiprocess="true" />
+58-->[androidx.lifecycle:lifecycle-process:2.0.0] /Users/dillonharris/.gradle/caches/transforms-2/files-2.1/373c6a82ca13621ed8eb3aa683d0abf7/lifecycle-process-2.0.0/AndroidManifest.xml:27:13-40
+59    </application>
+60
+61</manifest>

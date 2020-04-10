@@ -28,6 +28,13 @@ public class Tweet implements Comparable<Tweet> {
 
     }
 
+    public Tweet(String user, String message, String url, String timeStamp) {
+        this.user = user;
+        this.message = message;
+        this.url = url;
+        this.timeStamp = timeStamp;
+    }
+
     public Tweet() {
     }
 
@@ -77,7 +84,7 @@ public class Tweet implements Comparable<Tweet> {
     @Override
     public String toString() {
         return "Tweet{" +
-                "User='" + user.toString() + '\'' +
+                "User='" + user + '\'' +
                 ", message='" + message + '\'' +
                 ", url='" + url + '\'' +
                 '}';

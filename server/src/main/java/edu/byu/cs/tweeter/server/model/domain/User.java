@@ -14,30 +14,30 @@ public class User implements Comparable<User> {
     public String lastName = null;
     public String alias = null;
     public String imageUrl = null;
-    public List<Tweet> tweets = null;
+//    public List<Tweet> tweets = null;
 
 
     public User(String firstName, String lastName, String imageURL) {
-        this(firstName, lastName, String.format("@%s%s", firstName, lastName), imageURL, null);
+        this(firstName, lastName, String.format("@%s%s", firstName, lastName), imageURL);
     }
-
-    public User(String firstName, String lastName, String alias, String imageURL) {
-        this(firstName, lastName, alias, imageURL, null);
-    }
-
-    public User(String firstName, String lastName, String imageURL, List<Tweet> tweets) {
-        this(firstName, lastName, String.format("@%s%s", firstName, lastName), imageURL, tweets);
-    }
+//
+//    public User(String firstName, String lastName, String alias, String imageURL) {
+//        this(firstName, lastName, alias, imageURL);
+//    }
+//
+//    public User(String firstName, String lastName, String imageURL) {
+//        this(firstName, lastName, String.format("@%s%s", firstName, lastName), imageURL);
+//    }
 
     public User() {
     }
 
-    public User(String firstName, String lastName, String alias, String imageURL, List<Tweet> tweets) {
+    public User(String firstName, String lastName, String alias, String imageURL) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.alias = alias;
         this.imageUrl = imageURL;
-        this.tweets = tweets;
+//        this.tweets = tweets;
     }
 
     public String getFirstName() {
@@ -60,20 +60,20 @@ public class User implements Comparable<User> {
         return imageUrl;
     }
 
-    public List<Tweet> getTweets() {
-        return tweets;
-    }
+//    public List<Tweet> getTweets() {
+//        return tweets;
+//    }
 
-    public void makeTweets(List<Tweet> newTweets) {
-        tweets = newTweets;
-    }
+//    public void makeTweets(List<Tweet> newTweets) {
+//        tweets = newTweets;
+//    }
 
-    public void addTweet(Tweet tweet) {
-        if (tweets == null) {
-            tweets = new ArrayList<>();
-        }
-        tweets.add(tweet);
-    }
+//    public void addTweet(Tweet tweet) {
+//        if (tweets == null) {
+//            tweets = new ArrayList<>();
+//        }
+//        tweets.add(tweet);
+//    }
 
     @Override
     public boolean equals(Object o) {

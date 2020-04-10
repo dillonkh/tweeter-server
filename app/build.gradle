@@ -57,4 +57,5 @@ dependencies {
     implementation 'com.amazonaws:aws-android-sdk-apigateway-core:2.16.9'
     implementation platform('software.amazon.awssdk:bom:2.5.29')
     implementation 'software.amazon.awssdk:kinesis'
+    implementation 'com.amazonaws:aws-android-sdk-sqs:2.15.+'
 }

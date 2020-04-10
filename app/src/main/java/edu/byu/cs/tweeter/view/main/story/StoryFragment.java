@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.byu.cs.tweeter.R;
+import edu.byu.cs.tweeter.model.SessionManager;
 import edu.byu.cs.tweeter.model.domain.Tweet;
 import edu.byu.cs.tweeter.model.domain.User;
 import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
@@ -47,8 +48,8 @@ import edu.byu.cs.tweeter.view.cache.ImageCache;
 import edu.byu.cs.tweeter.view.main.UserViewActivity;
 
 public class StoryFragment extends Fragment implements
-        StoryPresenter.View,
-        SetUserShownTask.SetUserShownObserver
+        StoryPresenter.View
+//        SetUserShownTask.SetUserShownObserver
 {
 
     private static RecyclerView storyRecyclerView;
@@ -60,7 +61,7 @@ public class StoryFragment extends Fragment implements
 
     private StoryPresenter presenter;
 
-    private SetUserShownTask.SetUserShownObserver setUserShownObserver;
+//    private SetUserShownTask.SetUserShownObserver setUserShownObserver;
 
     private StoryRecyclerViewAdapter storyRecyclerViewAdapter;
 
@@ -71,7 +72,7 @@ public class StoryFragment extends Fragment implements
 
         presenter = new StoryPresenter(this);
 
-        setUserShownObserver = this;
+//        setUserShownObserver = this;
 
         storyRecyclerView = view.findViewById(R.id.storyRecyclerView);
 
@@ -97,13 +98,13 @@ public class StoryFragment extends Fragment implements
         storyRecyclerView.smoothScrollToPosition(0);
     }
 
-    @Override
-    public void userShownSet(User user) {
-        if (user != null) {
-            Intent intent = new Intent(getActivity(), UserViewActivity.class);
-            startActivity(intent);
-        }
-    }
+//    @Override
+//    public void userShownSet(User user) {
+//        if (user != null) {
+//            Intent intent = new Intent(getActivity(), UserViewActivity.class);
+//            startActivity(intent);
+//        }
+//    }
 
 
     private class StoryHolder extends RecyclerView.ViewHolder implements GetUserTask.GetUserObserver {
@@ -135,8 +136,8 @@ public class StoryFragment extends Fragment implements
         }
 
         private void switchToThisUserView(FragmentActivity activity, String userAlias) {
-            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter, activity, setUserShownObserver);
-            setUserShownTask.execute(new UserRequest(new User(userAlias)));
+//            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter, activity, setUserShownObserver);
+//            setUserShownTask.execute(new UserRequest(new User(userAlias)));
             // continued in userShownSet
         }
 
@@ -163,7 +164,7 @@ public class StoryFragment extends Fragment implements
         }
         private void getUserToBindTweets(Tweet tweet) {
             GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), this);
-            getUserTask.execute(new UserRequest(new User(tweet.getUser())));
+            getUserTask.execute(new UserRequest(null, tweet.getUser()));
             // continued in userRetrieved
         }
 
@@ -247,8 +248,8 @@ public class StoryFragment extends Fragment implements
     }
 
     private class StoryRecyclerViewAdapter extends RecyclerView.Adapter<StoryHolder> implements
-            GetStoryTask.GetStoryObserver,
-            GetUserShownTask.GetUserShownObserver
+            GetStoryTask.GetStoryObserver
+//            GetUserShownTask.GetUserShownObserver
     {
 
         private final List<Tweet> tweets = new ArrayList<>();
@@ -319,9 +320,13 @@ public class StoryFragment extends Fragment implements
             isLoading = true;
             addLoadingFooter();
 
-            GetUserShownTask userShownTask = new GetUserShownTask(presenter, getActivity(), this);
-            userShownTask.execute(new CurrentUserRequest());
+//            GetUserShownTask userShownTask = new GetUserShownTask(presenter, getActivity(), this);
+//            userShownTask.execute(new CurrentUserRequest());
             // continues on userShownGot
+
+            GetStoryTask getStoryTask = new GetStoryTask(presenter, this);
+            StoryRequest request = new StoryRequest(SessionManager.getInstance().getUserShown(), PAGE_SIZE, lastTweet);
+            getStoryTask.execute(request);
 
         }
 
@@ -363,15 +368,15 @@ public class StoryFragment extends Fragment implements
             }
         }
 
-        @Override
-        public void userShownGot(User user) {
-            if (user != null) {
-                GetStoryTask getStoryTask = new GetStoryTask(presenter, this);
-                StoryRequest request = new StoryRequest(user, PAGE_SIZE, lastTweet);
-                getStoryTask.execute(request);
-                // continued at tweetsRetrieved
-            }
-        }
+//        @Override
+//        public void userShownGot(User user) {
+//            if (user != null) {
+//                GetStoryTask getStoryTask = new GetStoryTask(presenter, this);
+//                StoryRequest request = new StoryRequest(user, PAGE_SIZE, lastTweet);
+//                getStoryTask.execute(request);
+//                // continued at tweetsRetrieved
+//            }
+//        }
     }
 
     private class FollowRecyclerViewPaginationScrollListener extends RecyclerView.OnScrollListener {
