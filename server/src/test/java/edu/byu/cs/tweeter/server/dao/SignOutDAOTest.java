@@ -3,12 +3,13 @@ package edu.byu.cs.tweeter.server.dao;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import edu.byu.cs.tweeter.server.dao.request.LoginRequest;
-import edu.byu.cs.tweeter.server.dao.request.SignUpRequest;
-import edu.byu.cs.tweeter.server.dao.request.UserRequest;
-import edu.byu.cs.tweeter.server.dao.response.LoginResponse;
-import edu.byu.cs.tweeter.server.dao.response.UserResponse;
+import edu.byu.cs.tweeter.server.model.request.LoginRequest;
+import edu.byu.cs.tweeter.server.model.request.SignUpRequest;
+import edu.byu.cs.tweeter.server.model.request.UserRequest;
+import edu.byu.cs.tweeter.server.model.response.LoginResponse;
+import edu.byu.cs.tweeter.server.model.response.UserResponse;
 import edu.byu.cs.tweeter.server.model.domain.User;
+import edu.byu.cs.tweeter.server.testing.ServerFacade;
 
 
 class SignOutDAOTest {

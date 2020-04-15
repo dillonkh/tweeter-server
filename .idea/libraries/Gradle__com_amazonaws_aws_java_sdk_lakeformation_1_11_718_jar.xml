@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-lakeformation:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-lakeformation/1.11.718/303695bf0e72531525d2ea6cc88945816e16f37d/aws-java-sdk-lakeformation-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-lakeformation/1.11.718/73fdf144b4d3a03ae2bad7f3280839f13c99c4c4/aws-java-sdk-lakeformation-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-lakeformation/1.11.718/d2290b6b5c3ae6c78f6d5914f6edb5c664335583/aws-java-sdk-lakeformation-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

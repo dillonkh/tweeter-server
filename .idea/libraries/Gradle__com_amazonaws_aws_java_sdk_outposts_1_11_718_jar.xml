@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-outposts:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-outposts/1.11.718/79152fa0452e1f8b22785c90c490ee93b2f81ecc/aws-java-sdk-outposts-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-outposts/1.11.718/f187613359dd31777ecb6bd11d90495c0f0fb177/aws-java-sdk-outposts-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-outposts/1.11.718/8a83d7cd842897173624137cb2eb3e1d5173a751/aws-java-sdk-outposts-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

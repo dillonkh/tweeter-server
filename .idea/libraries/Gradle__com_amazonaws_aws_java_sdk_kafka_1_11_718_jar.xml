@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-kafka:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kafka/1.11.718/c6651608162dac83c1970fd2eb522e163a93587c/aws-java-sdk-kafka-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kafka/1.11.718/736ea856408c599358cd49f13442e926838155ea/aws-java-sdk-kafka-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kafka/1.11.718/3f71110ba4f698b6b15b8cc90d4e86772fb30c4f/aws-java-sdk-kafka-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

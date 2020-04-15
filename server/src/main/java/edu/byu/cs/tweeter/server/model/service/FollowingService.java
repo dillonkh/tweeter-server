@@ -1,11 +1,11 @@
 package edu.byu.cs.tweeter.server.model.service;
 
 import edu.byu.cs.tweeter.server.dao.FollowingDAO;
-import edu.byu.cs.tweeter.server.dao.ServerFacade;
-import edu.byu.cs.tweeter.server.dao.request.FollowingRequest;
-import edu.byu.cs.tweeter.server.dao.request.UserRequest;
-import edu.byu.cs.tweeter.server.dao.response.FollowingResponse;
-import edu.byu.cs.tweeter.server.dao.response.UserResponse;
+import edu.byu.cs.tweeter.server.testing.ServerFacade;
+import edu.byu.cs.tweeter.server.model.domain.Tweet;
+import edu.byu.cs.tweeter.server.model.request.FollowingRequest;
+import edu.byu.cs.tweeter.server.model.request.UpdateFeedsRequest;
+import edu.byu.cs.tweeter.server.model.response.FollowingResponse;
 
 public class FollowingService {
 
@@ -26,12 +26,9 @@ public class FollowingService {
     }
 
     public FollowingResponse getFollowees(FollowingRequest request) {
-//        return serverFacade.getFollowees(request);
-        return  new FollowingDAO().getFollowees(request);
+        return new FollowingDAO().getFollowees(request);
     }
-
-//    public UserResponse getUser(UserRequest request) {
-//        UserResponse r = serverFacade.getUser(request);
-//        return r;
-//    }
+    public UpdateFeedsRequest getFolloweesMessage(FollowingRequest request, Tweet tweet) {
+        return new FollowingDAO().getFolloweesMessage(request, tweet);
+    }
 }

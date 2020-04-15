@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-kinesisvideosignalingchannels:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kinesisvideosignalingchannels/1.11.718/420665cf4d546bb2876671686666b90fbb284792/aws-java-sdk-kinesisvideosignalingchannels-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kinesisvideosignalingchannels/1.11.718/e29dc6407dfeb5e40a640b07c31cbe3ac2056a93/aws-java-sdk-kinesisvideosignalingchannels-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kinesisvideosignalingchannels/1.11.718/3be223d59cf9b8d7f05a20d02ec14fe52f4f4dcc/aws-java-sdk-kinesisvideosignalingchannels-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

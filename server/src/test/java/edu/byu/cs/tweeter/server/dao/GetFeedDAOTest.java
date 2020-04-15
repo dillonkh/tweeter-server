@@ -1,27 +1,12 @@
 package edu.byu.cs.tweeter.server.dao;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import edu.byu.cs.tweeter.model.domain.Follow;
-import edu.byu.cs.tweeter.model.service.request.FollowingRequest;
-import edu.byu.cs.tweeter.model.service.response.FollowingResponse;
-import edu.byu.cs.tweeter.server.dao.request.FeedRequest;
-import edu.byu.cs.tweeter.server.dao.request.FollowRequest;
-import edu.byu.cs.tweeter.server.dao.request.SignUpRequest;
-import edu.byu.cs.tweeter.server.dao.request.TweetRequest;
-import edu.byu.cs.tweeter.server.dao.response.FeedResponse;
-import edu.byu.cs.tweeter.server.dao.response.FollowResponse;
-import edu.byu.cs.tweeter.server.dao.response.LoginResponse;
-import edu.byu.cs.tweeter.server.dao.response.TweetResponse;
-import edu.byu.cs.tweeter.server.model.domain.Tweet;
+import edu.byu.cs.tweeter.server.model.request.FeedRequest;
+import edu.byu.cs.tweeter.server.model.response.FeedResponse;
 import edu.byu.cs.tweeter.server.model.domain.User;
+import edu.byu.cs.tweeter.server.testing.ServerFacade;
 
 class GetFeedDAOTest {
 

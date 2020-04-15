@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-marketplacecatalog:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-marketplacecatalog/1.11.718/c7630496ad7e829f9884d56feaaf461c89c7bcdc/aws-java-sdk-marketplacecatalog-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-marketplacecatalog/1.11.718/3fdadff01579924158583cbc7f72fb83bfe3118d/aws-java-sdk-marketplacecatalog-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-marketplacecatalog/1.11.718/8fab97082cd03ad9c017e5e7f01f768573310c50/aws-java-sdk-marketplacecatalog-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

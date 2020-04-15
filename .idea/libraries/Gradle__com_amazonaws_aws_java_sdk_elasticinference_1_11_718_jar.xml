@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-elasticinference:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elasticinference/1.11.718/548f22cb73fe2e61d4802f511fb5abb1c29c8a20/aws-java-sdk-elasticinference-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elasticinference/1.11.718/d740a3a78878806f81a255200f0b566b2e3354c8/aws-java-sdk-elasticinference-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-elasticinference/1.11.718/97c48455f3069cb3a49967e23ec23490ea7d080d/aws-java-sdk-elasticinference-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

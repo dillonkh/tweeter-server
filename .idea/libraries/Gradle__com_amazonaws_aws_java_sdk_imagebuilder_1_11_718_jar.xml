@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-imagebuilder:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-imagebuilder/1.11.718/ef8c403da8496d392651cf2458f9c37675f7d995/aws-java-sdk-imagebuilder-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-imagebuilder/1.11.718/1e993758666cf82066c435672ed4a279b86351b/aws-java-sdk-imagebuilder-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-imagebuilder/1.11.718/110a2db6394b9e9d50a16b8c4a01807a5f3973d8/aws-java-sdk-imagebuilder-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

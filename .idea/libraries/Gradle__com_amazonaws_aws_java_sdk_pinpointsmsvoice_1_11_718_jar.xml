@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-pinpointsmsvoice:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-pinpointsmsvoice/1.11.718/aa1de1895156384c5aeeb4788dccfd26f77219a2/aws-java-sdk-pinpointsmsvoice-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-pinpointsmsvoice/1.11.718/4dc7e9ed33e8ccb100aae2e66c9ece14619c8a5a/aws-java-sdk-pinpointsmsvoice-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-pinpointsmsvoice/1.11.718/c1f77aa1c8f635bc36dee01d51742df9364e9c2c/aws-java-sdk-pinpointsmsvoice-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

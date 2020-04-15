@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-servicequotas:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-servicequotas/1.11.718/7e941f200432cfbd463b8e480c46423eaf9d8d4d/aws-java-sdk-servicequotas-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-servicequotas/1.11.718/389e00fb9ebc17741e57c6aeb4fffb226d5a0c3a/aws-java-sdk-servicequotas-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-servicequotas/1.11.718/de585be5ea1e45fb788280d3cf0333a2c5bcd5a5/aws-java-sdk-servicequotas-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

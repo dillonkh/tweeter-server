@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-codestarnotifications:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codestarnotifications/1.11.718/4d9b361818973b5bfecd193eb8673037a7b50349/aws-java-sdk-codestarnotifications-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codestarnotifications/1.11.718/c8f972b22cbe248880b296452ea1f3d2d6549b9a/aws-java-sdk-codestarnotifications-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codestarnotifications/1.11.718/863d3800f76cad9357238a2355e389f71ab58ab3/aws-java-sdk-codestarnotifications-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

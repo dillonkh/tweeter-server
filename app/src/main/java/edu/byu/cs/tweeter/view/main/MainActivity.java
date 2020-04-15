@@ -23,8 +23,10 @@ import edu.byu.cs.tweeter.model.SessionManager;
 import edu.byu.cs.tweeter.model.domain.Tweet;
 import edu.byu.cs.tweeter.model.domain.User;
 import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
+import edu.byu.cs.tweeter.net.request.LoginRequest;
 import edu.byu.cs.tweeter.net.request.TweetRequest;
 import edu.byu.cs.tweeter.net.request.UserRequest;
+import edu.byu.cs.tweeter.net.response.LoginResponse;
 import edu.byu.cs.tweeter.net.response.TweetResponse;
 import edu.byu.cs.tweeter.net.response.UserResponse;
 import edu.byu.cs.tweeter.presenter.MainPresenter;
@@ -34,16 +36,16 @@ import edu.byu.cs.tweeter.view.asyncTasks.GetUserShownTask;
 import edu.byu.cs.tweeter.view.asyncTasks.GetUserTask;
 import edu.byu.cs.tweeter.view.asyncTasks.LoadImageTask;
 import edu.byu.cs.tweeter.view.asyncTasks.SetUserShownTask;
+import edu.byu.cs.tweeter.view.asyncTasks.SignOutTask;
 import edu.byu.cs.tweeter.view.cache.ImageCache;
 import edu.byu.cs.tweeter.view.main.feed.FeedFragment;
 import edu.byu.cs.tweeter.view.main.story.StoryFragment;
 
 public class MainActivity extends AppCompatActivity implements
-//        SetUserShownTask.SetUserShownObserver,
         GetSendTweetTask.GetTweetObserver,
         LoadImageTask.LoadImageObserver,
-//        GetCurrentUserTask.GetCurrentUserObserver,
-//        GetUserTask.GetUserObserver,
+        GetUserTask.GetUserObserver,
+        SignOutTask.SignOutObserver,
         MainPresenter.View
 {
 
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements
         signOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchToSignInView(view);
+                signOut();
             }
         });
 
@@ -146,26 +148,19 @@ public class MainActivity extends AppCompatActivity implements
 
     }
 
-    private void switchToThisUserView(String searchBoxText) {
-//        getUserShown();
-        // continued in userShownGot()
-//        GetUserTask getUserTask = new GetUserTask(presenter,MainActivity.this, this);
-//        getUserTask.execute(new UserRequest(new User(searchBoxText)));
-
-        Toast.makeText(this, "implement switch user view", Toast.LENGTH_SHORT).show();
+    private void signOut() {
+        SignOutTask signOutTask = new SignOutTask(presenter, this);
+        signOutTask.execute(new LoginRequest(null, SessionManager.getInstance().getUserLoggedIn().getAlias()));
     }
 
-//    private void getUserShown() {
-//        GetUserShownTask getUserShownTask = new GetUserShownTask(presenter, MainActivity.this, this);
-//        getUserShownTask.execute(new CurrentUserRequest());
-//    }
+    private void switchToThisUserView(String searchBoxText) {
+        GetUserTask getUserTask = new GetUserTask(presenter, MainActivity.this, this);
+        getUserTask.execute(new UserRequest(null, searchBoxText));
+
+
+    }
 
     private void getCurrentUser() {
-        // get the current user
-//        presenter = new MainPresenter(this);
-//        GetCurrentUserTask currentUserTask = new GetCurrentUserTask(presenter,MainActivity.this,this);
-//        currentUserTask.execute(new CurrentUserRequest(SessionManager.getInstance().getUserLoggedInAuthToken()));
-        // continues at currentUserGot
 
         User currentUser = SessionManager.getInstance().getUserLoggedIn();
         // Asynchronously load the user's image
@@ -180,23 +175,8 @@ public class MainActivity extends AppCompatActivity implements
 
     }
 
-//    @Override
-//    public void currentUserGot(UserResponse userResponse) {
-//        currentUser = userResponse.getUser();
-//
-//        // Asynchronously load the user's image
-//        LoadImageTask loadImageTask = new LoadImageTask(this);
-//        loadImageTask.execute(currentUser.getImageUrl());
-//
-//        TextView userName = findViewById(R.id.userName);
-//        userName.setText(currentUser.getName());
-//
-//        TextView userAlias = findViewById(R.id.userAlias);
-//        userAlias.setText(currentUser.getAlias());
-//    }
 
-
-    private void switchToSignInView (View view) {
+    private void switchToSignInView () {
 
         SessionManager.getInstance().setUserLoggedIn(null);
         SessionManager.getInstance().setUserShown(null);
@@ -212,11 +192,6 @@ public class MainActivity extends AppCompatActivity implements
         return following;
     }
 
-//    private void setUserShown(User userToShow) {
-//        SetUserShownTask setUserShownTask = new SetUserShownTask(presenter,MainActivity.this, this);
-//        setUserShownTask.execute(new UserRequest(userToShow));
-//        // continued in userShownSet
-//    }
 
     @Override
     public void imageLoadProgressUpdated(Integer progress) {
@@ -251,12 +226,24 @@ public class MainActivity extends AppCompatActivity implements
         Toast.makeText(this, "There was an error sending the tweet", Toast.LENGTH_SHORT);
     }
 
-//    @Override
-//    public void userRetrieved(UserResponse userResponse) {
-//        if (userResponse != null) {
-//            setUserShown(userResponse.getUser());
-//        }
-//    }
+    @Override
+    public void userRetrieved(UserResponse userResponse) {
+        if (userResponse != null) {
+            if (userResponse.getUser() != null) {
+                SessionManager.getInstance().setUserShown(userResponse.getUser());
+                Intent intent = new Intent(this, UserViewActivity.class);
+                this.startActivity(intent);
+            }
+            else {
+                Toast.makeText(this, "Sorry, that user does not exist", Toast.LENGTH_LONG);
+            }
+        }
+    }
+
+    @Override
+    public void signOutResponded(LoginResponse r) {
+        switchToSignInView();
+    }
 
 //    @Override
 //    public void userShownGot(User user) {

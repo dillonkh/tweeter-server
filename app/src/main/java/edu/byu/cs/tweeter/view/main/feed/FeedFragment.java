@@ -1,6 +1,7 @@
 package edu.byu.cs.tweeter.view.main.feed;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.SpannableString;
@@ -35,6 +36,8 @@ import edu.byu.cs.tweeter.presenter.FeedPresenter;
 import edu.byu.cs.tweeter.view.asyncTasks.GetFeedTask;
 import edu.byu.cs.tweeter.view.asyncTasks.GetUserTask;
 import edu.byu.cs.tweeter.view.cache.ImageCache;
+import edu.byu.cs.tweeter.view.main.LoginActivity;
+import edu.byu.cs.tweeter.view.main.UserViewActivity;
 
 public class FeedFragment extends Fragment implements
         FeedPresenter.View
@@ -94,6 +97,19 @@ public class FeedFragment extends Fragment implements
 //            startActivity(intent);
 //        }
 //    }
+
+    private void gotUser(UserResponse userResponse) {
+
+        if (userResponse != null) {
+            if (userResponse.getUser() != null) {
+                SessionManager.getInstance().setUserShown(userResponse.getUser());
+
+                Intent intent = new Intent(getActivity(), UserViewActivity.class);
+                startActivity(intent);
+            }
+        }
+
+    }
 
 
     private class FeedHolder extends RecyclerView.ViewHolder implements GetUserTask.GetUserObserver {
@@ -216,7 +232,7 @@ public class FeedFragment extends Fragment implements
         return ss;
     }
 
-    class MyClickableSpan extends ClickableSpan {
+    class MyClickableSpan extends ClickableSpan implements GetUserTask.GetUserObserver {
 
         String message;
 
@@ -226,17 +242,25 @@ public class FeedFragment extends Fragment implements
 
         @Override
         public void onClick(View textView) {
+
+
 //            startActivity(new Intent(MyActivity.this, NextActivity.class));
 //
 //            Toast.makeText(textView.getContext(),message,Toast.LENGTH_SHORT).show();
-//            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), message);
-//            UserRequest request = new UserRequest(presenter.getUserShown(), message);
-//            getUserTask.execute(request);
+            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(),this);
+            UserRequest request = new UserRequest(null, message);
+            getUserTask.execute(request);
         }
         @Override
         public void updateDrawState(TextPaint ds) {
             super.updateDrawState(ds);
             ds.setUnderlineText(false);
+        }
+
+        @Override
+        public void userRetrieved(UserResponse userResponse) {
+
+            gotUser(userResponse);
         }
     }
 
@@ -257,11 +281,9 @@ public class FeedFragment extends Fragment implements
         }
 
         void addItems(List<Tweet> newTweets) {
-            if (tweets.size() > 1) {
-                int startInsertPosition = tweets.size();
-                tweets.add(0, newTweets.get(newTweets.size()-1));
-                this.notifyItemInserted(0);
-            }
+            int startInsertPosition = tweets.size();
+            tweets.addAll(startInsertPosition, newTweets);
+            this.notifyItemRangeInserted(startInsertPosition, newTweets.size());
         }
 
         void addItem(Tweet tweet) {
@@ -337,14 +359,13 @@ public class FeedFragment extends Fragment implements
             if (feedResponse != null) {
                 List<Tweet> tweets = feedResponse.getTweets();
 
+                isLoading = false;
+                removeLoadingFooter();
                 if (tweets != null) {
                     lastTweet = (tweets.size() > 0) ? tweets.get(tweets.size() -1) : null;
                     hasMorePages = feedResponse.hasMorePages();
                     feedRecyclerViewAdapter.addItems(tweets);
                 }
-
-                isLoading = false;
-                removeLoadingFooter();
             }
             else {
                 loadMoreItems();

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-forecastquery:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-forecastquery/1.11.718/e53bd9da6be7dbaafc3ffc43c9bcfdde47a2bc/aws-java-sdk-forecastquery-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-forecastquery/1.11.718/678753ace8ec9083b0b6f9eaa23e0e2f38a68a40/aws-java-sdk-forecastquery-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-forecastquery/1.11.718/a286f41816457c6091245a4a8f69d867b26c9645/aws-java-sdk-forecastquery-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-accessanalyzer:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-accessanalyzer/1.11.718/6ac87cadce9c38a923e4bd4b2d90e7725017c17d/aws-java-sdk-accessanalyzer-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-accessanalyzer/1.11.718/2c0d9fff448bedb3965513023410c80734a89e18/aws-java-sdk-accessanalyzer-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-accessanalyzer/1.11.718/a1174ecabe2a1703467d5a21917fe6a05c278c07/aws-java-sdk-accessanalyzer-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

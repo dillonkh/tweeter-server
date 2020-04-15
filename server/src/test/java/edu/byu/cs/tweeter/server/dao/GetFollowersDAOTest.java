@@ -1,16 +1,12 @@
 package edu.byu.cs.tweeter.server.dao;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import edu.byu.cs.tweeter.server.dao.request.FollowRequest;
-import edu.byu.cs.tweeter.server.dao.request.FollowerRequest;
-import edu.byu.cs.tweeter.server.dao.request.SignUpRequest;
-import edu.byu.cs.tweeter.server.dao.response.FollowResponse;
-import edu.byu.cs.tweeter.server.dao.response.FollowerResponse;
-import edu.byu.cs.tweeter.server.dao.response.LoginResponse;
+import edu.byu.cs.tweeter.server.model.request.FollowerRequest;
+import edu.byu.cs.tweeter.server.model.response.FollowerResponse;
 import edu.byu.cs.tweeter.server.model.domain.User;
+import edu.byu.cs.tweeter.server.testing.ServerFacade;
 
 class GetFollowersDAOTest {
 

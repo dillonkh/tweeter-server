@@ -3,10 +3,8 @@ package edu.byu.cs.tweeter.server.lambda;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 
-import edu.byu.cs.tweeter.server.dao.request.LoginRequest;
-import edu.byu.cs.tweeter.server.dao.request.UserRequest;
-import edu.byu.cs.tweeter.server.dao.response.LoginResponse;
-import edu.byu.cs.tweeter.server.dao.response.UserResponse;
+import edu.byu.cs.tweeter.server.model.request.LoginRequest;
+import edu.byu.cs.tweeter.server.model.response.LoginResponse;
 import edu.byu.cs.tweeter.server.model.service.LoginService;
 
 

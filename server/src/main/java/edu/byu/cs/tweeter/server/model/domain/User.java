@@ -20,6 +20,7 @@ public class User implements Comparable<User> {
     public User(String firstName, String lastName, String imageURL) {
         this(firstName, lastName, String.format("@%s%s", firstName, lastName), imageURL);
     }
+
 //
 //    public User(String firstName, String lastName, String alias, String imageURL) {
 //        this(firstName, lastName, alias, imageURL);

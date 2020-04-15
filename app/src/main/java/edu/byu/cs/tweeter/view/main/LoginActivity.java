@@ -1,34 +1,43 @@
 package edu.byu.cs.tweeter.view.main;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import edu.byu.cs.tweeter.R;
 import edu.byu.cs.tweeter.model.SessionManager;
+import edu.byu.cs.tweeter.model.domain.UploadRequest;
 import edu.byu.cs.tweeter.net.request.LoginRequest;
 import edu.byu.cs.tweeter.net.request.SignUpRequest;
-import edu.byu.cs.tweeter.net.request.UserRequest;
 import edu.byu.cs.tweeter.net.response.LoginResponse;
-import edu.byu.cs.tweeter.net.response.UserResponse;
+import edu.byu.cs.tweeter.net.response.UploadResponse;
 import edu.byu.cs.tweeter.presenter.LoginPresenter;
 import edu.byu.cs.tweeter.presenter.MainPresenter;
 import edu.byu.cs.tweeter.view.asyncTasks.GetLoginTask;
 import edu.byu.cs.tweeter.view.asyncTasks.GetSignUpTask;
-import edu.byu.cs.tweeter.view.asyncTasks.GetUserTask;
+import edu.byu.cs.tweeter.view.asyncTasks.UploadImageTask;
 
 public class LoginActivity extends AppCompatActivity implements
         LoginPresenter.View,
         MainPresenter.View,
         GetSignUpTask.GetLoginObserver,
         GetLoginTask.GetLoginObserver ,
-        GetUserTask.GetUserObserver
+        UploadImageTask.uploadImageObserver
 {
 
     private LoginPresenter presenter;
@@ -38,9 +47,13 @@ public class LoginActivity extends AppCompatActivity implements
     private EditText signUpHandle;
     private EditText signUpPassword;
     private EditText signUpURL;
+    private Button selectImageButton;
+    private TextView savedText;
 
     private EditText handleInput;
     private EditText passwordInput;
+
+    public static final int GET_FROM_GALLERY = 3;
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -61,9 +74,18 @@ public class LoginActivity extends AppCompatActivity implements
         signUpHandle = findViewById(R.id.signUpHandleInput);
         signUpPassword = findViewById(R.id.signUpPasswordInput);
         signUpURL = findViewById(R.id.signUpImageURL);
+        selectImageButton = findViewById(R.id.selectImageButton);
+        savedText = findViewById(R.id.savedText);
 
         handleInput = findViewById(R.id.handleInput);
         passwordInput = findViewById(R.id.passwordInput);
+
+        selectImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivityForResult(new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.INTERNAL_CONTENT_URI), GET_FROM_GALLERY);
+            }
+        });
 
         signUpPrompt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +107,42 @@ public class LoginActivity extends AppCompatActivity implements
             }
         });
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        //Detects request codes
+        if(requestCode==GET_FROM_GALLERY && resultCode == Activity.RESULT_OK) {
+            Uri selectedImage = data.getData();
+            Bitmap bitmap = null;
+            try {
+                bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImage);
+
+                ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+                byte[] byteArray = byteArrayOutputStream.toByteArray();
+
+                uploadImageToS3(byteArray);
+
+            } catch (FileNotFoundException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+                return;
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+                return;
+            }
+        }
+    }
+
+    private void uploadImageToS3(byte[] byteArray) {
+        UploadImageTask task = new UploadImageTask(presenter, this);
+        String encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
+        encoded = encoded.replace("\n", "").replace("\r", "");
+        task.execute(new UploadRequest(encoded, "aFile.png"));
     }
 
     private void signIn(View v) {
@@ -110,10 +168,13 @@ public class LoginActivity extends AppCompatActivity implements
     }
 
     private  void authenticated() {
-        GetUserTask task = new GetUserTask(new MainPresenter(this),LoginActivity.this,this);
-        UserRequest request = new UserRequest(null, handleInput.getText().toString());
-        task.execute(request);
-        // continues at userretrieved
+        GetLoginTask getLoginTask = new GetLoginTask(presenter,LoginActivity.this);
+        LoginRequest request = new LoginRequest(
+                passwordInput.getText().toString(),
+                handleInput.getText().toString()
+        );
+        getLoginTask.execute(request);
+
 
     }
 
@@ -151,24 +212,9 @@ public class LoginActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void userRetrieved(UserResponse userResponse) {
-        if (userResponse != null) {
-            if (userResponse.getUser() != null) {
-                GetLoginTask getLoginTask = new GetLoginTask(presenter,LoginActivity.this);
-                LoginRequest request = new LoginRequest(
-                        passwordInput.getText().toString(),
-                        handleInput.getText().toString()
-                );
-                getLoginTask.execute(request);
-            }
-            else {
-                Toast.makeText(this, "Sorry, something went wrong.", Toast.LENGTH_LONG).show();
-            }
+    public void uploadResponded(UploadResponse uploaded) {
+        if (uploaded.isSuccess()) {
+            savedText.setVisibility(View.VISIBLE);
         }
-        else {
-            Toast.makeText(this, "Sorry, something went wrong.", Toast.LENGTH_LONG).show();
-        }
-
-
     }
 }

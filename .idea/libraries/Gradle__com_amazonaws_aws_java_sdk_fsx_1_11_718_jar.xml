@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-fsx:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-fsx/1.11.718/1440cb04f80e09957a02603b39bbffa517e6d685/aws-java-sdk-fsx-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-fsx/1.11.718/c7a05ff11494edd18a50b53fc2b9e0a67ac5e93d/aws-java-sdk-fsx-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-fsx/1.11.718/ad90574c585c47718a532441ec4a84e644e7b4d3/aws-java-sdk-fsx-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

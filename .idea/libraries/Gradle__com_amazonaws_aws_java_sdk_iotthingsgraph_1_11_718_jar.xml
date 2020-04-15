@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-iotthingsgraph:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-iotthingsgraph/1.11.718/b623afca582428b50bc3537f8066b8418cffc49b/aws-java-sdk-iotthingsgraph-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-iotthingsgraph/1.11.718/60f8b3e7473d96c66841b56204de31a77eb6967c/aws-java-sdk-iotthingsgraph-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-iotthingsgraph/1.11.718/4fdeffd991bc44bb7a87141c5889d88980ba10/aws-java-sdk-iotthingsgraph-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

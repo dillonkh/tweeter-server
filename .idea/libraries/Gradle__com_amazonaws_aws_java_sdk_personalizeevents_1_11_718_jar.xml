@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-personalizeevents:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-personalizeevents/1.11.718/a0b2d90ed39424b849f2f02b1b1b68a102eec990/aws-java-sdk-personalizeevents-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-personalizeevents/1.11.718/4dad8b551dbf729a0617bcff5aca9f184c2db716/aws-java-sdk-personalizeevents-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-personalizeevents/1.11.718/5900f9158e392a8f72a7cdae800a8c32ee2b766/aws-java-sdk-personalizeevents-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

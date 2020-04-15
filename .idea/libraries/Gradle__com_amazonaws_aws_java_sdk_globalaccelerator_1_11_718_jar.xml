@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-globalaccelerator:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-globalaccelerator/1.11.718/ebdb84ea2f28b56301023e58eefc6ffbcc3fc238/aws-java-sdk-globalaccelerator-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-globalaccelerator/1.11.718/ef2d43d0c57ecd6c775d464f1b502777c994e01d/aws-java-sdk-globalaccelerator-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-globalaccelerator/1.11.718/a6e9a89639cab8cd2d5d8803cb24abc86b35c503/aws-java-sdk-globalaccelerator-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

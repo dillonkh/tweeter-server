@@ -1,16 +1,8 @@
 package edu.byu.cs.tweeter.server.dao;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import edu.byu.cs.tweeter.server.dao.request.SignUpRequest;
-import edu.byu.cs.tweeter.server.dao.request.StoryRequest;
-import edu.byu.cs.tweeter.server.dao.request.TweetRequest;
-import edu.byu.cs.tweeter.server.dao.response.LoginResponse;
-import edu.byu.cs.tweeter.server.dao.response.StoryResponse;
-import edu.byu.cs.tweeter.server.dao.response.TweetResponse;
-import edu.byu.cs.tweeter.server.model.domain.Tweet;
-import edu.byu.cs.tweeter.server.model.domain.User;
+import edu.byu.cs.tweeter.server.testing.ServerFacade;
 
 
 class PostStatusDAOTest {

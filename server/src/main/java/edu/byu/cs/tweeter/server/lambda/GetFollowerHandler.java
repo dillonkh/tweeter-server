@@ -3,12 +3,9 @@ package edu.byu.cs.tweeter.server.lambda;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 
-import edu.byu.cs.tweeter.server.dao.request.FollowerRequest;
-import edu.byu.cs.tweeter.server.dao.request.FollowingRequest;
-import edu.byu.cs.tweeter.server.dao.response.FollowerResponse;
-import edu.byu.cs.tweeter.server.dao.response.FollowingResponse;
+import edu.byu.cs.tweeter.server.model.request.FollowerRequest;
+import edu.byu.cs.tweeter.server.model.response.FollowerResponse;
 import edu.byu.cs.tweeter.server.model.service.FollowerService;
-import edu.byu.cs.tweeter.server.model.service.FollowingService;
 
 
 /**

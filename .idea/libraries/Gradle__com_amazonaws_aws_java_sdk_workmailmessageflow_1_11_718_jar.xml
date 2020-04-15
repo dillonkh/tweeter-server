@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-workmailmessageflow:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-workmailmessageflow/1.11.718/78d65f836a4667db70a84a767e9ea70e83417481/aws-java-sdk-workmailmessageflow-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-workmailmessageflow/1.11.718/51b0e9e29947b7c9b517be78c622d9239c7aca6a/aws-java-sdk-workmailmessageflow-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-workmailmessageflow/1.11.718/90ffeba5159e813d3239580bda1de58550733625/aws-java-sdk-workmailmessageflow-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

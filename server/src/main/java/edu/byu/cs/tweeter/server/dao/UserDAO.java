@@ -3,21 +3,17 @@ package edu.byu.cs.tweeter.server.dao;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.document.DynamoDB;
-import com.amazonaws.services.dynamodbv2.document.GetItemOutcome;
 import com.amazonaws.services.dynamodbv2.document.Item;
 import com.amazonaws.services.dynamodbv2.document.PutItemOutcome;
 import com.amazonaws.services.dynamodbv2.document.Table;
 
-import java.util.List;
-
-import edu.byu.cs.tweeter.server.dao.request.LoginRequest;
-import edu.byu.cs.tweeter.server.dao.request.SignUpRequest;
-import edu.byu.cs.tweeter.server.dao.request.UserRequest;
-import edu.byu.cs.tweeter.server.dao.response.FollowResponse;
-import edu.byu.cs.tweeter.server.dao.response.LoginResponse;
-import edu.byu.cs.tweeter.server.dao.response.UserResponse;
-import edu.byu.cs.tweeter.server.model.domain.Tweet;
+import edu.byu.cs.tweeter.server.model.request.LoginRequest;
+import edu.byu.cs.tweeter.server.model.request.SignUpRequest;
+import edu.byu.cs.tweeter.server.model.request.UserRequest;
+import edu.byu.cs.tweeter.server.model.response.LoginResponse;
+import edu.byu.cs.tweeter.server.model.response.UserResponse;
 import edu.byu.cs.tweeter.server.model.domain.User;
+import edu.byu.cs.tweeter.server.model.service.HashPasswordService;
 
 public class UserDAO {
 
@@ -63,7 +59,7 @@ public class UserDAO {
             item.withPrimaryKey("alias", request.getHandle());
             item.withString("first_name", request.getFirstName());
             item.withString("last_name", request.getLastName());
-            item.withString("password", request.getPassword());
+            item.withString("password", HashPasswordService.getInstance().hashPassword(request.getPassword()));
             item.withString("image_url", request.getImageURL());
 
             PutItemOutcome outcome = table.putItem(item);
@@ -90,7 +86,7 @@ public class UserDAO {
         try {
 
             Item item = table.getItem("alias", request.getHandle());
-            if (item.get("password").toString().equals(request.getPassword())) {
+            if (item.get("password").toString().equals(HashPasswordService.getInstance().hashPassword(request.getPassword()))) {
                 return new LoginResponse(true, makeUser(item), "FakeAuth");
             }
             else {

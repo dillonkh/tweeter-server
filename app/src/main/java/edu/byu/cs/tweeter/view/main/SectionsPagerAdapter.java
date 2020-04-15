@@ -92,4 +92,6 @@ class SectionsPagerAdapter extends FragmentPagerAdapter {
         // Show 4 total pages.
         return 4;
     }
+
+
 }

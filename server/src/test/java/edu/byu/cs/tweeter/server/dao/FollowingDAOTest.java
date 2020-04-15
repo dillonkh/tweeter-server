@@ -8,13 +8,17 @@ import com.amazonaws.services.sqs.model.SendMessageResult;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import edu.byu.cs.tweeter.server.dao.request.FollowRequest;
-import edu.byu.cs.tweeter.server.dao.request.FollowingRequest;
-import edu.byu.cs.tweeter.server.dao.request.UnFollowRequest;
-import edu.byu.cs.tweeter.server.dao.response.FollowResponse;
-import edu.byu.cs.tweeter.server.dao.response.FollowingResponse;
-import edu.byu.cs.tweeter.server.dao.response.UnFollowResponse;
+import edu.byu.cs.tweeter.server.model.request.FollowRequest;
+import edu.byu.cs.tweeter.server.model.request.FollowingRequest;
+import edu.byu.cs.tweeter.server.model.request.IsFollowingRequest;
+import edu.byu.cs.tweeter.server.model.request.UnFollowRequest;
+import edu.byu.cs.tweeter.server.model.response.FollowResponse;
+import edu.byu.cs.tweeter.server.model.response.FollowingResponse;
+import edu.byu.cs.tweeter.server.model.response.IsFollowingResponse;
+import edu.byu.cs.tweeter.server.model.response.UnFollowResponse;
 import edu.byu.cs.tweeter.server.model.domain.User;
+import edu.byu.cs.tweeter.server.model.service.FollowService;
+import edu.byu.cs.tweeter.server.model.service.FollowingService;
 
 class FollowingDAOTest {
 
@@ -54,13 +58,24 @@ class FollowingDAOTest {
     }
 
     @Test
+    void testIsFollowing() {
+        User userLoggedIn = new User("Dillon", "Harris", "@dillonkh", "url");
+        User userShown = new User("Test2", "User", "@testUser2", "url");
+        IsFollowingRequest request = new IsFollowingRequest(userLoggedIn, userShown);
+        IsFollowingResponse response = FollowService.getInstance().isFollowing(request);
+
+        Assertions.assertTrue(!response.success);
+
+    }
+
+    @Test
     void testPostSQSMessage() {
 
         final AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
 
         String messageBody = "test trigger is gone";
 
-        String queueUrl = "https://sqs.us-west-2.amazonaws.com/500231213860/test_queue";
+        String queueUrl = "https://sqs.us-west-2.amazonaws.com/500231213860/post_tweets_to_feeds_queue";
 
 
 

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-appmesh:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-appmesh/1.11.718/c0d012a90c539b74ada04cb9e0f1da47ac48f7cb/aws-java-sdk-appmesh-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-appmesh/1.11.718/7c2fda9cdb4098c53b9791230f7f75a097841ed2/aws-java-sdk-appmesh-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-appmesh/1.11.718/df192d745260a93fa9b54a53a435531ac7f52f64/aws-java-sdk-appmesh-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

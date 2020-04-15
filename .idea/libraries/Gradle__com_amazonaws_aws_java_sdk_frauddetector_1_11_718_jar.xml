@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-frauddetector:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-frauddetector/1.11.718/fd5ee55a75283337bf9a7f7678c71518396c01c5/aws-java-sdk-frauddetector-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-frauddetector/1.11.718/30910c702b58a2623fd5c85466bf3457f5538804/aws-java-sdk-frauddetector-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-frauddetector/1.11.718/d2818ac60ee5072c8198cdadef406518b378ac54/aws-java-sdk-frauddetector-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

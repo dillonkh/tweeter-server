@@ -3,21 +3,16 @@ package edu.byu.cs.tweeter.server.dao;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.concurrent.TimeUnit;
-
-import edu.byu.cs.tweeter.server.dao.request.FeedRequest;
-import edu.byu.cs.tweeter.server.dao.request.FollowRequest;
-import edu.byu.cs.tweeter.server.dao.request.SignUpRequest;
-import edu.byu.cs.tweeter.server.dao.request.StoryRequest;
-import edu.byu.cs.tweeter.server.dao.request.TweetRequest;
-import edu.byu.cs.tweeter.server.dao.request.UserRequest;
-import edu.byu.cs.tweeter.server.dao.response.FeedResponse;
-import edu.byu.cs.tweeter.server.dao.response.FollowResponse;
-import edu.byu.cs.tweeter.server.dao.response.LoginResponse;
-import edu.byu.cs.tweeter.server.dao.response.StoryResponse;
-import edu.byu.cs.tweeter.server.dao.response.TweetResponse;
+import edu.byu.cs.tweeter.server.model.request.FeedRequest;
+import edu.byu.cs.tweeter.server.model.request.StoryRequest;
+import edu.byu.cs.tweeter.server.model.request.TweetRequest;
+import edu.byu.cs.tweeter.server.model.request.UserRequest;
+import edu.byu.cs.tweeter.server.model.response.FeedResponse;
+import edu.byu.cs.tweeter.server.model.response.StoryResponse;
+import edu.byu.cs.tweeter.server.model.response.TweetResponse;
 import edu.byu.cs.tweeter.server.model.domain.Tweet;
 import edu.byu.cs.tweeter.server.model.domain.User;
+import edu.byu.cs.tweeter.server.testing.ServerFacade;
 
 
 class StoryDAOTest {
@@ -27,17 +22,27 @@ class StoryDAOTest {
     @Test
     void testAddTweet() {
 
-        Tweet tweet = new Tweet("@testUser1", "Test1", "User", "this is a tweet by @testUser1","url");
+        Tweet tweet = new Tweet("@testUser2", "Test2", "User", "testing update feeds for @dillonkh. Test #2","url");
         TweetResponse response = new TweetsDAO().addTweet(new TweetRequest(tweet));
 
         Assertions.assertTrue(response.sent);
     }
 
     @Test
+    void testAddTweetToFeeds() {
+
+        Tweet tweet = new Tweet("@testUser2", "Test2", "User", "testing update feeds for @dillonkh","url");
+        new TweetsDAO().addTweetsToFeeds(new TweetRequest(tweet));
+
+        Assertions.assertTrue(true);
+    }
+
+    @Test
     void testGetStory() {
 //        User user = new UserDAO().getUser(new UserRequest(null, "@dillonkh")).getUser();
         User user = new User("Dillon", "Harris", "@dillonkh", "url");
-        StoryResponse response = new TweetsDAO().getStory(new StoryRequest(user, 10, null));
+        Tweet lastTweet = new Tweet("@dillonkh","Dillon","Harris","fake","fake","13/04/2020 12:19:41");
+        StoryResponse response = new TweetsDAO().getStory(new StoryRequest(user, 10, lastTweet));
 
         Assertions.assertTrue(response.isSuccess());
     }

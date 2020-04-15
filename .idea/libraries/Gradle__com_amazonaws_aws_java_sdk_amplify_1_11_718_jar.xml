@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-amplify:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-amplify/1.11.718/a8351ac93d6b524665e3c9d0911384a6239fba8c/aws-java-sdk-amplify-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-amplify/1.11.718/2bd30a4f101daf4ab29d02d841875a64934ccfa1/aws-java-sdk-amplify-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-amplify/1.11.718/a2bb0b767dc1fab02831d4dbda08ac9e73bda65b/aws-java-sdk-amplify-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

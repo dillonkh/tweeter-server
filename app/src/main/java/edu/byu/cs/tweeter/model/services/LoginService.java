@@ -1,13 +1,11 @@
 package edu.byu.cs.tweeter.model.services;
 
-import edu.byu.cs.tweeter.model.domain.User;
+import edu.byu.cs.tweeter.model.domain.UploadRequest;
 import edu.byu.cs.tweeter.net.ServerFacade;
-import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
 import edu.byu.cs.tweeter.net.request.LoginRequest;
 import edu.byu.cs.tweeter.net.request.SignUpRequest;
-import edu.byu.cs.tweeter.net.request.UserRequest;
 import edu.byu.cs.tweeter.net.response.LoginResponse;
-import edu.byu.cs.tweeter.net.response.UserResponse;
+import edu.byu.cs.tweeter.net.response.UploadResponse;
 
 public class LoginService {
 
@@ -62,6 +60,23 @@ public class LoginService {
 //            UserService.getInstance().setCurrentUser(new UserRequest(r.getUserSignedIn()));
 //            UserService.getInstance().setUserShown(new UserRequest(r.getUserSignedIn()));
 //        }
+
+        return r;
+    }
+
+    public LoginResponse signOut(LoginRequest request) {
+        LoginResponse r = serverFacade.signOut(request);
+        // some other stuff
+//        if (r.isAuthentcated() && r.getUserSignedIn() != null) {
+//            UserService.getInstance().setCurrentUser(new UserRequest(r.getUserSignedIn()));
+//            UserService.getInstance().setUserShown(new UserRequest(r.getUserSignedIn()));
+//        }
+
+        return r;
+    }
+
+    public UploadResponse uploadImage(UploadRequest request) {
+        UploadResponse r = serverFacade.uploadImage(request);
 
         return r;
     }

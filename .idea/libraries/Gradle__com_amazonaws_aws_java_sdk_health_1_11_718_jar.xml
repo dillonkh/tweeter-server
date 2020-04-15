@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-health:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-health/1.11.718/771e1ecb2b91e9b782ea5cf8ceaac2133d22c696/aws-java-sdk-health-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-health/1.11.718/96203823a5570eaccaf6fea0e960f36ecd274ca1/aws-java-sdk-health-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-health/1.11.718/eda5204372e9bc515919b7990d70a09ba6e6c562/aws-java-sdk-health-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

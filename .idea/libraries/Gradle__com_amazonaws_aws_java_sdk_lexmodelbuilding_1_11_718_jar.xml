@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-lexmodelbuilding:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-lexmodelbuilding/1.11.718/564c312086de95cc5e7a3763459b9376b818b3bd/aws-java-sdk-lexmodelbuilding-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-lexmodelbuilding/1.11.718/db0729547ec082ad03550b48dacb785b7f1354b1/aws-java-sdk-lexmodelbuilding-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-lexmodelbuilding/1.11.718/c90017639e7ebd5707061623fadff6853c6507ea/aws-java-sdk-lexmodelbuilding-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

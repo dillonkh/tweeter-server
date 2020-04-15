@@ -1,14 +1,13 @@
 package edu.byu.cs.tweeter.server.model.service;
 
 import edu.byu.cs.tweeter.server.dao.FollowingDAO;
-import edu.byu.cs.tweeter.server.dao.ServerFacade;
-import edu.byu.cs.tweeter.server.dao.request.FollowRequest;
-import edu.byu.cs.tweeter.server.dao.request.IsFollowingRequest;
-import edu.byu.cs.tweeter.server.dao.request.UnFollowRequest;
-import edu.byu.cs.tweeter.server.dao.response.FollowResponse;
-import edu.byu.cs.tweeter.server.dao.response.IsFollowingResponse;
-import edu.byu.cs.tweeter.server.dao.response.UnFollowResponse;
-import edu.byu.cs.tweeter.server.model.domain.User;
+import edu.byu.cs.tweeter.server.testing.ServerFacade;
+import edu.byu.cs.tweeter.server.model.request.FollowRequest;
+import edu.byu.cs.tweeter.server.model.request.IsFollowingRequest;
+import edu.byu.cs.tweeter.server.model.request.UnFollowRequest;
+import edu.byu.cs.tweeter.server.model.response.FollowResponse;
+import edu.byu.cs.tweeter.server.model.response.IsFollowingResponse;
+import edu.byu.cs.tweeter.server.model.response.UnFollowResponse;
 
 public class FollowService {
 
@@ -34,24 +33,36 @@ public class FollowService {
 
 
     public FollowResponse followUser(FollowRequest request) {
-//        FollowResponse response = serverFacade.followUser(request);
-        FollowResponse response = followingDAO.followUser(request);
-        return response;
+        if (AuthenticationService.getInstance().isAuthenticated(request.getUserLoggedIn().alias)) {
+            FollowResponse response = followingDAO.followUser(request);
+            return response;
+        }
+        else {
+            return null;
+        }
 
     }
 
     public UnFollowResponse unfollowUser(UnFollowRequest request) {
-//        UnFollowResponse response = serverFacade.unfollowUser(request);
-        UnFollowResponse response = followingDAO.unfollowUser(request);
-        return response;
+        if (AuthenticationService.getInstance().isAuthenticated(request.getUserLoggedIn().alias)) {
+            UnFollowResponse response = followingDAO.unfollowUser(request);
+            return response;
+        }
+        else {
+            return null;
+        }
+
 
     }
 
-//    public boolean isFollowing(User userLoggedIn, User userShown) {
-//        return serverFacade.isFollowing(userLoggedIn,userShown);
-//    }
     public IsFollowingResponse isFollowing(IsFollowingRequest request) {
-        return serverFacade.isFollowing(request);
+        if (AuthenticationService.getInstance().isAuthenticated(request.getUserLoggedIn().alias)) {
+            IsFollowingResponse response = followingDAO.isFollowing(request);
+            return response;
+        }
+        else {
+            return null;
+        }
     }
 
 }

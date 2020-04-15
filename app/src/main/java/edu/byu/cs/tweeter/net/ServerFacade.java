@@ -1,19 +1,9 @@
 package edu.byu.cs.tweeter.net;
 
-import com.amazonaws.Response;
-import com.amazonaws.mobileconnectors.apigateway.ApiClientFactory;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
-import edu.byu.cs.tweeter.model.domain.Tweet;
-import edu.byu.cs.tweeter.model.domain.User;
+import edu.byu.cs.tweeter.model.domain.UploadRequest;
 import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
 import edu.byu.cs.tweeter.net.request.FeedRequest;
 import edu.byu.cs.tweeter.net.request.FollowRequest;
@@ -35,6 +25,7 @@ import edu.byu.cs.tweeter.net.response.LoginResponse;
 import edu.byu.cs.tweeter.net.response.StoryResponse;
 import edu.byu.cs.tweeter.net.response.TweetResponse;
 import edu.byu.cs.tweeter.net.response.UnFollowResponse;
+import edu.byu.cs.tweeter.net.response.UploadResponse;
 import edu.byu.cs.tweeter.net.response.UserResponse;
 
 public class ServerFacade {
@@ -155,6 +146,19 @@ public class ServerFacade {
         ClientCommunicator clientCommunicator = new ClientCommunicator(BASE_URL);
         try {
             return clientCommunicator.doPost(urlPath, request, null, TweetResponse.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public UploadResponse uploadImage(UploadRequest request) {
+
+        String urlPath = "/uploadimage";
+
+        ClientCommunicator clientCommunicator = new ClientCommunicator(BASE_URL);
+        try {
+            return clientCommunicator.doPost(urlPath, request, null, UploadResponse.class);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -318,6 +322,18 @@ public class ServerFacade {
 
     public LoginResponse signUp(SignUpRequest request) {
         String urlPath = "/signup";
+
+        ClientCommunicator clientCommunicator = new ClientCommunicator(BASE_URL);
+        try {
+            return clientCommunicator.doPost(urlPath, request, null, LoginResponse.class);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public LoginResponse signOut(LoginRequest request) {
+        String urlPath = "/signout";
 
         ClientCommunicator clientCommunicator = new ClientCommunicator(BASE_URL);
         try {

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-xray:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-xray/1.11.718/6d144d88c290716377f9a6a8dbf2182e371b07a/aws-java-sdk-xray-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-xray/1.11.718/e70504ba3b66bed594ad1bd8993a54f8291a7f27/aws-java-sdk-xray-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-xray/1.11.718/c073dad594baa522a5a63f4d3d65f355f0065ec8/aws-java-sdk-xray-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

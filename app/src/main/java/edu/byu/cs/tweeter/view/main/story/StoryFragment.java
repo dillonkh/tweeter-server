@@ -269,8 +269,8 @@ public class StoryFragment extends Fragment implements
 
         void addItems(List<Tweet> newTweets) {
             int startInsertPosition = tweets.size();
-            tweets.add(0, newTweets.get(newTweets.size()-1));
-            this.notifyItemInserted(0);
+            tweets.addAll(startInsertPosition, newTweets);
+            this.notifyItemRangeInserted(startInsertPosition, newTweets.size());
         }
 
         void addItem(Tweet tweet) {
@@ -345,15 +345,13 @@ public class StoryFragment extends Fragment implements
 
             if (storyResponse != null) {
                 List<Tweet> tweets = storyResponse.getTweets();
-
+                isLoading = false;
+                removeLoadingFooter();
                 if (tweets != null) {
                     lastTweet = (tweets.size() > 0) ? tweets.get(tweets.size() -1) : null;
                     hasMorePages = storyResponse.hasMorePages();
                     storyRecyclerViewAdapter.addItems(tweets);
                 }
-
-                isLoading = false;
-                removeLoadingFooter();
             }
             else {
                 loadMoreItems();

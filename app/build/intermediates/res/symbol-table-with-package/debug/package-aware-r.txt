@@ -1182,6 +1182,7 @@ id right_side
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
+id savedText
 id screen
 id scroll
 id scrollIndicatorDown
@@ -1201,6 +1202,7 @@ id search_plate
 id search_src_text
 id search_voice_btn
 id section_label
+id selectImageButton
 id select_dialog_listview
 id selected
 id sendTweetButton

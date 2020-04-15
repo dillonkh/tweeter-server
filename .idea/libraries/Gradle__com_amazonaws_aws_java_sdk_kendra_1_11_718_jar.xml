@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-kendra:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kendra/1.11.718/d01e2d36b8c1ff69235bf953e82963198c331ad2/aws-java-sdk-kendra-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kendra/1.11.718/e790bcd902ed0dee157eff35154806ec5bbf6022/aws-java-sdk-kendra-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kendra/1.11.718/77de5bc205895119ecde701cc0fe64d753586c52/aws-java-sdk-kendra-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

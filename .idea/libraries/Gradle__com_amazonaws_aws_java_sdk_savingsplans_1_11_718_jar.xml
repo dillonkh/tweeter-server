@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-savingsplans:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-savingsplans/1.11.718/4216dc1ee2ea13f8112293c36e7536b5b1c8d89d/aws-java-sdk-savingsplans-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-savingsplans/1.11.718/4efa2569caaeb9f4de8e2a20b55b0f3a6c39809e/aws-java-sdk-savingsplans-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-savingsplans/1.11.718/43cbb93325759fff4a596587d2dbae6f7db13dcd/aws-java-sdk-savingsplans-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

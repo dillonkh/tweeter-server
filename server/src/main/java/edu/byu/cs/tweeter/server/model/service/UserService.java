@@ -1,9 +1,12 @@
 package edu.byu.cs.tweeter.server.model.service;
 
 
+import edu.byu.cs.tweeter.server.dao.AuthenticatedUsersDAO;
 import edu.byu.cs.tweeter.server.dao.UserDAO;
-import edu.byu.cs.tweeter.server.dao.request.UserRequest;
-import edu.byu.cs.tweeter.server.dao.response.UserResponse;
+import edu.byu.cs.tweeter.server.model.request.LoginRequest;
+import edu.byu.cs.tweeter.server.model.request.UserRequest;
+import edu.byu.cs.tweeter.server.model.response.LoginResponse;
+import edu.byu.cs.tweeter.server.model.response.UserResponse;
 import edu.byu.cs.tweeter.server.model.domain.User;
 
 public class UserService {
@@ -20,23 +23,20 @@ public class UserService {
         return instance;
     }
 
-    private UserService() {
-//        // TODO: Remove when the actual login functionality exists.
-//        currentUser = new User("Test", "User",
-//                "https://faculty.cs.byu.edu/~jwilkerson/cs340/tweeter/images/donald_duck.png");
-//        setCurrentUser(currentUser);
-    }
+    private UserService() {}
 
-    public UserResponse getUserShown() {
-        return new UserResponse(userShown);
-    }
+//    public UserResponse getUserShown() {
+//        return new UserResponse(userShown);
+//    }
 
     public UserResponse getUser(UserRequest request) {
         UserResponse r = new UserDAO().getUser(request);
         return r;
     }
 
-    public void setCurrentUser(User user) { // this will probably use the auth token in an authorized user table
-        this.userShown = user;
+    public LoginResponse signOut(LoginRequest request) {
+        LoginResponse r = new AuthenticatedUsersDAO().removeRow(request.getHandle());
+        return r;
     }
+
 }

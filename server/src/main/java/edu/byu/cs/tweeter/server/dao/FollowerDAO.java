@@ -8,14 +8,12 @@ import com.amazonaws.services.dynamodbv2.document.ItemCollection;
 import com.amazonaws.services.dynamodbv2.document.QueryOutcome;
 import com.amazonaws.services.dynamodbv2.document.Table;
 import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import edu.byu.cs.tweeter.server.dao.request.FollowerRequest;
-import edu.byu.cs.tweeter.server.dao.response.FollowerResponse;
-import edu.byu.cs.tweeter.server.dao.response.FollowingResponse;
+import edu.byu.cs.tweeter.server.model.request.FollowerRequest;
+import edu.byu.cs.tweeter.server.model.response.FollowerResponse;
 import edu.byu.cs.tweeter.server.model.domain.User;
 
 public class FollowerDAO {

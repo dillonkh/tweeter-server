@@ -1,13 +1,12 @@
 package edu.byu.cs.tweeter.presenter;
 
-import edu.byu.cs.tweeter.model.services.FeedService;
+import edu.byu.cs.tweeter.model.domain.UploadRequest;
 import edu.byu.cs.tweeter.model.services.LoginService;
-import edu.byu.cs.tweeter.net.request.FeedRequest;
 import edu.byu.cs.tweeter.net.request.LoginRequest;
 import edu.byu.cs.tweeter.net.request.SignUpRequest;
 import edu.byu.cs.tweeter.net.request.UserRequest;
-import edu.byu.cs.tweeter.net.response.FeedResponse;
 import edu.byu.cs.tweeter.net.response.LoginResponse;
+import edu.byu.cs.tweeter.net.response.UploadResponse;
 import edu.byu.cs.tweeter.net.response.UserResponse;
 
 public class LoginPresenter extends Presenter {
@@ -40,5 +39,13 @@ public class LoginPresenter extends Presenter {
 
     public LoginResponse signUp (SignUpRequest request) {
         return LoginService.getInstance().signUp(request);
+    }
+
+    public LoginResponse signOut(LoginRequest request) {
+        return LoginService.getInstance().signOut(request);
+    }
+
+    public UploadResponse uploadImage(UploadRequest request) {
+        return LoginService.getInstance().uploadImage(request);
     }
 }

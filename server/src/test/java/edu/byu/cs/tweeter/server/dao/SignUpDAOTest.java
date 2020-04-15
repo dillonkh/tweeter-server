@@ -3,14 +3,10 @@ package edu.byu.cs.tweeter.server.dao;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import edu.byu.cs.tweeter.server.dao.request.LoginRequest;
-import edu.byu.cs.tweeter.server.dao.request.SignUpRequest;
-import edu.byu.cs.tweeter.server.dao.request.UserRequest;
-import edu.byu.cs.tweeter.server.dao.response.LoginResponse;
-import edu.byu.cs.tweeter.server.dao.response.UserResponse;
-import edu.byu.cs.tweeter.server.lambda.SignUpHandler;
-import edu.byu.cs.tweeter.server.model.domain.User;
+import edu.byu.cs.tweeter.server.model.request.SignUpRequest;
+import edu.byu.cs.tweeter.server.model.response.LoginResponse;
 import edu.byu.cs.tweeter.server.model.service.LoginService;
+import edu.byu.cs.tweeter.server.testing.ServerFacade;
 
 
 class SignUpDAOTest {
@@ -24,7 +20,7 @@ class SignUpDAOTest {
 
     @Test
     void testSignUpValid() {
-        SignUpRequest request = new SignUpRequest("Dillon", "Harris", "@dillonkh", "Password1", "https://orbitermag.com/wp-content/uploads/2017/03/default-user-image-300x300.png");
+        SignUpRequest request = new SignUpRequest("Test2", "User", "@testUser2", "Password1", "https://images.unsplash.com/photo-1516912347627-9c5b5d08b35f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
         LoginResponse response = LoginService.getInstance().signUp(request);
 
         Assertions.assertTrue(response.isAuthentcated);

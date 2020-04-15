@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-medialive:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-medialive/1.11.718/d4bd5aabc6258330fc7ad4aead3bc02d443de4b7/aws-java-sdk-medialive-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-medialive/1.11.718/8fc3c7b8f24098d11292d708bace943636adaa84/aws-java-sdk-medialive-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-medialive/1.11.718/2fd826b49d957c749751e662a705275c28d0f016/aws-java-sdk-medialive-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

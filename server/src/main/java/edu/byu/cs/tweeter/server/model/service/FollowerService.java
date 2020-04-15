@@ -2,12 +2,9 @@ package edu.byu.cs.tweeter.server.model.service;
 
 
 import edu.byu.cs.tweeter.server.dao.FollowerDAO;
-import edu.byu.cs.tweeter.server.dao.ServerFacade;
-import edu.byu.cs.tweeter.server.dao.UserDAO;
-import edu.byu.cs.tweeter.server.dao.request.FollowerRequest;
-import edu.byu.cs.tweeter.server.dao.request.UserRequest;
-import edu.byu.cs.tweeter.server.dao.response.FollowerResponse;
-import edu.byu.cs.tweeter.server.dao.response.UserResponse;
+import edu.byu.cs.tweeter.server.testing.ServerFacade;
+import edu.byu.cs.tweeter.server.model.request.FollowerRequest;
+import edu.byu.cs.tweeter.server.model.response.FollowerResponse;
 
 public class FollowerService {
 

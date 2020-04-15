@@ -180,7 +180,7 @@ public class FollowerFragment extends Fragment implements
 
         void addItems(List<User> newUsers) {
             int startInsertPosition = users.size();
-            users.addAll(newUsers);
+            users.addAll(startInsertPosition, newUsers);
             this.notifyItemRangeInserted(startInsertPosition, newUsers.size());
         }
 
@@ -248,14 +248,16 @@ public class FollowerFragment extends Fragment implements
         @Override
         public void followersRetrieved(FollowerResponse followerResponse) {
             if (followerResponse != null) {
+
                 removeLoadingFooter();
+                isLoading = false;
+
                 if (followerResponse.getFollowees() != null) {
                     List<User> followees = followerResponse.getFollowees();
 
                     lastFollowee = (followees.size() > 0) ? followees.get(followees.size() -1) : null;
                     hasMorePages = followerResponse.hasMorePages();
 
-                    isLoading = false;
                     followerRecyclerViewAdapter.addItems(followees);
                 }
             }

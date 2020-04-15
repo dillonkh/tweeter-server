@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-dataexchange:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-dataexchange/1.11.718/173c8833d4a43712c8c7a931a51043a3d4eda962/aws-java-sdk-dataexchange-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-dataexchange/1.11.718/f499e5aba78f53e2d3f041286cff8437248fcc5d/aws-java-sdk-dataexchange-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-dataexchange/1.11.718/c075d96e584326e322407fd5e9979d30e19a4db9/aws-java-sdk-dataexchange-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

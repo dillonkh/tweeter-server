@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-ioteventsdata:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ioteventsdata/1.11.718/ddc8511916b1b2237fa1f056db8e990b31fbab86/aws-java-sdk-ioteventsdata-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ioteventsdata/1.11.718/e4f0d9757e657a8d910c3a9f6723628a6f879d8b/aws-java-sdk-ioteventsdata-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ioteventsdata/1.11.718/b25c45a9ca688e0ea3b87612a70d3bbf2dab473d/aws-java-sdk-ioteventsdata-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

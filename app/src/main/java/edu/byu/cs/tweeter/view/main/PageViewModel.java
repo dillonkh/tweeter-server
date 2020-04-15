@@ -1,5 +1,7 @@
 package edu.byu.cs.tweeter.view.main;
 
+import android.view.MenuItem;
+
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -24,4 +26,5 @@ public class PageViewModel extends ViewModel {
     public LiveData<String> getText() {
         return text;
     }
+
 }

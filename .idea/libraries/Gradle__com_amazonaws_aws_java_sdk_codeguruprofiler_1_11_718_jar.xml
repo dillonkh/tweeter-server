@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-codeguruprofiler:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codeguruprofiler/1.11.718/c350fade8f47114c3fda4d261f6d494ab4ed66cf/aws-java-sdk-codeguruprofiler-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codeguruprofiler/1.11.718/21b1c8d4f5249785190f2be7464f9ad5a2aa1f03/aws-java-sdk-codeguruprofiler-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-codeguruprofiler/1.11.718/9d88caba159da3c56b6f971fe27a9b016a4c8f6f/aws-java-sdk-codeguruprofiler-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

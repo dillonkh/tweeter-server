@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.amazonaws:aws-java-sdk-comprehendmedical:1.11.718@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-comprehendmedical/1.11.718/2fbc265345d8138237826e09c24f6a5ec0b9ea2f/aws-java-sdk-comprehendmedical-1.11.718.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-comprehendmedical/1.11.718/ed8b53adff3f7b1946364018992f0f4621de7e84/aws-java-sdk-comprehendmedical-1.11.718-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-comprehendmedical/1.11.718/a036cfe93cb760d2154fc4f68d1d0a256abde3cd/aws-java-sdk-comprehendmedical-1.11.718-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
