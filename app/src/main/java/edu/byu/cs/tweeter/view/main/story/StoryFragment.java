@@ -253,7 +253,7 @@ public class StoryFragment extends Fragment implements
         public void userRetrieved(UserResponse userResponse) {
             if (userResponse != null) {
                 if (userResponse.getUser() != null) {
-
+                    SessionManager.getInstance().setUserShown(userResponse.getUser());
                     Intent intent = new Intent(getActivity(), UserViewActivity.class);
                     startActivity(intent);
                 }

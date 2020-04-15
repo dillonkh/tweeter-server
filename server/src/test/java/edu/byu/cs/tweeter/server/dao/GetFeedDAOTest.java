@@ -20,6 +20,9 @@ class GetFeedDAOTest {
 
         Assertions.assertTrue(response.isSuccess());
 
+        new FeedDAO().getFeed(null);
+        new FeedDAO().updateFeeds(null);
+
     }
 
 //    @Test

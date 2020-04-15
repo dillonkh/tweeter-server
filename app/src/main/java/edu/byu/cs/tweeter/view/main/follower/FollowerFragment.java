@@ -112,14 +112,14 @@ public class FollowerFragment extends Fragment implements
             userAlias.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    switchToThisUserView(getActivity(), user);
+                    switchToThisUserView(getActivity(), userAlias.getText().toString());
                 }
             });
         }
 
-        private void switchToThisUserView(FragmentActivity activity, User user) {
+        private void switchToThisUserView(FragmentActivity activity, String userAlias) {
             GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), this);
-            getUserTask.execute(new UserRequest(null, user.getAlias()));
+            getUserTask.execute(new UserRequest(null, userAlias));
             // continued in userShownSet
 
         }
@@ -129,7 +129,7 @@ public class FollowerFragment extends Fragment implements
         public void userRetrieved(UserResponse userResponse) {
             if (userResponse != null) {
                 if (userResponse.getUser() != null) {
-
+                    SessionManager.getInstance().setUserShown(userResponse.getUser());
                     Intent intent = new Intent(getActivity(), UserViewActivity.class);
                     startActivity(intent);
                 }

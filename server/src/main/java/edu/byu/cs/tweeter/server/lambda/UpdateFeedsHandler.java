@@ -34,7 +34,7 @@ public class UpdateFeedsHandler implements RequestHandler<SQSEvent, Void> {
             // post the feeds in batches. we will have user, author and tweet
             Gson gson = new Gson();
             UpdateFeedsRequest updateFeedsRequest = gson.fromJson(msg.getBody(),UpdateFeedsRequest.class);
-            System.out.println(updateFeedsRequest.getTweet().getMessage());
+            System.out.println("LIST OF USERS: "+updateFeedsRequest.getUserAliasList());
             FeedService.getInstance().updateFeeds(updateFeedsRequest);
 
         }
