@@ -22,7 +22,7 @@ class StoryDAOTest {
     @Test
     void testAddTweet() {
 
-        Tweet tweet = new Tweet("@testUser2", "Test2", "User", "testing update feeds for @dillonkh. Test #2","url");
+        Tweet tweet = new Tweet("@dillonkh", "Dillon", "Harris", "time test 2","url");
         TweetResponse response = new TweetsDAO().addTweet(new TweetRequest(tweet));
 
         Assertions.assertTrue(response.sent);

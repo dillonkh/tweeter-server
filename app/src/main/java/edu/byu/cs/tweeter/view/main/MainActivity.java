@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
-        presenter = new MainPresenter();
+        presenter = new MainPresenter(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -186,11 +186,11 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(intent);
     }
 
-    private boolean isFollowing () {
-        following = !following;
-
-        return following;
-    }
+//    private boolean isFollowing () {
+//        following = !following;
+//
+//        return following;
+//    }
 
 
     @Override
@@ -211,6 +211,7 @@ public class MainActivity extends AppCompatActivity implements
     public void tweetResponded(TweetResponse tweetResponse) {
         if (tweetResponse != null) {
             if (tweetResponse.isSent()) {
+                Toast.makeText(this, "Tweet delivered!", Toast.LENGTH_LONG).show();
                 storyFragment.listChanged();
             }
             else {

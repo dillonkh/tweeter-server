@@ -34,7 +34,7 @@ public class GetUsersImFollowingToUpdateFeedsHandler implements RequestHandler<S
 
     @Override
     public Void handleRequest(SQSEvent event, Context context) {
-        final int LIMIT = 25;
+        final int LIMIT = 200;
 //        final int MESSAGE_BATCH_LIMIT = 25;
         final AmazonSQS sqs = AmazonSQSClientBuilder.defaultClient();
         final String QUEUE_URL = "https://sqs.us-west-2.amazonaws.com/500231213860/update_feeds_queue";
@@ -49,22 +49,30 @@ public class GetUsersImFollowingToUpdateFeedsHandler implements RequestHandler<S
             Tweet tweet = r.getTweet();
             User newUser = new User(tweet.getFirstName(),tweet.getLastName(),tweet.getUser(),"url");
 
-            // get all the users im following
-            UpdateFeedsRequest updateFeedsRequest = FollowingService.getInstance().getFolloweesMessage(new FollowingRequest(newUser, LIMIT, null), r.getTweet());
+            boolean hasMoreUsers = true;
+            while (hasMoreUsers) {
+                // get all the users im following
+                UpdateFeedsRequest updateFeedsRequest = FollowingService.getInstance().getFolloweesMessage(new FollowingRequest(newUser, LIMIT, null), r.getTweet());
 
-            String message = gson.toJson(updateFeedsRequest);
+                String message = gson.toJson(updateFeedsRequest);
 
-            SendMessageRequest send_msg_request = new SendMessageRequest()
+                SendMessageRequest send_msg_request = new SendMessageRequest()
 
-                    .withQueueUrl(QUEUE_URL)
+                        .withQueueUrl(QUEUE_URL)
 
-                    .withMessageBody(message)
+                        .withMessageBody(message)
 
-                    .withDelaySeconds(5);
+                        .withDelaySeconds(5);
 
 
 
-            SendMessageResult send_msg_result = sqs.sendMessage(send_msg_request);
+                SendMessageResult send_msg_result = sqs.sendMessage(send_msg_request);
+
+//                System.out.println(send_msg_result.toString());
+
+                hasMoreUsers = updateFeedsRequest.hasMore;
+            }
+
 
 
         }

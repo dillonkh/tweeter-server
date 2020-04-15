@@ -41,9 +41,9 @@ import edu.byu.cs.tweeter.view.cache.ImageCache;
 import edu.byu.cs.tweeter.view.main.UserViewActivity;
 
 public class FollowerFragment extends Fragment implements
-        FollowerPresenter.View,
-        GetUserTask.GetUserObserver,
-        GetCurrentUserTask.GetCurrentUserObserver
+        FollowerPresenter.View
+//        GetUserTask.GetUserObserver,
+//        GetCurrentUserTask.GetCurrentUserObserver,
 //        SetUserShownTask.SetUserShownObserver
 //        GetUserShownTask.GetUserShownObserver
 {
@@ -69,9 +69,9 @@ public class FollowerFragment extends Fragment implements
 
         presenter = new FollowerPresenter(this);
 
-        getUserObserver = this;
+//        getUserObserver = this;
 //        setUserShownObserver = this;
-        getUserObserver = this;
+//        getUserObserver = this;
 
         RecyclerView followerRecyclerView = view.findViewById(R.id.followerRecyclerView);
 
@@ -86,39 +86,10 @@ public class FollowerFragment extends Fragment implements
         return view;
     }
 
-    @Override
-    public void userRetrieved(UserResponse userResponse) {
-//        GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), userAlias.toString());
-//        UserRequest request = new UserRequest(presenter.getUserShown(), userAlias.getText().toString());
-//        getUserTask.execute(request);
-    }
-
-    @Override
-    public void currentUserGot(UserResponse userResponse) {
-//        GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), userAlias.toString());
-//        UserRequest request = new UserRequest(presenter.getUserShown(), userAlias.getText().toString());
-//        getUserTask.execute(request);
-    }
-
-//    @Override
-//    public void userShownSet(User user) {
-//        if (user != null) {
-//            Intent intent = new Intent(getActivity(), UserViewActivity.class);
-//            startActivity(intent);
-//        }
-//
-//    }
-
-//    @Override
-//    public void userShownGot(User user) {
-////        GetFollowerTask getFollowerTask = new GetFollowerTask(presenter, getFollowersObserver);
-////        FollowerRequest request = new FollowerRequest(user, PAGE_SIZE,);
-////        getFollowerTask.execute(request);
-//    }
 
 
 
-    private class FollowerHolder extends RecyclerView.ViewHolder {
+    private class FollowerHolder extends RecyclerView.ViewHolder implements GetUserTask.GetUserObserver {
 
         private final ImageView userImage;
         private final TextView userAlias;
@@ -131,12 +102,6 @@ public class FollowerFragment extends Fragment implements
             userAlias = itemView.findViewById(R.id.userAlias);
             userName = itemView.findViewById(R.id.userName);
 
-//            itemView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    Toast.makeText(getContext(), "You selected '" + userName.getText() + "'.", Toast.LENGTH_SHORT).show();
-//                }
-//            });
         }
 
         void bindUser(final User user) {
@@ -153,13 +118,26 @@ public class FollowerFragment extends Fragment implements
         }
 
         private void switchToThisUserView(FragmentActivity activity, User user) {
-//            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter,activity,setUserShownObserver);
-//            setUserShownTask.execute(new UserRequest(user));
+            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), this);
+            getUserTask.execute(new UserRequest(null, user.getAlias()));
             // continued in userShownSet
 
         }
 
 
+        @Override
+        public void userRetrieved(UserResponse userResponse) {
+            if (userResponse != null) {
+                if (userResponse.getUser() != null) {
+
+                    Intent intent = new Intent(getActivity(), UserViewActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    Toast.makeText(getContext(), "Sorry, that user does not exist", Toast.LENGTH_LONG);
+                }
+            }
+        }
     }
 
     public class FollowerRecyclerViewAdapter extends RecyclerView.Adapter<FollowerHolder>

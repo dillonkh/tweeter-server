@@ -55,29 +55,29 @@ public class GetUserTask extends AsyncTask<UserRequest, Void, UserResponse> {
         mainPresenter = null;
     }
 
-//    public GetUserTask(FollowerPresenter presenter, FragmentActivity activity, GetUserTask.GetUserObserver observer) {
-//        this.followerPresenter = presenter;
-//        this.activity = activity;
+    public GetUserTask(FollowerPresenter presenter, FragmentActivity activity, GetUserTask.GetUserObserver observer) {
+        this.followerPresenter = presenter;
+        this.activity = activity;
+
+        this.observer = observer;
+
+        feedPresenter = null;
+        storyPresenter = null;
+        followingPresenter = null;
+        mainPresenter = null;
+    }
 //
-//        this.observer = observer;
-//
-//        feedPresenter = null;
-//        storyPresenter = null;
-//        followingPresenter = null;
-//        mainPresenter = null;
-//    }
-//
-//    public GetUserTask(FollowingPresenter presenter, FragmentActivity activity, GetUserTask.GetUserObserver observer) {
-//        this.followingPresenter = presenter;
-//        this.activity = activity;
-//
-//        this.observer = observer;
-//
-//        feedPresenter = null;
-//        storyPresenter = null;
-//        followerPresenter = null;
-//        mainPresenter = null;
-//    }
+    public GetUserTask(FollowingPresenter presenter, FragmentActivity activity, GetUserTask.GetUserObserver observer) {
+        this.followingPresenter = presenter;
+        this.activity = activity;
+
+        this.observer = observer;
+
+        feedPresenter = null;
+        storyPresenter = null;
+        followerPresenter = null;
+        mainPresenter = null;
+    }
 
     public GetUserTask(MainPresenter presenter, FragmentActivity activity, GetUserTask.GetUserObserver observer) {
         this.mainPresenter = presenter;

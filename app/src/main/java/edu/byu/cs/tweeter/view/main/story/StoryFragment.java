@@ -136,9 +136,8 @@ public class StoryFragment extends Fragment implements
         }
 
         private void switchToThisUserView(FragmentActivity activity, String userAlias) {
-//            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter, activity, setUserShownObserver);
-//            setUserShownTask.execute(new UserRequest(new User(userAlias)));
-            // continued in userShownSet
+            GetUserTask getUserTask = new GetUserTask(presenter, activity, this);
+            getUserTask.execute(new UserRequest(null, userAlias));
         }
 
         void bindTweet(Tweet tweet) {
@@ -162,7 +161,7 @@ public class StoryFragment extends Fragment implements
             userAlias.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    switchToThisUserView(getActivity(), userAlias.getText().toString());
+//                    switchToThisUserView(getActivity(), userAlias.getText().toString());
                 }
             });
         }
@@ -174,11 +173,15 @@ public class StoryFragment extends Fragment implements
 
         @Override
         public void userRetrieved(UserResponse userResponse) {
-            if (userResponse.getUser() != null) {
-                userImage.setImageDrawable(ImageCache.getInstance().getImageDrawable(userResponse.getUser()));
-                userAlias.setText(userResponse.getUser().getAlias());
-                userFirstName.setText(userResponse.getUser().getFirstName());
-                userLastName.setText(userResponse.getUser().getLastName());
+            if (userResponse != null) {
+                if (userResponse.getUser() != null) {
+
+                    Intent intent = new Intent(getActivity(), UserViewActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    Toast.makeText(getContext(), "Sorry, that user does not exist", Toast.LENGTH_LONG);
+                }
             }
         }
     }
@@ -227,7 +230,7 @@ public class StoryFragment extends Fragment implements
         return ss;
     }
 
-    class MyClickableSpan extends ClickableSpan {
+    class MyClickableSpan extends ClickableSpan implements GetUserTask.GetUserObserver {
 
         String message;
 
@@ -237,17 +240,27 @@ public class StoryFragment extends Fragment implements
 
         @Override
         public void onClick(View textView) {
-//            startActivity(new Intent(MyActivity.this, NextActivity.class));
-//
-//            Toast.makeText(textView.getContext(),message,Toast.LENGTH_SHORT).show();
-//            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), presenter.getUserShown(), message);
-//            UserRequest request = new UserRequest(presenter.getUserShown(), message);
-//            getUserTask.execute(request);
+            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), this);
+            getUserTask.execute(new UserRequest(null, message));
         }
         @Override
         public void updateDrawState(TextPaint ds) {
             super.updateDrawState(ds);
             ds.setUnderlineText(false);
+        }
+
+        @Override
+        public void userRetrieved(UserResponse userResponse) {
+            if (userResponse != null) {
+                if (userResponse.getUser() != null) {
+
+                    Intent intent = new Intent(getActivity(), UserViewActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    Toast.makeText(getContext(), "Sorry, that user does not exist", Toast.LENGTH_LONG);
+                }
+            }
         }
     }
 

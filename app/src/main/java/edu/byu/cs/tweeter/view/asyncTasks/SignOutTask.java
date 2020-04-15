@@ -11,7 +11,6 @@ import edu.byu.cs.tweeter.presenter.MainPresenter;
 
 public class SignOutTask extends AsyncTask<LoginRequest, Void, LoginResponse> {
 
-    private final LoginPresenter presenter;
     private final MainPresenter mainPresenter;
     private final SignOutObserver observer;
 
@@ -19,21 +18,15 @@ public class SignOutTask extends AsyncTask<LoginRequest, Void, LoginResponse> {
         void signOutResponded(LoginResponse r);
     }
 
-    public SignOutTask(LoginPresenter presenter, SignOutObserver observer) {
-        this.presenter = presenter;
+    public SignOutTask(MainPresenter mainPresenter, SignOutObserver observer) {
+        this.mainPresenter = mainPresenter;
         this.observer = observer;
         mainPresenter = null;
     }
 
-    public SignOutTask(MainPresenter mainPresenter, SignOutObserver observer) {
-        this.mainPresenter = mainPresenter;
-        this.observer = observer;
-        presenter = null;
-    }
-
     @Override
     protected LoginResponse doInBackground(LoginRequest... signUpRequests) {
-        LoginResponse response = presenter.signOut(signUpRequests[0]);
+        LoginResponse response = mainPresenter.signOut(signUpRequests[0]);
 //        loadImages(response);
         return response;
     }

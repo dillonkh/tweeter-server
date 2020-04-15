@@ -16,6 +16,7 @@ import android.widget.Toast;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.UUID;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -54,6 +55,8 @@ public class LoginActivity extends AppCompatActivity implements
     private EditText passwordInput;
 
     public static final int GET_FROM_GALLERY = 3;
+
+    private String fileName = "";
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -142,7 +145,9 @@ public class LoginActivity extends AppCompatActivity implements
         UploadImageTask task = new UploadImageTask(presenter, this);
         String encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
         encoded = encoded.replace("\n", "").replace("\r", "");
-        task.execute(new UploadRequest(encoded, "aFile.png"));
+        String imageID = UUID.randomUUID().toString();
+        fileName = "https://tweeter-dillonkh.s3-us-west-2.amazonaws.com/"+imageID+".png";
+        task.execute(new UploadRequest(encoded, imageID+".png"));
     }
 
     private void signIn(View v) {
@@ -155,17 +160,28 @@ public class LoginActivity extends AppCompatActivity implements
     private void signUp(View v) {
         if (userInfoIsValid() && !alreadySignedUp()) {
 //            switchToMainActivity(v);
+            String imageURL = getImageURL();
             GetSignUpTask getSignUpTask = new GetSignUpTask(presenter,LoginActivity.this);
             SignUpRequest request = new SignUpRequest(
                     signUpFirst.getText().toString(),
                     signUpLast.getText().toString(),
                     signUpHandle.getText().toString(),
                     signUpPassword.getText().toString(),
-                    signUpURL.getText().toString()
+                    imageURL
             );
             getSignUpTask.execute(request);
         }
     }
+
+    private String getImageURL() {
+        if (fileName.equals("")) {
+            return signUpURL.getText().toString();
+        }
+        else {
+            return fileName;
+        }
+    }
+
 
     private  void authenticated() {
         GetLoginTask getLoginTask = new GetLoginTask(presenter,LoginActivity.this);
@@ -213,8 +229,12 @@ public class LoginActivity extends AppCompatActivity implements
 
     @Override
     public void uploadResponded(UploadResponse uploaded) {
-        if (uploaded.isSuccess()) {
-            savedText.setVisibility(View.VISIBLE);
+        if (uploaded == null) {
+            Toast.makeText(this, "Sorry, something went wrong, try again", Toast.LENGTH_LONG).show();
+        } else {
+            if (uploaded.isSuccess()) {
+                savedText.setVisibility(View.VISIBLE);
+            }
         }
     }
 }

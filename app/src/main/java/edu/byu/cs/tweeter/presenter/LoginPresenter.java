@@ -41,10 +41,6 @@ public class LoginPresenter extends Presenter {
         return LoginService.getInstance().signUp(request);
     }
 
-    public LoginResponse signOut(LoginRequest request) {
-        return LoginService.getInstance().signOut(request);
-    }
-
     public UploadResponse uploadImage(UploadRequest request) {
         return LoginService.getInstance().uploadImage(request);
     }

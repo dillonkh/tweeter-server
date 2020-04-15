@@ -28,6 +28,7 @@ import edu.byu.cs.tweeter.net.request.CurrentUserRequest;
 import edu.byu.cs.tweeter.net.request.FollowingRequest;
 import edu.byu.cs.tweeter.net.request.UserRequest;
 import edu.byu.cs.tweeter.net.response.FollowingResponse;
+import edu.byu.cs.tweeter.net.response.UserResponse;
 import edu.byu.cs.tweeter.presenter.FollowingPresenter;
 import edu.byu.cs.tweeter.view.asyncTasks.GetFollowingTask;
 import edu.byu.cs.tweeter.view.asyncTasks.GetUserShownTask;
@@ -83,7 +84,7 @@ public class FollowingFragment extends Fragment implements
 //    }
 
 
-    private class FollowingHolder extends RecyclerView.ViewHolder {
+    private class FollowingHolder extends RecyclerView.ViewHolder implements GetUserTask.GetUserObserver {
 
         private final ImageView userImage;
         private final TextView userAlias;
@@ -118,9 +119,23 @@ public class FollowingFragment extends Fragment implements
         }
 
         private void switchToThisUserView(FragmentActivity activity, User user) {
-//            SetUserShownTask setUserShownTask = new SetUserShownTask(presenter, activity, setUserShownObserver);
-//            setUserShownTask.execute(new UserRequest(user));
+            GetUserTask getUserTask = new GetUserTask(presenter, getActivity(), this);
+            getUserTask.execute(new UserRequest(null, user.getAlias()));
             // continued in userShownSet
+        }
+
+        @Override
+        public void userRetrieved(UserResponse userResponse) {
+            if (userResponse != null) {
+                if (userResponse.getUser() != null) {
+
+                    Intent intent = new Intent(getActivity(), UserViewActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    Toast.makeText(getContext(), "Sorry, that user does not exist", Toast.LENGTH_LONG);
+                }
+            }
         }
     }
 

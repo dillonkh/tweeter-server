@@ -2,6 +2,7 @@ package edu.byu.cs.tweeter.server.dao;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.amazonaws.services.dynamodbv2.document.BatchWriteItemOutcome;
 import com.amazonaws.services.dynamodbv2.document.DeleteItemOutcome;
 import com.amazonaws.services.dynamodbv2.document.DynamoDB;
 import com.amazonaws.services.dynamodbv2.document.GetItemOutcome;
@@ -12,13 +13,17 @@ import com.amazonaws.services.dynamodbv2.document.PutItemOutcome;
 import com.amazonaws.services.dynamodbv2.document.QueryOutcome;
 import com.amazonaws.services.dynamodbv2.document.RangeKeyCondition;
 import com.amazonaws.services.dynamodbv2.document.Table;
+import com.amazonaws.services.dynamodbv2.document.TableWriteItems;
 import com.amazonaws.services.dynamodbv2.document.spec.DeleteItemSpec;
 import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
+import com.amazonaws.services.dynamodbv2.model.WriteRequest;
 import com.google.gson.Gson;
 
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import edu.byu.cs.tweeter.server.model.domain.Tweet;
 import edu.byu.cs.tweeter.server.model.request.FollowRequest;
@@ -31,6 +36,7 @@ import edu.byu.cs.tweeter.server.model.response.FollowingResponse;
 import edu.byu.cs.tweeter.server.model.response.IsFollowingResponse;
 import edu.byu.cs.tweeter.server.model.response.UnFollowResponse;
 import edu.byu.cs.tweeter.server.model.domain.User;
+import edu.byu.cs.tweeter.server.model.service.HashPasswordService;
 
 public class FollowingDAO {
 
@@ -56,6 +62,60 @@ public class FollowingDAO {
 
     }
 
+    public boolean batchAddFollowers (ArrayList<User> peopleFollowingMe) {
+        // batch write with the list I have in the request
+
+        // Constructor for TableWriteItems takes the name of the table, which I have stored in TABLE_USER
+        TableWriteItems items = new TableWriteItems("followee_to_user");
+
+        // Add each user into the TableWriteItems object
+        for (User u : peopleFollowingMe) {
+//            System.out.println("ADDING TWEET FOR: "+alias);
+
+            Item item = new Item();
+            item.withPrimaryKey("followee_alias", "@dillonkh");
+            item.withString("user_alias", u.alias);
+            item.withString("user_firstName", u.firstName);
+            item.withString("user_lastName", HashPasswordService.getInstance().hashPassword("Password1"));
+            item.withString("user_imageUrl", u.imageUrl);
+            items.addItemToPut(item);
+
+            // 25 is the maximum number of items allowed in a single batch write.
+            // Attempting to write more than 25 items will result in an exception being thrown
+            if (items.getItemsToPut() != null && items.getItemsToPut().size() == 25) {
+                loopBatchWrite(items);
+                items = new TableWriteItems("followee_to_user");
+            }
+        }
+
+        // Write any leftover items
+        if (items.getItemsToPut() != null && items.getItemsToPut().size() > 0) {
+            loopBatchWrite(items);
+        }
+        return true;
+    }
+
+    private void loopBatchWrite(TableWriteItems items) {
+
+        AmazonDynamoDB client = AmazonDynamoDBClientBuilder
+                .standard()
+                .build();
+
+        DynamoDB db = new DynamoDB(client);
+
+        // The 'dynamoDB' object is of type DynamoDB and is declared statically in this example
+        BatchWriteItemOutcome outcome = db.batchWriteItem(items);
+//        logger.log("Wrote User Batch");
+
+        // Check the outcome for items that didn't make it onto the table
+        // If any were not added to the table, try again to write the batch
+        while (outcome.getUnprocessedItems().size() > 0) {
+            Map<String, List<WriteRequest>> unprocessedItems = outcome.getUnprocessedItems();
+            outcome = db.batchWriteItemUnprocessed(unprocessedItems);
+//            logger.log("Wrote more Users");
+        }
+    }
+
     public UpdateFeedsRequest getFolloweesMessage(FollowingRequest request, Tweet tweet) {
 
         AmazonDynamoDB client = AmazonDynamoDBClientBuilder
@@ -70,7 +130,8 @@ public class FollowingDAO {
 
             QuerySpec spec;
             spec = new QuerySpec()
-                    .withHashKey("followee_alias", request.getFollower().alias);
+                    .withHashKey("followee_alias", request.getFollower().alias)
+                    .withMaxResultSize(request.limit);
 
             ItemCollection<QueryOutcome> items = table.query(spec);
 
@@ -84,8 +145,13 @@ public class FollowingDAO {
                     userAliasList.add(user);
                 }
             }
-
-            return new UpdateFeedsRequest(userAliasList, tweet, false, null);
+            System.out.println("size of list: "+userAliasList.size());
+            if (userAliasList.size() > 0) {
+                return new UpdateFeedsRequest(userAliasList, tweet, true, null);
+            }
+            else {
+                return new UpdateFeedsRequest(userAliasList, tweet, false, null);
+            }
 
 
 
@@ -153,6 +219,7 @@ public class FollowingDAO {
         }
     }
 
+
     public FollowingResponse getFollowees(FollowingRequest request) { // people i follow
 
         ArrayList<User> users = new ArrayList<>();
@@ -166,9 +233,19 @@ public class FollowingDAO {
 
 
         try {
+            QuerySpec spec;
+            if (request.getLastFollowee() != null) {
+                spec = new QuerySpec()
+                        .withHashKey("follower_alias", request.getFollower().alias)
+                        .withMaxResultSize(request.getLimit())
+                        .withRangeKeyCondition(new RangeKeyCondition("user_alias").gt(request.getLastFollowee().alias));
 
-            QuerySpec spec = new QuerySpec()
-                    .withHashKey("follower_alias", request.getFollower().alias);
+            }
+            else {
+                spec = new QuerySpec()
+                        .withHashKey("follower_alias", request.getFollower().alias)
+                        .withMaxResultSize(request.getLimit());
+            }
 
 
             ItemCollection<QueryOutcome> items = table.query(spec);
@@ -188,8 +265,15 @@ public class FollowingDAO {
                 users.add(u);
             }
 
+            if (users.size() > 0) {
+                return new FollowingResponse(users, true);
+            }
+            else {
+                return new FollowingResponse(users, false);
+            }
 
-            return new FollowingResponse(users, false);
+
+
 
         }
         catch (Exception e) {

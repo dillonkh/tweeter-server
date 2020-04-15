@@ -105,7 +105,7 @@ public class TweetsDAO {
 
         // Constructor for TableWriteItems takes the name of the table, which I have stored in TABLE_USER
         TableWriteItems items = new TableWriteItems("feed");
-
+        System.out.println("start updating feeds");
         // Add each user into the TableWriteItems object
         for (String alias : updateFeedsRequest.getUserAliasList()) {
             System.out.println("ADDING TWEET FOR: "+alias);
@@ -130,6 +130,9 @@ public class TweetsDAO {
         if (items.getItemsToPut() != null && items.getItemsToPut().size() > 0) {
             loopBatchWrite(items);
         }
+
+        System.out.println("start updating feeds");
+
 
     }
 

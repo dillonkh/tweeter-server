@@ -6,6 +6,7 @@ import com.amazonaws.services.dynamodbv2.document.DynamoDB;
 import com.amazonaws.services.dynamodbv2.document.Item;
 import com.amazonaws.services.dynamodbv2.document.ItemCollection;
 import com.amazonaws.services.dynamodbv2.document.QueryOutcome;
+import com.amazonaws.services.dynamodbv2.document.RangeKeyCondition;
 import com.amazonaws.services.dynamodbv2.document.Table;
 import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
 
@@ -31,9 +32,19 @@ public class FollowerDAO {
 
 
         try {
+            QuerySpec spec;
+            if (request.getLastFollowee() != null) {
+                spec = new QuerySpec()
+                        .withHashKey("followee_alias", request.getFollowing().alias)
+                        .withMaxResultSize(request.getLimit())
+                        .withRangeKeyCondition(new RangeKeyCondition("user_alias").gt(request.getLastFollowee().alias));
 
-            QuerySpec spec = new QuerySpec()
-                    .withHashKey("followee_alias", request.getFollowing().alias);
+            }
+            else {
+                spec = new QuerySpec()
+                        .withHashKey("followee_alias", request.getFollowing().alias)
+                        .withMaxResultSize(request.getLimit());
+            }
 
 
             ItemCollection<QueryOutcome> items = table.query(spec);
@@ -52,8 +63,12 @@ public class FollowerDAO {
                 users.add(u);
             }
 
-
-            return new FollowerResponse(users,false);
+            if (users.size() > 0) {
+                return new FollowerResponse(users,true);
+            }
+            else {
+                return new FollowerResponse(users,false);
+            }
 
         }
         catch (Exception e) {

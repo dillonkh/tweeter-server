@@ -15,7 +15,7 @@ class GetFeedDAOTest {
     @Test
     void testGetFeed() {
 
-        User user = new User("Dillon", "Harris", "@dillonkh", "url");
+        User user = new User("Test", "User1", "@testUser100", "url");
         FeedResponse response = new TweetsDAO().getFeed(new FeedRequest(user, 10, null));
 
         Assertions.assertTrue(response.isSuccess());
